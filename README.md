@@ -59,6 +59,7 @@ Open `index.html` to see the current elements and components together.
 ## Documentation
 
 - [Sizing and units](docs/sizing.md) explains when StyleWire uses `rem`, `em`, `px`, unitless values, and responsive layout units.
+- [CSS variables](docs/variables.md) documents the reusable values available for framework customization.
 
 ## Public classes
 
