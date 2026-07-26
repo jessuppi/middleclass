@@ -203,6 +203,8 @@ A visual component should not require replacing a native interactive element wit
 
 StyleWire targets modern browsers without transpilation or compatibility bundles.
 
+For now, modern browsers means the current stable releases of Chrome, Edge, Firefox, and Safari. Internet Explorer and legacy browser-specific compatibility work are out of scope.
+
 Progressive CSS features are acceptable when they simplify the source and fail safely where practical. A new feature should not create a serious usability failure in an otherwise supported browser merely to save a small amount of CSS.
 
 ## Evaluating New Features
