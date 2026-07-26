@@ -124,7 +124,7 @@ Use the existing spacing scale before adding unrelated one-off spacing values. S
 | `--sw-accent` | `#175cd3` | `#78a9ff` | Primary interactive accent |
 | `--sw-accent-hover` | `#114aa9` | `#a6c5ff` | Hover-state accent |
 | `--sw-accent-text` | `#ffffff` | `#101820` | Text shown on the accent color |
-| `--sw-focus` | `#f4b400` | `#ffd166` | Keyboard focus outline |
+| `--sw-focus` | `#9a6700` | `#ffd166` | Keyboard focus outline |
 | `--sw-code-background` | `#eef2f6` | `#202a34` | Code background |
 | `--sw-success` | `#217a3c` | `#68c77b` | Success status accent |
 | `--sw-warning` | `#8a5a00` | `#f0bd5a` | Warning status accent |
