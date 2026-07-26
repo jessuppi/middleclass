@@ -11,7 +11,7 @@ It gives plain HTML a clean responsive foundation, then adds a small set of layo
 - Keep selectors understandable and easy to override.
 - Keep the public class API small and deliberate.
 - Support static hosting such as GitHub Pages and Cloudflare Pages.
-- Avoid JavaScript, package managers, preprocessors, and framework-specific markup.
+- Avoid JavaScript, package managers, preprocessors, and rigid component markup structures.
 
 ## Usage
 
