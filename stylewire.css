@@ -273,7 +273,7 @@ h6 + * {
 
 ul,
 ol {
-	padding-inline-start: 1.5rem;
+	padding-inline-start: var(--sw-space-5);
 }
 
 li + li {
