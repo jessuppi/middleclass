@@ -9,7 +9,7 @@ It gives plain HTML a clean responsive foundation, then adds a small set of layo
 - Make ordinary semantic HTML look intentional.
 - Work from one readable CSS file with no build step.
 - Keep selectors understandable and easy to override.
-- Provide a small, stable public class API.
+- Keep the public class API small and deliberate.
 - Support static hosting such as GitHub Pages and Cloudflare Pages.
 - Avoid JavaScript, package managers, preprocessors, and framework-specific markup.
 
@@ -145,6 +145,8 @@ StyleWire is a CSS foundation, not an application framework. The project does no
 ## Versioning
 
 StyleWire follows semantic versioning. The version appears in the stylesheet header and changelog.
+
+Before 1.0, documented classes, variables, theme behavior, and semantic element styling may change between minor releases.
 
 ## License
 
