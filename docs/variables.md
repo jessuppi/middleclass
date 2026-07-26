@@ -30,6 +30,12 @@ All public StyleWire variables use the `--sw-` prefix. This reduces naming confl
 
 Site variables should use a different prefix or an unambiguous project-specific name.
 
+## Public API Status
+
+The variables documented here are the current intended customization points for StyleWire.
+
+The formal compatibility policy for variable renames, removals, and deprecations is still pending while the framework continues to evolve. Until that policy is finalized, changes to documented variables should remain deliberate and be recorded in the changelog.
+
 ## Overriding Variables
 
 Load StyleWire first, then define overrides in the site's own stylesheet:
