@@ -184,9 +184,13 @@ They can be set directly on a component:
 
 Each component variable falls back to the normal StyleWire spacing scale when it is not set.
 
+Because CSS variables inherit, setting a component variable on a shared ancestor can affect every nested matching component. Set the variable directly on a specific `.stack`, `.cluster`, or `.columns` element when only one instance should change.
+
+The formal scoping policy for nested component variables is still pending while StyleWire continues to evolve.
+
 ## Scope and Inheritance
 
-Variables inherit through the document. A variable set on `:root` applies globally, while a variable set on a particular element applies only to that element and its descendants.
+Variables inherit through the document. A variable set on `:root` applies globally, while a variable set on a particular element applies to that element and its descendants.
 
 ```css
 .special-section {
@@ -195,6 +199,8 @@ Variables inherit through the document. A variable set on `:root` applies global
 ```
 
 Links and buttons inside `.special-section` use that accent without changing the rest of the page.
+
+Inheritance also means that an override may reach nested components unless a more specific descendant value replaces it. Scope overrides as narrowly as the intended effect requires.
 
 ## When to Add a Variable
 
