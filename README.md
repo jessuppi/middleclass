@@ -56,6 +56,10 @@ A minimal page can use semantic HTML without component classes:
 
 Open `index.html` to see the current elements and components together.
 
+## Documentation
+
+- [Sizing and units](docs/sizing.md) explains when StyleWire uses `rem`, `em`, `px`, unitless values, and responsive layout units.
+
 ## Public classes
 
 StyleWire intentionally keeps its class API small.
