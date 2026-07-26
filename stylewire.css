@@ -535,24 +535,40 @@ input[type="submit"]:hover {
 	color: var(--sw-accent-text);
 }
 
-.button.secondary {
+button.secondary,
+.button.secondary,
+input[type="button"].secondary,
+input[type="reset"].secondary,
+input[type="submit"].secondary {
 	border-color: var(--sw-border);
 	background: var(--sw-surface-strong);
 	color: var(--sw-text);
 }
 
-.button.secondary:hover {
+button.secondary:hover,
+.button.secondary:hover,
+input[type="button"].secondary:hover,
+input[type="reset"].secondary:hover,
+input[type="submit"].secondary:hover {
 	border-color: var(--sw-text-muted);
 	background: var(--sw-surface);
 	color: var(--sw-text);
 }
 
-.button.outline {
+button.outline,
+.button.outline,
+input[type="button"].outline,
+input[type="reset"].outline,
+input[type="submit"].outline {
 	background: transparent;
 	color: var(--sw-accent);
 }
 
-.button.outline:hover {
+button.outline:hover,
+.button.outline:hover,
+input[type="button"].outline:hover,
+input[type="reset"].outline:hover,
+input[type="submit"].outline:hover {
 	background: var(--sw-accent);
 	color: var(--sw-accent-text);
 }
