@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="StyleWire is a lightweight, classless-first CSS framework for static websites.">
+	<title>StyleWire CSS Framework</title>
+	<link rel="stylesheet" href="stylewire.css">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<nav aria-label="Primary navigation">
+				<ul>
+					<li><strong>StyleWire</strong></li>
+					<li><a href="#principles">Principles</a></li>
+					<li><a href="#components">Components</a></li>
+					<li><a href="#forms">Forms</a></li>
+					<li><a href="https://github.com/jessuppi/stylewire">GitHub</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<div class="container stack">
+			<section class="reading-width">
+				<p class="muted">Classless-first CSS for static websites</p>
+				<h1>Good defaults, minimal markup.</h1>
+				<p>StyleWire gives semantic HTML a clean, responsive foundation while keeping layout and component classes small and predictable.</p>
+				<div class="cluster">
+					<a class="button" href="stylewire.css">View stylesheet</a>
+					<a class="button outline" href="https://github.com/jessuppi/stylewire">Browse the repository</a>
+				</div>
+			</section>
+
+			<section id="principles">
+				<h2>Principles</h2>
+				<div class="columns">
+					<article class="card">
+						<h3>Semantic first</h3>
+						<p>Plain headings, paragraphs, links, lists, tables, and forms look intentional without extra classes.</p>
+					</article>
+					<article class="card">
+						<h3>No build step</h3>
+						<p>Link one CSS file from a static page. There is no package manager, preprocessor, or JavaScript dependency.</p>
+					</article>
+					<article class="card">
+						<h3>Easy to override</h3>
+						<p>Public custom properties control the colors, spacing, widths, typography, and component shape.</p>
+					</article>
+				</div>
+			</section>
+
+			<section id="components">
+				<h2>Components</h2>
+				<p>StyleWire adds only a few classes where semantic HTML cannot express layout or presentation by itself.</p>
+
+				<div class="columns">
+					<article class="card">
+						<h3>Card</h3>
+						<p>Use <code>.card</code> for a contained section with a subtle surface and border.</p>
+						<a href="#forms">Continue to forms</a>
+					</article>
+					<article class="card">
+						<h3>Buttons</h3>
+						<p>Native buttons and submit inputs share the same base style. Links can opt in with <code>.button</code>.</p>
+						<div class="cluster">
+							<button type="button">Primary</button>
+							<a class="button secondary" href="#components">Secondary</a>
+						</div>
+					</article>
+				</div>
+
+				<div class="notice success">
+					<strong>Small public API.</strong> Layout uses <code>.container</code>, <code>.reading-width</code>, <code>.stack</code>, <code>.cluster</code>, and <code>.columns</code>.
+				</div>
+
+				<details>
+					<summary>Why classless-first instead of completely classless?</summary>
+					<p>Semantic selectors can style content safely, but they cannot infer whether a group should become columns, a cluster, or a card. A few explicit classes keep those choices understandable.</p>
+				</details>
+			</section>
+
+			<section>
+				<h2>Content elements</h2>
+				<div class="reading-width">
+					<blockquote>
+						<p>A framework should make the common path easy without making custom work difficult.</p>
+					</blockquote>
+					<p>Inline <code>code</code>, keyboard input such as <kbd>Ctrl</kbd> + <kbd>S</kbd>, <mark>highlighted text</mark>, and ordinary links receive useful defaults.</p>
+					<pre><code>&lt;link rel="stylesheet" href="stylewire.css"&gt;</code></pre>
+				</div>
+
+				<div class="table-wrap">
+					<table>
+						<caption>Included foundations</caption>
+						<thead>
+							<tr>
+								<th scope="col">Area</th>
+								<th scope="col">Default behavior</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Typography</td>
+								<td>Responsive headings and readable content rhythm</td>
+							</tr>
+							<tr>
+								<td>Color</td>
+								<td>Light, dark, and explicit theme variables</td>
+							</tr>
+							<tr>
+								<td>Accessibility</td>
+								<td>Visible focus, semantic controls, and screen-reader utility</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			<section id="forms" class="reading-width">
+				<h2>Forms</h2>
+				<form action="#" method="get">
+					<fieldset>
+						<legend>Example form</legend>
+
+						<label for="name">Name</label>
+						<input id="name" name="name" type="text" autocomplete="name" placeholder="Your name">
+
+						<label for="email">Email</label>
+						<input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com">
+
+						<label for="message">Message</label>
+						<textarea id="message" name="message" placeholder="Write a short message"></textarea>
+
+						<label>
+							<input type="checkbox" name="updates">
+							Send occasional updates
+						</label>
+					</fieldset>
+
+					<div class="cluster">
+						<button type="submit">Submit example</button>
+						<button type="reset" class="secondary">Reset</button>
+					</div>
+				</form>
+			</section>
+		</div>
+	</main>
+
+	<footer>
+		<div class="container">
+			<p>StyleWire is a lightweight CSS foundation for semantic static websites.</p>
+		</div>
+	</footer>
+</body>
+</html>
