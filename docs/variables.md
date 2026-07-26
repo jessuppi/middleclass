@@ -36,6 +36,19 @@ The variables documented here are the current intended customization points for 
 
 The formal compatibility policy for variable renames, removals, and deprecations is still pending while the framework continues to evolve. Until that policy is finalized, changes to documented variables should remain deliberate and be recorded in the changelog.
 
+## Value Type Guidance
+
+Current variables expect values in these general categories:
+
+| Variable group | Expected value |
+| --- | --- |
+| Font-family variables | A valid CSS font-family list |
+| Font-size, width, gutter, radius, border-width, spacing, and component-gap variables | A valid CSS length or math expression that resolves to a length |
+| `--sw-line-height` | A unitless number |
+| Color variables | A valid CSS color |
+
+The formal value-type contract is still pending while StyleWire continues to evolve. Until it is finalized, overrides should preserve the existing value category of each variable.
+
 ## Overriding Variables
 
 Load StyleWire first, then define overrides in the site's own stylesheet:
