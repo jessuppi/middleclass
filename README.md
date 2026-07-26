@@ -101,11 +101,11 @@ Override variables after loading StyleWire:
 :root {
 	--sw-content-width: 80rem;
 	--sw-reading-width: 44rem;
-	--sw-accent: #6b3fc8;
-	--sw-accent-hover: #5630a7;
 	--sw-radius: 0.25rem;
 }
 ```
+
+Color overrides require theme-aware selectors. See [CSS variables](docs/variables.md) for examples.
 
 All public custom properties use the `--sw-` prefix.
 
