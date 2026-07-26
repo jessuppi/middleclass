@@ -1,1 +1,145 @@
-# stylewire
+# StyleWire
+
+StyleWire is a lightweight, classless-first CSS framework for semantic static websites.
+
+It gives plain HTML a clean responsive foundation, then adds a small set of layout and component classes for choices that semantic markup cannot express by itself.
+
+## Goals
+
+- Make ordinary semantic HTML look intentional.
+- Work from one readable CSS file with no build step.
+- Keep selectors understandable and easy to override.
+- Provide a small, stable public class API.
+- Support static hosting such as GitHub Pages and Cloudflare Pages.
+- Avoid JavaScript, package managers, preprocessors, and framework-specific markup.
+
+## Usage
+
+Copy `stylewire.css` into a site and link it from the document head:
+
+```html
+<link rel="stylesheet" href="/assets/stylewire.css">
+```
+
+A minimal page can use semantic HTML without component classes:
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Example</title>
+	<link rel="stylesheet" href="stylewire.css">
+</head>
+<body>
+	<header>
+		<div class="container">
+			<nav aria-label="Primary navigation">
+				<ul>
+					<li><strong>Example</strong></li>
+					<li><a href="/about/">About</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<div class="container reading-width">
+			<h1>Hello, world.</h1>
+			<p>StyleWire handles the foundation while the document remains ordinary HTML.</p>
+		</div>
+	</main>
+</body>
+</html>
+```
+
+Open `index.html` to see the current elements and components together.
+
+## Public classes
+
+StyleWire intentionally keeps its class API small.
+
+### Layout
+
+- `.container` centers content within the main site width and responsive gutters.
+- `.reading-width` limits long-form content to a comfortable line length.
+- `.stack` arranges children vertically with consistent spacing.
+- `.cluster` wraps related inline items such as buttons or navigation controls.
+- `.columns` creates responsive equal-width columns.
+
+Component spacing can be adjusted locally with custom properties:
+
+```html
+<div class="columns" style="--sw-columns-space: 2rem;">
+	...
+</div>
+```
+
+### Components
+
+- `.button` gives a link button presentation.
+- `.secondary` and `.outline` provide alternate button styles.
+- `.card` creates a contained surface.
+- `.notice` creates a highlighted message.
+- `.success`, `.warning`, and `.danger` change a notice status accent.
+- `.table-wrap` allows wide tables to scroll on narrow screens.
+- `.muted` uses the secondary text color.
+- `.screen-reader-text` visually hides accessible text.
+
+## Customization
+
+Override tokens after loading StyleWire:
+
+```css
+:root {
+	--sw-content-width: 80rem;
+	--sw-reading-width: 44rem;
+	--sw-accent: #6b3fc8;
+	--sw-accent-hover: #5630a7;
+	--sw-radius: 0.25rem;
+}
+```
+
+All public custom properties use the `--sw-` prefix.
+
+## Color themes
+
+StyleWire follows the operating system color preference by default.
+
+Set an explicit theme on the root element when a site needs to override that behavior:
+
+```html
+<html lang="en" data-theme="light">
+```
+
+```html
+<html lang="en" data-theme="dark">
+```
+
+StyleWire does not include a theme toggle because interactive behavior belongs to the site, not the CSS framework.
+
+## Browser approach
+
+StyleWire targets modern browsers without transpilation or compatibility bundles. The source stays readable and uses progressive CSS features that fail safely where practical.
+
+## Project scope
+
+StyleWire is a CSS foundation, not an application framework. The project does not plan to include:
+
+- JavaScript widgets
+- utility-class generation
+- CSS preprocessors
+- package-manager requirements
+- framework adapters
+- icon libraries
+- bundled fonts
+- application state or routing
+
+## Versioning
+
+StyleWire follows semantic versioning. The version appears in the stylesheet header and changelog.
+
+## License
+
+StyleWire is available under the MIT License.
