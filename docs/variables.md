@@ -111,6 +111,20 @@ Use the existing spacing scale before adding unrelated one-off spacing values. S
 | `--sw-warning` | `#8a5a00` | `#f0bd5a` | Warning status accent |
 | `--sw-danger` | `#b42318` | `#ff8b82` | Danger status accent |
 
+## Color Pairing and Contrast
+
+Color variables work as related groups rather than isolated values. When overriding colors:
+
+- review `--sw-accent`, `--sw-accent-hover`, and `--sw-accent-text` together
+- verify `--sw-text` and `--sw-text-muted` against the page and surface backgrounds
+- keep `--sw-border` visible against every surface where it appears
+- ensure `--sw-focus` remains clearly visible around interactive elements
+- review success, warning, and danger accents in both light and dark themes
+
+Test normal, hover, focus, and disabled states after changing a color group. A color that looks acceptable by itself may not provide sufficient contrast when used for text, backgrounds, borders, or focus indicators.
+
+StyleWire provides balanced defaults, but a site that overrides color variables is responsible for preserving accessible contrast in every supported theme.
+
 ## Light and Dark Themes
 
 Color variables change with the active color theme. Non-color variables remain shared.
