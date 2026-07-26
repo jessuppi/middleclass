@@ -38,11 +38,22 @@ Load StyleWire first, then define overrides in the site's own stylesheet:
 :root {
 	--sw-content-width: 80rem;
 	--sw-reading-width: 44rem;
-	--sw-accent: #6b3fc8;
-	--sw-accent-hover: #5630a7;
 	--sw-radius: 0.25rem;
 }
 ```
+
+Color variables require theme-aware selectors because StyleWire's theme rules are more specific than a plain `:root` rule. To customize colors used by automatic dark mode, match the framework selector:
+
+```css
+@media (prefers-color-scheme: dark) {
+	:root:not([data-theme="light"]) {
+		--sw-accent: #b69cff;
+		--sw-accent-hover: #d1c1ff;
+	}
+}
+```
+
+Use `[data-theme="light"]` and `[data-theme="dark"]` for explicit theme overrides, as shown in the theme section below.
 
 There is normally no need to edit `stylewire.css` directly.
 
@@ -120,7 +131,7 @@ Theme-specific overrides should target the same selectors:
 }
 ```
 
-When automatic system theming must also use custom dark colors, override the variables inside a matching `prefers-color-scheme` media query as well.
+When automatic system theming must also use custom dark colors, override the variables inside a matching `prefers-color-scheme` media query as shown above.
 
 ## Component Variables
 
