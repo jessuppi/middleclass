@@ -2,16 +2,19 @@
 
 StyleWire uses a small, predictable sizing policy rather than forcing one CSS unit everywhere.
 
+This document describes the current framework approach. The policy may evolve, but unit changes should always be deliberate and based on the behavior a value needs.
+
 ## General Policy
 
 Use:
 
-- `rem` for typography, spacing, component dimensions, widths, and radii
-- `em` when a value should scale with the font size of its own element
-- `px` for fixed visual details such as thin borders and focus outlines
-- `%`, viewport units, and `clamp()` when sizing must respond to available space
+- `rem` for root-relative typography, spacing, component dimensions, widths, radii, and breakpoints
+- `em` when a value should scale with the font size of a particular element
+- `px` for fixed visual details such as hairline borders, focus outlines, and accessibility mechanics
+- unitless values where CSS defines proportional behavior, especially `line-height` and zero
+- `%`, viewport units, `fr`, and CSS math functions when sizing must respond to available space
 
-This keeps the framework scalable without giving up precise visual control.
+StyleWire does not ban any valid CSS unit. It chooses units according to what each dimension should follow.
 
 ## Why StyleWire Uses `rem`
 
@@ -27,9 +30,18 @@ The card padding remains tied to the root font size regardless of the font size 
 
 StyleWire does not set a pixel font size on `<html>`. This allows browser and user font-size preferences to remain effective.
 
+Common uses for `rem` include:
+
+- font sizes
+- spacing tokens
+- component heights and widths
+- content-width limits
+- border radii
+- media-query breakpoints
+
 ## When to Use `em`
 
-An `em` value is relative to the font size of the element where it is used. This is useful when a detail should grow or shrink with a particular component.
+For most properties, an `em` value is relative to the computed font size of the element where it is used. This is useful when a detail should grow or shrink with a particular component.
 
 ```css
 .badge {
@@ -38,6 +50,10 @@ An `em` value is relative to the font size of the element where it is used. This
 ```
 
 A larger badge font will automatically produce proportionally larger badge padding.
+
+When `em` is used for the `font-size` property itself, it is relative to the inherited font size from the parent rather than the element's final computed font size.
+
+StyleWire also uses `em` for small typographic details that should follow nearby text, such as underline offsets and inline-code sizing.
 
 Avoid using `em` for the main spacing system. Nested font-size changes can make `em` dimensions compound and become difficult to predict.
 
@@ -55,13 +71,64 @@ Pixels remain appropriate for details that should stay visually fixed.
 }
 ```
 
-StyleWire does not ban pixels. Replacing every pixel value with a relative unit would reduce clarity without improving accessibility.
+Typical `px` uses include:
 
-## Responsive Units
+- one-pixel borders
+- focus-outline thickness and offset
+- small shadows
+- implementation values used to visually hide accessible text
+
+StyleWire does not use `px` for the general spacing or typography scales. Replacing every pixel value with a relative unit would reduce clarity without improving accessibility.
+
+## Borders and Decorative Accents
+
+Not every visible edge serves the same purpose.
+
+Use `px` for hairline borders that should remain visually thin:
+
+```css
+.card {
+	border: 1px solid var(--sw-border);
+}
+```
+
+Use `rem` or `em` for wider decorative accents that should scale with the interface or component:
+
+```css
+.notice {
+	border-inline-start: 0.25rem solid var(--sw-accent);
+}
+```
+
+A notice rail is a component dimension, not a hairline border, so a scalable unit is intentional.
+
+## Unitless Values
+
+Use unitless values where CSS defines proportional behavior.
+
+```css
+body {
+	line-height: 1.6;
+}
+```
+
+A unitless `line-height` scales with each element's own font size and inherits cleanly. Using `1.6rem` would force the same absolute line height onto differently sized text.
+
+Zero should normally remain unitless:
+
+```css
+figure {
+	margin: 0;
+}
+```
+
+Do not add units to zero unless a particular CSS function or syntax requires them.
+
+## Responsive and Layout Units
 
 Use percentages and viewport-relative units when a dimension should respond to its container or the viewport.
 
-StyleWire combines these units with `clamp()` where a value needs minimum and maximum limits:
+StyleWire combines relative units with CSS math functions when values need limits:
 
 ```css
 :root {
@@ -70,6 +137,29 @@ StyleWire combines these units with `clamp()` where a value needs minimum and ma
 ```
 
 The gutter grows with the viewport but never becomes smaller than `1rem` or larger than `2rem`.
+
+Useful responsive tools include:
+
+- `%` for dimensions relative to a containing block
+- `vw` and `vh` for dimensions relative to the viewport
+- `svh`, `lvh`, and `dvh` when mobile viewport behavior requires a more specific height model
+- `fr` for distributing available space in CSS Grid
+- `min()`, `max()`, and `clamp()` for bounded responsive values
+- `minmax()` for flexible grid tracks
+
+Traditional `vh` remains valid when its browser behavior is acceptable. Prefer `svh`, `lvh`, or `dvh` when browser interface changes on mobile could materially affect the layout.
+
+## Breakpoints
+
+StyleWire uses `rem` for media-query breakpoints:
+
+```css
+@media (max-width: 40rem) {
+	/* narrow-screen rules */
+}
+```
+
+This keeps breakpoints aligned with the document's root scale instead of treating them as unrelated fixed pixels.
 
 ## Default Spacing Scale
 
@@ -88,13 +178,20 @@ StyleWire uses a root-relative spacing scale:
 
 The pixel column is only a familiar reference. Actual rendered sizes follow the user's root font size.
 
-## Practical Rule
+## Accessibility Exceptions
+
+Some accessibility techniques use tiny fixed dimensions for implementation rather than visual design.
+
+For example, visually hidden text may use `1px` dimensions and a negative pixel margin while remaining available to assistive technology. These values are intentional exceptions and should not be converted to the spacing scale.
+
+## Practical Review Rule
 
 When adding or reviewing StyleWire CSS, ask what the dimension should follow:
 
 - The document's root scale: use `rem`
 - The current component's text: use `em`
-- A fixed visual edge: use `px`
-- The available layout space: use `%`, viewport units, or `clamp()`
+- A fixed visual edge or implementation detail: use `px`
+- Proportional inherited behavior: use a unitless value
+- The available layout space: use `%`, viewport units, `fr`, or CSS math functions
 
 Do not convert units mechanically. Choose the unit that matches the intended behavior.
