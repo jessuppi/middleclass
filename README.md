@@ -94,7 +94,7 @@ Component spacing can be adjusted locally with custom properties:
 
 ## Customization
 
-Override tokens after loading StyleWire:
+Override variables after loading StyleWire:
 
 ```css
 :root {
