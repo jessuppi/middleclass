@@ -182,7 +182,7 @@ The public API consists of documented classes, documented CSS variables, support
 
 Internal selector structure and one-off property values are implementation details unless documented otherwise.
 
-StyleWire is still evolving. Public API changes should remain deliberate, narrowly scoped, and recorded in the changelog. Compatibility rules can become stricter as the framework matures.
+StyleWire is pre-1.0 and does not promise API stability. Documented classes, variables, theme attributes, and semantic element behavior may change between minor releases. Changes should remain deliberate, narrowly scoped, and recorded in the changelog.
 
 ## Accessibility Baseline
 
