@@ -109,6 +109,21 @@ Component spacing can be adjusted locally with custom properties:
 - `.muted` uses the secondary text color.
 - `.screen-reader-text` visually hides accessible text.
 
+Buttons and `.button` links use consistent spacing between their children. A direct SVG icon is normalized to `1em` so it follows the button text size without shrinking:
+
+```html
+<a class="button" href="/download/">
+	<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+		<path d="M12 3v12"></path>
+		<path d="m7 10 5 5 5-5"></path>
+		<path d="M5 21h14"></path>
+	</svg>
+	Download
+</a>
+```
+
+StyleWire does not bundle icons. Authors provide the SVG markup and should hide decorative icons from assistive technology.
+
 ## Customization
 
 Override variables after loading StyleWire:
