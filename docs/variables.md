@@ -120,7 +120,7 @@ Use the existing spacing scale before adding unrelated one-off spacing values. S
 | `--sw-surface-strong` | `#e8edf2` | `#25313d` | Stronger secondary surface |
 | `--sw-text` | `#18212b` | `#edf2f7` | Main text color |
 | `--sw-text-muted` | `#5d6875` | `#aab5c0` | Secondary text color |
-| `--sw-border` | `#7b8a99` | `#3a4856` | Standard border color |
+| `--sw-border` | `#7b8a99` | `#607080` | Standard border color |
 | `--sw-accent` | `#175cd3` | `#78a9ff` | Primary interactive accent |
 | `--sw-accent-hover` | `#114aa9` | `#a6c5ff` | Hover-state accent |
 | `--sw-accent-text` | `#ffffff` | `#101820` | Text shown on the accent color |
