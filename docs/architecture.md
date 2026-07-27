@@ -41,6 +41,7 @@ For example, HTML has no element whose meaning is:
 - a narrow reading column
 - a wrapping row of related controls
 - responsive equal-width columns
+- an item placed at the inline end of a horizontal flex layout
 - a visually contained card
 - a warning notice
 - a secondary or outlined button
@@ -84,6 +85,7 @@ The current public class API has three narrow roles. A fourth role may emerge la
 - `.stack`
 - `.cluster`
 - `.columns`
+- `.push-end`
 
 ### Components and Variants
 
