@@ -45,6 +45,7 @@ For example, HTML has no element whose meaning is:
 - a visually contained card
 - a warning notice
 - a secondary or outlined button
+- a native disclosure presented as an overlaid dropdown menu
 
 StyleWire uses a limited class API for these cases rather than attaching strong visual assumptions to generic elements such as `div`, `section`, or `article`.
 
@@ -97,6 +98,7 @@ The current public class API has three narrow roles. A fourth role may emerge la
 - `.success`
 - `.warning`
 - `.danger`
+- `.dropdown`
 
 ### Supporting Behavior
 
