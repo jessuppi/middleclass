@@ -199,6 +199,8 @@ Framework additions should preserve:
 
 A visual component should not require replacing a native interactive element with a generic element.
 
+See [Accessibility](accessibility.md) for the current framework baseline, author responsibilities, and basic testing guidance.
+
 ## Browser Approach
 
 StyleWire targets modern browsers without transpilation or compatibility bundles.
