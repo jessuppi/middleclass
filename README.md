@@ -74,6 +74,21 @@ StyleWire intentionally keeps its class API small.
 - `.stack` arranges children vertically with consistent spacing.
 - `.cluster` wraps related inline items such as buttons or navigation controls.
 - `.columns` creates responsive equal-width columns.
+- `.push-end` moves an item to the inline end of a horizontal flex layout.
+
+Use `.push-end` on an item inside a StyleWire navigation list or another horizontal flex layout such as `.cluster`:
+
+```html
+<nav aria-label="Primary navigation">
+	<ul>
+		<li><a href="/">Home</a></li>
+		<li><a href="/about/">About</a></li>
+		<li class="push-end"><a href="/account/">Account</a></li>
+	</ul>
+</nav>
+```
+
+The inline end is the right side in left-to-right documents and the left side in right-to-left documents. The class has no useful pushing effect unless its parent provides available horizontal space through a flex layout.
 
 Component spacing can be adjusted locally with custom properties:
 
