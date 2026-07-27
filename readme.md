@@ -105,6 +105,7 @@ Component spacing can be adjusted locally with custom properties:
 - `.card` creates a contained surface.
 - `.notice` creates a highlighted message.
 - `.success`, `.warning`, and `.danger` change a notice status accent.
+- `.dropdown` turns a native `details` element into an overlaid menu.
 - `.table-wrap` allows wide tables to scroll on narrow screens.
 - `.muted` uses the secondary text color.
 - `.screen-reader-text` visually hides accessible text.
@@ -123,6 +124,20 @@ Buttons and `.button` links use consistent spacing between their children. A dir
 ```
 
 StyleWire does not bundle icons. Authors provide the SVG markup and should hide decorative icons from assistive technology.
+
+Use `.dropdown` with a direct `summary` trigger followed by a direct `ul` menu. The menu remains ordinary HTML, and its links navigate normally:
+
+```html
+<details class="dropdown">
+	<summary>Products</summary>
+	<ul>
+		<li><a href="/products/one/">Product One</a></li>
+		<li><a href="/products/two/">Product Two</a></li>
+	</ul>
+</details>
+```
+
+The open menu is positioned over nearby content instead of expanding the document layout. Opening and closing remain native `details` behavior and require no JavaScript.
 
 ## Customization
 
