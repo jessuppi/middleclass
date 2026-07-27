@@ -75,7 +75,7 @@ Page-specific names such as `.homepage-box` or `.pricing-blue-column` belong in 
 
 ## Current Class Layers
 
-The current public class API has four narrow roles.
+The current public class API has three narrow roles. A fourth role may emerge later if the API develops a genuinely distinct group, but the framework does not target a fixed number of layers.
 
 ### Layout
 
