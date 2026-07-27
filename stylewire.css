@@ -1,5 +1,5 @@
 /*
- * StyleWire v0.1.0
+ * StyleWire v0.2.0
  * A lightweight, classless-first CSS framework for static websites.
  * https://github.com/jessuppi/stylewire
  */
@@ -204,6 +204,10 @@ footer {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
 	gap: var(--sw-columns-space, var(--sw-space-5));
+}
+
+.push-end {
+	margin-inline-start: auto;
 }
 
 /* typography */
