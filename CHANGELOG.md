@@ -4,6 +4,10 @@ All notable changes to StyleWire are documented in this file.
 
 The project follows semantic versioning.
 
+## 0.2.0 — 2026-07-27
+
+- Added the direction-aware `.push-end` layout helper for horizontal flex layouts.
+
 ## 0.1.0 — 2026-07-26
 
 - Added the initial classless-first stylesheet.
