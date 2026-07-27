@@ -9,9 +9,9 @@ StyleWire is still pre-1.0, so this guidance describes the current direction rat
 StyleWire currently provides:
 
 - visible keyboard focus through `:focus-visible`
-- light and dark color defaults intended to remain readable
+- light and dark defaults that aim to meet common WCAG AA contrast thresholds where StyleWire controls both colors
 - native form controls and button behavior rather than custom replacements
-- minimum control heights intended to support practical touch targets
+- minimum heights for text fields and button-like controls intended to support practical touch targets
 - layouts that can wrap and adapt on narrow screens
 - a `.screen-reader-text` class for visually hidden accessible text
 - no bundled JavaScript, animation, or interactive widget behavior
@@ -34,12 +34,14 @@ Classes such as `.success`, `.warning`, and `.danger` change presentation only. 
 
 ## Visually Hidden Text
 
-Use `.screen-reader-text` when text should remain available to assistive technology without being visually displayed:
+Use `.screen-reader-text` when text should remain available to assistive technology without being visually displayed. Decorative icon markup should be hidden from assistive technology:
 
 ```html
 <a href="/search/">
+	<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24">
+		<path d="M11 4a7 7 0 1 0 4.9 12l4 4 1.4-1.4-4-4A7 7 0 0 0 11 4Zm0 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10Z"></path>
+	</svg>
 	<span class="screen-reader-text">Open search</span>
-	Search icon
 </a>
 ```
 
