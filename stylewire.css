@@ -67,7 +67,7 @@
 		--sw-surface-strong: #25313d;
 		--sw-text: #edf2f7;
 		--sw-text-muted: #aab5c0;
-		--sw-border: #3a4856;
+		--sw-border: #607080;
 		--sw-accent: #78a9ff;
 		--sw-accent-hover: #a6c5ff;
 		--sw-accent-text: #101820;
@@ -86,7 +86,7 @@
 	--sw-surface-strong: #25313d;
 	--sw-text: #edf2f7;
 	--sw-text-muted: #aab5c0;
-	--sw-border: #3a4856;
+	--sw-border: #607080;
 	--sw-accent: #78a9ff;
 	--sw-accent-hover: #a6c5ff;
 	--sw-accent-text: #101820;
@@ -489,7 +489,7 @@ textarea {
 input::placeholder,
 textarea::placeholder {
 	color: var(--sw-text-muted);
-	opacity: 0.8;
+	opacity: 1;
 }
 
 input[type="checkbox"],
