@@ -59,6 +59,7 @@ Open `index.html` to see the current elements and components together.
 ## Documentation
 
 - [Architecture](docs/architecture.md) explains the classless-first model, limited class API, selector strategy, and framework boundaries.
+- [Accessibility](docs/accessibility.md) describes the current accessibility baseline, author responsibilities, and basic testing expectations.
 - [Sizing and units](docs/sizing.md) explains when StyleWire uses `rem`, `em`, `px`, unitless values, and responsive layout units.
 - [CSS variables](docs/variables.md) documents the reusable values available for framework customization.
 
