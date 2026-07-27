@@ -1,5 +1,5 @@
 /*
- * StyleWire v0.2.0
+ * StyleWire v0.3.0
  * A lightweight, classless-first CSS framework for static websites.
  * https://github.com/jessuppi/stylewire
  */
@@ -521,6 +521,7 @@ input[type="submit"] {
 	min-height: 2.75rem;
 	align-items: center;
 	justify-content: center;
+	gap: var(--sw-space-2);
 	padding: var(--sw-space-3) var(--sw-space-5);
 	border: var(--sw-border-width) solid var(--sw-accent);
 	border-radius: var(--sw-radius-small);
@@ -531,6 +532,13 @@ input[type="submit"] {
 	text-align: center;
 	text-decoration: none;
 	cursor: pointer;
+}
+
+button > svg,
+.button > svg {
+	width: 1em;
+	height: 1em;
+	flex: 0 0 auto;
 }
 
 button:hover,
