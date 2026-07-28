@@ -34,7 +34,7 @@ Site variables should use a different prefix or an unambiguous project-specific 
 
 The variables documented here are the current intended customization points for StyleWire.
 
-The formal compatibility policy for variable renames, removals, and deprecations is still pending while the framework continues to evolve. Until that policy is finalized, changes to documented variables should remain deliberate and be recorded in the changelog.
+StyleWire is pre-1.0, so documented variables may still change between minor releases. Renames, removals, and behavior changes should remain deliberate and be recorded in the changelog.
 
 ## Value Type Guidance
 
@@ -47,7 +47,7 @@ Current variables expect values in these general categories:
 | `--sw-line-height` | A unitless number |
 | Color variables | A valid CSS color |
 
-The formal value-type contract is still pending while StyleWire continues to evolve. Until it is finalized, overrides should preserve the existing value category of each variable.
+Overrides should preserve the existing value category of each variable.
 
 ## Overriding Variables
 
@@ -185,8 +185,6 @@ They can be set directly on a component:
 Each component variable falls back to the normal StyleWire spacing scale when it is not set.
 
 Because CSS variables inherit, setting a component variable on a shared ancestor can affect every nested matching component. Set the variable directly on a specific `.stack`, `.cluster`, or `.columns` element when only one instance should change.
-
-The formal scoping policy for nested component variables is still pending while StyleWire continues to evolve.
 
 ## Scope and Inheritance
 
