@@ -1,6 +1,6 @@
 # Architecture
 
-StyleWire is a lightweight, classless-first CSS framework for semantic static websites.
+MiddleClass is a lightweight, classless-first CSS framework for semantic static websites.
 
 Its architecture gives ordinary HTML useful defaults while reserving a small optional class layer for layout and presentation choices that HTML semantics cannot express by themselves.
 
@@ -10,7 +10,7 @@ This document describes the current direction. Details may evolve, but changes s
 
 Classless-first means a useful document should look intentional before component classes are added.
 
-StyleWire styles ordinary elements such as:
+MiddleClass styles ordinary elements such as:
 
 - headings, paragraphs, lists, and links
 - navigation
@@ -48,7 +48,7 @@ For example, HTML has no element whose meaning is:
 - a native disclosure presented as an overlaid dropdown menu
 - a dropdown aligned to a different logical edge or opening direction
 
-StyleWire uses a limited class API for these cases rather than attaching strong visual assumptions to generic elements such as `div`, `section`, or `article`.
+MiddleClass uses a limited class API for these cases rather than attaching strong visual assumptions to generic elements such as `div`, `section`, or `article`.
 
 ```html
 <div class="columns">
@@ -57,7 +57,7 @@ StyleWire uses a limited class API for these cases rather than attaching strong 
 </div>
 ```
 
-This keeps semantic HTML useful without forcing StyleWire to guess the author's intent.
+This keeps semantic HTML useful without forcing MiddleClass to guess the author's intent.
 
 ## Class Admission Rules
 
@@ -72,7 +72,7 @@ A new public class should normally satisfy all of these conditions:
 
 A class should not be added merely because one declaration is convenient to reuse.
 
-StyleWire should avoid utility classes such as `.mt-4`, `.flex`, `.rounded`, or `.text-center`. Those classes expose individual declarations and encourage large class lists rather than readable semantic markup.
+MiddleClass should avoid utility classes such as `.mt-4`, `.flex`, `.rounded`, or `.text-center`. Those classes expose individual declarations and encourage large class lists rather than readable semantic markup.
 
 Page-specific names such as `.homepage-box` or `.pricing-blue-column` belong in the site's own stylesheet, not the framework.
 
@@ -113,7 +113,7 @@ These classes are optional. Semantic element defaults remain the foundation of t
 
 ## Selector Strategy
 
-StyleWire keeps selectors understandable and intentionally low in specificity.
+MiddleClass keeps selectors understandable and intentionally low in specificity.
 
 Use:
 
@@ -133,13 +133,13 @@ Avoid:
 
 The `.screen-reader-text` accessibility utility may use narrowly targeted implementation exceptions where required for reliable visually hidden content.
 
-A site should normally be able to override StyleWire by loading its own stylesheet after `stylewire.css`, without specificity escalation.
+A site should normally be able to override MiddleClass by loading its own stylesheet after `middleclass.css`, without specificity escalation.
 
 ## One-File Source
 
 The distributed framework remains one readable CSS file.
 
-StyleWire does not require:
+MiddleClass does not require:
 
 - a build step
 - a package manager
@@ -155,7 +155,7 @@ Documentation and the demonstration page may use separate files, but the framewo
 
 ## Stylesheet Order
 
-`stylewire.css` is organized from broad foundations to narrower behavior:
+`middleclass.css` is organized from broad foundations to narrower behavior:
 
 1. variables and color themes
 2. reset rules
@@ -175,7 +175,7 @@ New rules should be placed in the most relevant existing section. A new section 
 
 ## Variables and Local Customization
 
-Public CSS variables hold shared framework values such as colors, spacing, widths, radii, and typography settings.
+Public CSS variables use the `--mc-` prefix and hold shared framework values such as colors, spacing, widths, radii, and typography settings.
 
 Variables provide the normal customization layer. Sites should prefer overriding a documented variable when changing a shared framework choice and use site-specific CSS for isolated behavior.
 
@@ -189,7 +189,7 @@ The public API consists of documented classes, documented CSS variables, support
 
 Internal selector structure and one-off property values are implementation details unless documented otherwise.
 
-StyleWire is pre-1.0 and does not promise API stability. Documented classes, variables, theme attributes, and semantic element behavior may change between minor releases. Changes should remain deliberate, narrowly scoped, and recorded in the changelog.
+MiddleClass is pre-1.0 and does not promise API stability. Documented classes, variables, theme attributes, and semantic element behavior may change between minor releases. Changes should remain deliberate, narrowly scoped, and recorded in the changelog.
 
 ## Accessibility Baseline
 
@@ -210,7 +210,7 @@ See [Accessibility](accessibility.md) for the current framework baseline, author
 
 ## Browser Approach
 
-StyleWire targets modern browsers without transpilation or compatibility bundles.
+MiddleClass targets modern browsers without transpilation or compatibility bundles.
 
 For now, modern browsers means the current stable releases of Chrome, Edge, Firefox, and Safari. Internet Explorer and legacy browser-specific compatibility work are out of scope.
 
@@ -231,7 +231,7 @@ When the answer is uncertain, leaving the feature out is usually safer. Sites ca
 
 ## Out of Scope
 
-StyleWire is not intended to become:
+MiddleClass is not intended to become:
 
 - a comprehensive utility framework
 - a JavaScript component library
