@@ -46,6 +46,7 @@ For example, HTML has no element whose meaning is:
 - a warning notice
 - a secondary or outlined button
 - a native disclosure presented as an overlaid dropdown menu
+- a dropdown aligned to a different logical edge or opening direction
 
 StyleWire uses a limited class API for these cases rather than attaching strong visual assumptions to generic elements such as `div`, `section`, or `article`.
 
@@ -99,6 +100,8 @@ The current public class API has three narrow roles. A fourth role may emerge la
 - `.warning`
 - `.danger`
 - `.dropdown`
+- `.dropdown-start`
+- `.dropup`
 
 ### Supporting Behavior
 
@@ -106,7 +109,7 @@ The current public class API has three narrow roles. A fourth role may emerge la
 - `.muted`
 - `.screen-reader-text`
 
-These classes are optional. Semantic element defaults remain the foundation of the framework.
+These classes are optional. Semantic element defaults remain the foundation of the framework. See [Classes](classes.md) for the canonical usage reference.
 
 ## Selector Strategy
 
