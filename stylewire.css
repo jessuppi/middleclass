@@ -152,6 +152,7 @@ body {
 	font-family: var(--sw-font-sans);
 	font-size: var(--sw-font-size);
 	line-height: var(--sw-line-height);
+	overflow-wrap: break-word;
 	text-rendering: optimizeLegibility;
 }
 
@@ -191,6 +192,10 @@ footer {
 	display: flex;
 	flex-direction: column;
 	gap: var(--sw-stack-space, var(--sw-space-5));
+}
+
+.stack > * {
+	margin-block: 0;
 }
 
 .cluster {
@@ -255,7 +260,7 @@ table,
 figure,
 form,
 details {
-	margin-block-end: var(--sw-space-5);
+	margin-block: 0 var(--sw-space-5);
 }
 
 h2,
@@ -455,6 +460,7 @@ th {
 /* forms */
 
 fieldset {
+	min-inline-size: 0;
 	margin: 0 0 var(--sw-space-5);
 	padding: var(--sw-space-5);
 	border: var(--sw-border-width) solid var(--sw-border);
@@ -587,6 +593,26 @@ input[type="reset"].outline:hover,
 input[type="submit"].outline:hover {
 	background: var(--sw-accent);
 	color: var(--sw-accent-text);
+}
+
+button.secondary.outline,
+.button.secondary.outline,
+input[type="button"].secondary.outline,
+input[type="reset"].secondary.outline,
+input[type="submit"].secondary.outline {
+	border-color: var(--sw-border);
+	background: transparent;
+	color: var(--sw-text);
+}
+
+button.secondary.outline:hover,
+.button.secondary.outline:hover,
+input[type="button"].secondary.outline:hover,
+input[type="reset"].secondary.outline:hover,
+input[type="submit"].secondary.outline:hover {
+	border-color: var(--sw-text-muted);
+	background: var(--sw-surface);
+	color: var(--sw-text);
 }
 
 /* components */
