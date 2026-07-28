@@ -15,7 +15,9 @@
 					<li><strong>StyleWire</strong></li>
 					<li><a href="#principles">Principles</a></li>
 					<li><a href="#components">Components</a></li>
+					<li><a href="#content">Content</a></li>
 					<li><a href="#forms">Forms</a></li>
+					<li><a href="#documentation">Documentation</a></li>
 					<li class="push-end"><a href="https://github.com/jessuppi/stylewire">GitHub</a></li>
 				</ul>
 			</nav>
@@ -25,13 +27,20 @@
 	<main>
 		<div class="container stack">
 			<section class="reading-width">
-				<p class="muted">Classless-first CSS for static websites</p>
+				<p class="muted">StyleWire 0.1.0</p>
 				<h1>Good defaults, minimal markup.</h1>
 				<p>StyleWire gives semantic HTML a clean, responsive foundation while keeping layout and component classes small and predictable.</p>
 				<div class="cluster">
-					<a class="button" href="stylewire.css">View stylesheet</a>
-					<a class="button outline" href="https://github.com/jessuppi/stylewire">Browse the repository</a>
+					<a class="button" href="stylewire.css" download>Download CSS</a>
+					<a class="button outline" href="#installation">Installation</a>
+					<a class="button secondary outline" href="https://github.com/jessuppi/stylewire">Browse the repository</a>
 				</div>
+			</section>
+
+			<section id="installation" class="reading-width">
+				<h2>Installation</h2>
+				<p>Copy the single stylesheet into your project and link it from the document head. There is no build step, package manager, or JavaScript dependency.</p>
+				<pre><code>&lt;link rel="stylesheet" href="/assets/stylewire.css"&gt;</code></pre>
 			</section>
 
 			<section id="principles">
@@ -47,14 +56,14 @@
 					</article>
 					<article class="card">
 						<h3>Easy to override</h3>
-						<p>Public custom properties control the colors, spacing, widths, typography, and component shape.</p>
+						<p>Public custom properties control colors, spacing, widths, typography, and component shape.</p>
 					</article>
 				</div>
 			</section>
 
 			<section id="components">
 				<h2>Components</h2>
-				<p>StyleWire adds only a few classes where semantic HTML cannot express layout or presentation by itself.</p>
+				<p>StyleWire adds classes only where semantic HTML cannot express layout or presentation by itself.</p>
 
 				<div class="columns">
 					<article class="card">
@@ -67,15 +76,26 @@
 						<p>Native buttons and submit inputs share the same base style. Links can opt in with <code>.button</code>.</p>
 						<div class="cluster">
 							<button type="button">Primary</button>
-							<a class="button secondary" href="#components">Secondary</a>
+							<button class="secondary" type="button">Secondary</button>
+							<a class="button outline" href="#components">Outline</a>
+							<a class="button secondary outline" href="#documentation">Secondary outline</a>
 						</div>
 					</article>
 				</div>
 
-				<div class="notice success">
-					<strong>Small public API.</strong> Layout uses <code>.container</code>, <code>.reading-width</code>, <code>.stack</code>, <code>.cluster</code>, <code>.columns</code>, and <code>.push-end</code>.
+				<div class="stack">
+					<div class="notice success">
+						<strong>Success:</strong> The release candidate passed its automated checks.
+					</div>
+					<div class="notice warning">
+						<strong>Warning:</strong> Test local color overrides in both supported themes.
+					</div>
+					<div class="notice danger">
+						<strong>Danger:</strong> Do not rely on color alone to communicate status.
+					</div>
 				</div>
 
+				<h3>Dropdown variations</h3>
 				<div class="cluster">
 					<details class="dropdown">
 						<summary>End aligned</summary>
@@ -98,6 +118,13 @@
 							<li><a href="#forms">Forms</a></li>
 						</ul>
 					</details>
+					<details class="dropdown dropdown-start dropup">
+						<summary>Start and upward</summary>
+						<ul>
+							<li><a href="#principles">Principles</a></li>
+							<li><a href="#forms">Forms</a></li>
+						</ul>
+					</details>
 				</div>
 
 				<details>
@@ -106,14 +133,45 @@
 				</details>
 			</section>
 
-			<section>
+			<section id="content">
 				<h2>Content elements</h2>
+				<div class="columns">
+					<article class="card">
+						<h3>Unordered list</h3>
+						<ul>
+							<li>Semantic defaults</li>
+							<li>Responsive layouts</li>
+							<li>Theme-aware colors</li>
+						</ul>
+					</article>
+					<article class="card">
+						<h3>Ordered list</h3>
+						<ol>
+							<li>Copy the stylesheet</li>
+							<li>Link it from HTML</li>
+							<li>Add classes only when needed</li>
+						</ol>
+					</article>
+					<article class="card">
+						<h3>Definition list</h3>
+						<dl>
+							<dt>Classless-first</dt>
+							<dd>Useful defaults before optional component classes.</dd>
+							<dt>Static-friendly</dt>
+							<dd>No build tools or runtime dependencies.</dd>
+						</dl>
+					</article>
+				</div>
+
 				<div class="reading-width">
 					<blockquote>
 						<p>A framework should make the common path easy without making custom work difficult.</p>
 					</blockquote>
 					<p>Inline <code>code</code>, keyboard input such as <kbd>Ctrl</kbd> + <kbd>S</kbd>, <mark>highlighted text</mark>, and ordinary links receive useful defaults.</p>
-					<pre><code>&lt;link rel="stylesheet" href="stylewire.css"&gt;</code></pre>
+					<p>Long text wraps rather than forcing page overflow: <a href="https://example.com/releases/stylewire/0.1.0/documentation/very-long-static-site-example">https://example.com/releases/stylewire/0.1.0/documentation/very-long-static-site-example</a></p>
+					<pre><code>&lt;div class="container reading-width"&gt;
+	&lt;h1&gt;Hello, world.&lt;/h1&gt;
+&lt;/div&gt;</code></pre>
 				</div>
 
 				<div class="table-wrap">
@@ -147,34 +205,79 @@
 				<h2>Forms</h2>
 				<form action="#" method="get">
 					<fieldset>
-						<legend>Example form</legend>
+						<legend>Example fields</legend>
 
 						<label for="name">Name</label>
 						<input id="name" name="name" type="text" autocomplete="name" placeholder="Your name">
 
-						<label for="email">Email</label>
-						<input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com">
+						<label for="email">Disabled email</label>
+						<input id="email" name="email" type="email" value="name@example.com" disabled>
+
+						<label for="topic">Topic</label>
+						<select id="topic" name="topic">
+							<option value="">Choose a topic</option>
+							<option value="layout">Layout</option>
+							<option value="components">Components</option>
+							<option value="accessibility">Accessibility</option>
+						</select>
 
 						<label for="message">Message</label>
 						<textarea id="message" name="message" placeholder="Write a short message"></textarea>
+					</fieldset>
 
+					<fieldset>
+						<legend>Example choices</legend>
 						<label>
-							<input type="checkbox" name="updates">
-							Send occasional updates
+							<input type="radio" name="frequency" value="weekly" checked>
+							Weekly updates
 						</label>
+						<label>
+							<input type="radio" name="frequency" value="monthly">
+							Monthly updates
+						</label>
+						<label>
+							<input type="checkbox" name="examples">
+							Include code examples
+						</label>
+						<label for="density">Interface density</label>
+						<input id="density" name="density" type="range" min="1" max="5" value="3">
 					</fieldset>
 
 					<div class="cluster">
 						<button type="submit">Submit example</button>
 						<button type="reset" class="secondary">Reset</button>
+						<button type="button" disabled>Disabled</button>
 					</div>
 				</form>
+			</section>
+
+			<section id="documentation">
+				<h2>Documentation</h2>
+				<p>The complete reference remains in the GitHub repository so the framework and its documentation can evolve together.</p>
+				<div class="columns">
+					<article class="card">
+						<h3><a href="https://github.com/jessuppi/stylewire/blob/master/docs/classes.md">Classes</a></h3>
+						<p>Every supported public class, expected markup, combinations, and limitations.</p>
+					</article>
+					<article class="card">
+						<h3><a href="https://github.com/jessuppi/stylewire/blob/master/docs/variables.md">CSS variables</a></h3>
+						<p>Typography, spacing, layout, color, and component customization points.</p>
+					</article>
+					<article class="card">
+						<h3><a href="https://github.com/jessuppi/stylewire/blob/master/docs/accessibility.md">Accessibility</a></h3>
+						<p>Framework defaults, author responsibilities, and the release testing baseline.</p>
+					</article>
+					<article class="card">
+						<h3><a href="https://github.com/jessuppi/stylewire/blob/master/docs/architecture.md">Architecture</a></h3>
+						<p>The classless-first model, class admission rules, selector strategy, and project boundaries.</p>
+					</article>
+				</div>
 			</section>
 		</div>
 	</main>
 
 	<footer>
-		<div class="container">
+		<div class="container stack">
 			<p>StyleWire is a lightweight CSS foundation for semantic static websites.</p>
 		</div>
 	</footer>
