@@ -70,7 +70,7 @@ StyleWire intentionally keeps its public class API small:
 
 - Layout: `.container`, `.reading-width`, `.stack`, `.cluster`, `.columns`, and `.push-end`
 - Buttons and variants: `.button`, `.secondary`, and `.outline`
-- Content components: `.card`, `.notice`, `.success`, `.warning`, `.danger`, and `.dropdown`
+- Content components: `.card`, `.notice`, `.success`, `.warning`, `.danger`, `.dropdown`, `.dropdown-start`, and `.dropup`
 - Supporting behavior: `.table-wrap`, `.muted`, and `.screen-reader-text`
 
 See [Classes](docs/classes.md) for the complete usage reference. Semantic element defaults remain the foundation of the framework, and site-specific presentation should remain in the site's own stylesheet.
