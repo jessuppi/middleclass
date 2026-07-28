@@ -65,14 +65,14 @@ Color variables require theme-aware selectors because MiddleClass's theme rules 
 
 ```css
 @media (prefers-color-scheme: dark) {
-	:root:not([data-theme="light"]) {
+	:root:not([data-theme]) {
 		--mc-accent: #b69cff;
 		--mc-accent-hover: #d1c1ff;
 	}
 }
 ```
 
-Use `[data-theme="light"]` and `[data-theme="dark"]` for explicit theme overrides, as shown in the theme section below.
+Automatic dark mode applies only when the root element has no `data-theme` attribute. Use `[data-theme="light"]` and `[data-theme="dark"]` for explicit theme overrides, as shown in the theme section below.
 
 There is normally no need to edit `middleclass.css` directly.
 
