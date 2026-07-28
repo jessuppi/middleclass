@@ -41,6 +41,8 @@ Arranges direct children vertically with consistent spacing.
 </div>
 ```
 
+StyleWire removes the direct children's outer block margins so the stack gap is the single source of spacing between them. Content inside each child keeps its normal document rhythm.
+
 Override the spacing for one stack with `--sw-stack-space`:
 
 ```html
@@ -129,7 +131,7 @@ It may be combined with `.secondary`:
 <a class="button secondary outline" href="/source/">View source</a>
 ```
 
-Supported on native buttons, `.button` links, and button-type inputs.
+The combined treatment uses neutral text and border colors with a subtle neutral hover surface. Both variants are supported on native buttons, `.button` links, and button-type inputs.
 
 ## Content Components
 
