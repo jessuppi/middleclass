@@ -14,3 +14,4 @@ The project follows semantic versioning.
 - Added light, dark, and system-aware color themes.
 - Added a static demonstration page.
 - Added project usage and customization documentation.
+- Added a canonical reference for every supported public class.
