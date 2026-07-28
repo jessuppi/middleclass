@@ -713,6 +713,24 @@ details.dropdown > summary + ul {
 	list-style: none;
 }
 
+details.dropdown.dropdown-start > summary + ul {
+	inset-inline-start: 0;
+	inset-inline-end: auto;
+}
+
+details.dropdown.dropup > summary + ul {
+	inset-block-start: auto;
+	inset-block-end: calc(100% + var(--sw-space-2));
+}
+
+details.dropdown.dropup > summary::after {
+	transform: rotate(225deg) translate(-0.1em, -0.1em);
+}
+
+details.dropdown.dropup[open] > summary::after {
+	transform: rotate(45deg) translate(-0.1em, -0.1em);
+}
+
 details.dropdown > summary + ul > li {
 	margin: 0;
 }
