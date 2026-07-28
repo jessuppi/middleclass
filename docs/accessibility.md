@@ -32,6 +32,24 @@ Sites using StyleWire should still provide:
 
 Classes such as `.success`, `.warning`, and `.danger` change presentation only. The surrounding content must communicate the actual meaning.
 
+## Details and Dropdowns
+
+Unclassed `details` elements remain block-style disclosures for expandable content. StyleWire also supports `details.dropdown` when the same native disclosure behavior should present a direct `ul` as an overlaid link menu without shifting nearby layout.
+
+The `summary` remains the native keyboard-operable trigger, and links inside the list remain ordinary links. Authors should use clear summary text, keep each destination understandable out of context, and preserve the required direct structure:
+
+```html
+<details class="dropdown">
+	<summary>Products</summary>
+	<ul>
+		<li><a href="/products/one/">Product One</a></li>
+		<li><a href="/products/two/">Product Two</a></li>
+	</ul>
+</details>
+```
+
+The CSS-only component does not add application-style menu roles or JavaScript behavior such as closing when a user clicks elsewhere. Ordinary navigation links should not be given `menu` or `menuitem` roles.
+
 ## Visually Hidden Text
 
 Use `.screen-reader-text` when text should remain available to assistive technology without being visually displayed. Decorative icon markup should be hidden from assistive technology:
