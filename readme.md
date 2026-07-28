@@ -59,85 +59,21 @@ Open `index.html` to see the current elements and components together.
 ## Documentation
 
 - [Architecture](docs/architecture.md) explains the classless-first model, limited class API, selector strategy, and framework boundaries.
+- [Classes](docs/classes.md) is the canonical reference for every supported public class, its expected markup, and important limitations.
 - [Accessibility](docs/accessibility.md) describes the current accessibility baseline, author responsibilities, and basic testing expectations.
 - [Sizing and units](docs/sizing.md) explains when StyleWire uses `rem`, `em`, `px`, unitless values, and responsive layout units.
 - [CSS variables](docs/variables.md) documents the reusable values available for framework customization.
 
 ## Public classes
 
-StyleWire intentionally keeps its class API small.
+StyleWire intentionally keeps its public class API small:
 
-### Layout
+- Layout: `.container`, `.reading-width`, `.stack`, `.cluster`, `.columns`, and `.push-end`
+- Buttons and variants: `.button`, `.secondary`, and `.outline`
+- Content components: `.card`, `.notice`, `.success`, `.warning`, `.danger`, and `.dropdown`
+- Supporting behavior: `.table-wrap`, `.muted`, and `.screen-reader-text`
 
-- `.container` centers content within the main site width and responsive gutters.
-- `.reading-width` limits long-form content to a comfortable line length.
-- `.stack` arranges children vertically with consistent spacing.
-- `.cluster` wraps related inline items such as buttons or navigation controls.
-- `.columns` creates responsive equal-width columns.
-- `.push-end` moves an item to the inline end of a horizontal flex layout.
-
-Use `.push-end` on an item inside a StyleWire navigation list or another horizontal flex layout such as `.cluster`:
-
-```html
-<nav aria-label="Primary navigation">
-	<ul>
-		<li><a href="/">Home</a></li>
-		<li><a href="/about/">About</a></li>
-		<li class="push-end"><a href="/account/">Account</a></li>
-	</ul>
-</nav>
-```
-
-The inline end is the right side in left-to-right documents and the left side in right-to-left documents. The class has no useful pushing effect unless its parent provides available horizontal space through a flex layout.
-
-Component spacing can be adjusted locally with custom properties:
-
-```html
-<div class="columns" style="--sw-columns-space: 2rem;">
-	...
-</div>
-```
-
-### Components
-
-- `.button` gives a link button presentation.
-- `.secondary` and `.outline` provide alternate button styles.
-- `.card` creates a contained surface.
-- `.notice` creates a highlighted message.
-- `.success`, `.warning`, and `.danger` change a notice status accent.
-- `.dropdown` turns a native `details` element into an overlaid menu.
-- `.table-wrap` allows wide tables to scroll on narrow screens.
-- `.muted` uses the secondary text color.
-- `.screen-reader-text` visually hides accessible text.
-
-Buttons and `.button` links use consistent spacing between their children. A direct SVG icon is normalized to `1em` so it follows the button text size without shrinking:
-
-```html
-<a class="button" href="/download/">
-	<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-		<path d="M12 3v12"></path>
-		<path d="m7 10 5 5 5-5"></path>
-		<path d="M5 21h14"></path>
-	</svg>
-	Download
-</a>
-```
-
-StyleWire does not bundle icons. Authors provide the SVG markup and should hide decorative icons from assistive technology.
-
-Use `.dropdown` with a direct `summary` trigger followed by a direct `ul` menu. The menu remains ordinary HTML, and its links navigate normally:
-
-```html
-<details class="dropdown">
-	<summary>Products</summary>
-	<ul>
-		<li><a href="/products/one/">Product One</a></li>
-		<li><a href="/products/two/">Product Two</a></li>
-	</ul>
-</details>
-```
-
-The open menu is positioned over nearby content instead of expanding the document layout. Opening and closing remain native `details` behavior and require no JavaScript.
+See [Classes](docs/classes.md) for the complete usage reference. Semantic element defaults remain the foundation of the framework, and site-specific presentation should remain in the site's own stylesheet.
 
 ## Customization
 
