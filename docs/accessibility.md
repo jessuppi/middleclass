@@ -1,15 +1,15 @@
 # Accessibility
 
-StyleWire aims to provide accessible CSS defaults for semantic static websites. It does not guarantee that every site using the framework is accessible, because markup, content, scripting, and local overrides remain the site's responsibility.
+MiddleClass aims to provide accessible CSS defaults for semantic static websites. It does not guarantee that every site using the framework is accessible, because markup, content, scripting, and local overrides remain the site's responsibility.
 
-StyleWire is still pre-1.0, so this guidance describes the current direction rather than a permanent compatibility contract.
+MiddleClass is still pre-1.0, so this guidance describes the current direction rather than a permanent compatibility contract.
 
 ## Framework Baseline
 
-StyleWire currently provides:
+MiddleClass currently provides:
 
 - visible keyboard focus through `:focus-visible`
-- light and dark defaults that aim to meet common WCAG AA contrast thresholds where StyleWire controls both colors
+- light and dark defaults that aim to meet common WCAG AA contrast thresholds where MiddleClass controls both colors
 - native form controls and button behavior rather than custom replacements
 - minimum heights for text fields and button-like controls intended to support practical touch targets
 - layouts that can wrap and adapt on narrow screens
@@ -20,7 +20,7 @@ Framework changes should preserve native semantics, keyboard access, text resizi
 
 ## Author Responsibilities
 
-Sites using StyleWire should still provide:
+Sites using MiddleClass should still provide:
 
 - meaningful landmarks and heading order
 - labels for form controls
@@ -34,7 +34,7 @@ Classes such as `.success`, `.warning`, and `.danger` change presentation only. 
 
 ## Details and Dropdowns
 
-Unclassed `details` elements remain block-style disclosures for expandable content. StyleWire also supports `details.dropdown` when the same native disclosure behavior should present a direct `ul` as an overlaid link menu without shifting nearby layout.
+Unclassed `details` elements remain block-style disclosures for expandable content. MiddleClass also supports `details.dropdown` when the same native disclosure behavior should present a direct `ul` as an overlaid link menu without shifting nearby layout.
 
 The `summary` remains the native keyboard-operable trigger, and links inside the list remain ordinary links. Authors should use clear summary text, keep each destination understandable out of context, and preserve the required direct structure:
 
@@ -71,11 +71,11 @@ Do not use visually hidden text to repair unclear structure when visible wording
 
 ## Motion
 
-StyleWire currently includes no animations or transitions. If motion is added later, it should remain limited and respect `prefers-reduced-motion` where appropriate.
+MiddleClass currently includes no animations or transitions. If motion is added later, it should remain limited and respect `prefers-reduced-motion` where appropriate.
 
 ## Basic Testing
 
-Before releasing a framework change or a site built with StyleWire, check at least:
+Before releasing a framework change or a site built with MiddleClass, check at least:
 
 1. Keyboard navigation and visible focus.
 2. Light and dark color schemes.
@@ -88,4 +88,4 @@ Automated tools can help identify problems, but they do not replace manual keybo
 
 ## Scope
 
-StyleWire does not currently claim formal WCAG conformance. The project should continue improving its defaults while keeping the framework small, semantic, and easy for sites to override.
+MiddleClass does not currently claim formal WCAG conformance. The project should continue improving its defaults while keeping the framework small, semantic, and easy for sites to override.
