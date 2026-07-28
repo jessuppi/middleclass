@@ -1,12 +1,13 @@
 # Changelog
 
-All notable changes to StyleWire are documented in this file.
+All notable changes to MiddleClass are documented in this file.
 
 The project follows semantic versioning.
 
 ## 0.1.0 — 2026-07-28
 
 - Added the initial classless-first stylesheet.
+- Added the `--mc-` public custom-property namespace.
 - Added responsive layout primitives and a small component set.
 - Added the direction-aware `.push-end` layout helper for horizontal flex layouts.
 - Added consistent spacing and normalized direct SVG sizing for buttons and `.button` links.
