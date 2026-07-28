@@ -4,7 +4,7 @@ All notable changes to MiddleClass are documented in this file.
 
 The project follows semantic versioning.
 
-## 0.1.0 — 2026-07-28
+## 0.1.0
 
 - Added the initial classless-first stylesheet.
 - Added the `--mc-` public custom-property namespace.
@@ -17,6 +17,8 @@ The project follows semantic versioning.
 - Added the native `details.dropdown` overlay component for link menus without layout shifts.
 - Added `.dropdown-start` and `.dropup` modifiers for logical alignment and opening direction.
 - Added light, dark, and system-aware color themes.
+- Made explicit theme attributes take precedence over automatic system theming.
+- Scoped disclosure summary spacing to direct children so nested disclosures remain independent.
 - Added copyright and MIT license metadata to the distributed stylesheet header.
 - Normalized document block margins and made `.stack` direct-child spacing deterministic.
 - Added long-text wrapping and safer fieldset sizing for narrow layouts.
