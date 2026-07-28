@@ -1,10 +1,10 @@
-# StyleWire
+# MiddleClass
 
-StyleWire is a lightweight, classless-first CSS framework for semantic static websites.
+MiddleClass is a lightweight, classless-first CSS framework for semantic static websites.
 
 It gives plain HTML a clean responsive foundation, then adds a small set of layout and component classes for choices that semantic markup cannot express by itself.
 
-**Live demo:** [jessuppi.github.io/stylewire](https://jessuppi.github.io/stylewire/)
+**Live demo:** [jessuppi.github.io/middleclass](https://jessuppi.github.io/middleclass/)
 
 ## Goals
 
@@ -17,10 +17,10 @@ It gives plain HTML a clean responsive foundation, then adds a small set of layo
 
 ## Usage
 
-Download or copy [`stylewire.css`](stylewire.css) into a site and link it from the document head:
+Download or copy [`middleclass.css`](middleclass.css) into a site and link it from the document head:
 
 ```html
-<link rel="stylesheet" href="/assets/stylewire.css">
+<link rel="stylesheet" href="/assets/middleclass.css">
 ```
 
 A minimal page can use semantic HTML without component classes:
@@ -32,7 +32,7 @@ A minimal page can use semantic HTML without component classes:
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Example</title>
-	<link rel="stylesheet" href="stylewire.css">
+	<link rel="stylesheet" href="middleclass.css">
 </head>
 <body>
 	<header>
@@ -49,26 +49,26 @@ A minimal page can use semantic HTML without component classes:
 	<main>
 		<div class="container reading-width">
 			<h1>Hello, world.</h1>
-			<p>StyleWire handles the foundation while the document remains ordinary HTML.</p>
+			<p>MiddleClass handles the foundation while the document remains ordinary HTML.</p>
 		</div>
 	</main>
 </body>
 </html>
 ```
 
-Use the [live demonstration](https://jessuppi.github.io/stylewire/) as a visual reference for semantic elements, public classes, forms, themes, and responsive behavior.
+Use the [live demonstration](https://jessuppi.github.io/middleclass/) as a visual reference for semantic elements, public classes, forms, themes, and responsive behavior.
 
 ## Documentation
 
 - [Architecture](docs/architecture.md) explains the classless-first model, limited class API, selector strategy, and framework boundaries.
 - [Classes](docs/classes.md) is the canonical reference for every supported public class, its expected markup, and important limitations.
 - [Accessibility](docs/accessibility.md) describes the current accessibility baseline, author responsibilities, and basic testing expectations.
-- [Sizing and units](docs/sizing.md) explains when StyleWire uses `rem`, `em`, `px`, unitless values, and responsive layout units.
+- [Sizing and units](docs/sizing.md) explains when MiddleClass uses `rem`, `em`, `px`, unitless values, and responsive layout units.
 - [CSS variables](docs/variables.md) documents the reusable values available for framework customization.
 
 ## Public classes
 
-StyleWire intentionally keeps its public class API small:
+MiddleClass intentionally keeps its public class API small:
 
 - Layout: `.container`, `.reading-width`, `.stack`, `.cluster`, `.columns`, and `.push-end`
 - Buttons and variants: `.button`, `.secondary`, and `.outline`
@@ -79,23 +79,23 @@ See [Classes](docs/classes.md) for the complete usage reference. Semantic elemen
 
 ## Customization
 
-Override variables after loading StyleWire:
+Override variables after loading MiddleClass:
 
 ```css
 :root {
-	--sw-content-width: 80rem;
-	--sw-reading-width: 44rem;
-	--sw-radius: 0.25rem;
+	--mc-content-width: 80rem;
+	--mc-reading-width: 44rem;
+	--mc-radius: 0.25rem;
 }
 ```
 
 Color overrides require theme-aware selectors. See [CSS variables](docs/variables.md) for examples.
 
-All public custom properties use the `--sw-` prefix.
+All public custom properties use the `--mc-` prefix.
 
 ## Color themes
 
-StyleWire follows the operating system color preference by default.
+MiddleClass follows the operating system color preference by default.
 
 Set an explicit theme on the root element when a site needs to override that behavior:
 
@@ -107,15 +107,15 @@ Set an explicit theme on the root element when a site needs to override that beh
 <html lang="en" data-theme="dark">
 ```
 
-StyleWire does not include a theme toggle because interactive behavior belongs to the site, not the CSS framework.
+MiddleClass does not include a theme toggle because interactive behavior belongs to the site, not the CSS framework.
 
 ## Browser approach
 
-StyleWire targets modern browsers without transpilation or compatibility bundles. The source stays readable and uses progressive CSS features that fail safely where practical.
+MiddleClass targets modern browsers without transpilation or compatibility bundles. The source stays readable and uses progressive CSS features that fail safely where practical.
 
 ## Project scope
 
-StyleWire is a CSS foundation, not an application framework. The project does not plan to include:
+MiddleClass is a CSS foundation, not an application framework. The project does not plan to include:
 
 - JavaScript widgets
 - utility-class generation
@@ -128,7 +128,7 @@ StyleWire is a CSS foundation, not an application framework. The project does no
 
 ## Versioning
 
-StyleWire follows semantic versioning. The version appears in the stylesheet header and changelog.
+MiddleClass follows semantic versioning. The version appears in the stylesheet header and changelog.
 
 Before 1.0, documented classes, variables, theme behavior, and semantic element styling may change between minor releases.
 
@@ -136,4 +136,4 @@ Release tags use the plain numeric version, such as `0.1.0`, without a `v` prefi
 
 ## License
 
-StyleWire is available under the MIT License.
+MiddleClass is available under the MIT License.
