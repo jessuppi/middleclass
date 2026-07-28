@@ -1,6 +1,6 @@
 # CSS Variables
 
-StyleWire uses CSS variables to store reusable framework values such as colors, spacing, widths, radii, and typography settings.
+MiddleClass uses CSS variables to store reusable framework values such as colors, spacing, widths, radii, and typography settings.
 
 The formal CSS term is custom properties. This documentation uses CSS variables because it is the more familiar name.
 
@@ -10,7 +10,7 @@ A variable has a name and a value:
 
 ```css
 :root {
-	--sw-accent: #175cd3;
+	--mc-accent: #175cd3;
 }
 ```
 
@@ -18,7 +18,7 @@ The value is reused with `var()`:
 
 ```css
 a {
-	color: var(--sw-accent);
+	color: var(--mc-accent);
 }
 ```
 
@@ -26,15 +26,15 @@ Changing the variable changes every rule that uses it.
 
 ## Prefix
 
-All public StyleWire variables use the `--sw-` prefix. This reduces naming conflicts with site-specific CSS and other libraries.
+All public MiddleClass variables use the `--mc-` prefix. This reduces naming conflicts with site-specific CSS and other libraries.
 
 Site variables should use a different prefix or an unambiguous project-specific name.
 
 ## Public API Status
 
-The variables documented here are the current intended customization points for StyleWire.
+The variables documented here are the current intended customization points for MiddleClass.
 
-StyleWire is pre-1.0, so documented variables may still change between minor releases. Renames, removals, and behavior changes should remain deliberate and be recorded in the changelog.
+MiddleClass is pre-1.0, so documented variables may still change between minor releases. Renames, removals, and behavior changes should remain deliberate and be recorded in the changelog.
 
 ## Value Type Guidance
 
@@ -44,70 +44,70 @@ Current variables expect values in these general categories:
 | --- | --- |
 | Font-family variables | A valid CSS font-family list |
 | Font-size, width, gutter, radius, border-width, spacing, and component-gap variables | A valid CSS length or math expression that resolves to a length |
-| `--sw-line-height` | A unitless number |
+| `--mc-line-height` | A unitless number |
 | Color variables | A valid CSS color |
 
 Overrides should preserve the existing value category of each variable.
 
 ## Overriding Variables
 
-Load StyleWire first, then define overrides in the site's own stylesheet:
+Load MiddleClass first, then define overrides in the site's own stylesheet:
 
 ```css
 :root {
-	--sw-content-width: 80rem;
-	--sw-reading-width: 44rem;
-	--sw-radius: 0.25rem;
+	--mc-content-width: 80rem;
+	--mc-reading-width: 44rem;
+	--mc-radius: 0.25rem;
 }
 ```
 
-Color variables require theme-aware selectors because StyleWire's theme rules are more specific than a plain `:root` rule. To customize colors used by automatic dark mode, match the framework selector:
+Color variables require theme-aware selectors because MiddleClass's theme rules are more specific than a plain `:root` rule. To customize colors used by automatic dark mode, match the framework selector:
 
 ```css
 @media (prefers-color-scheme: dark) {
 	:root:not([data-theme="light"]) {
-		--sw-accent: #b69cff;
-		--sw-accent-hover: #d1c1ff;
+		--mc-accent: #b69cff;
+		--mc-accent-hover: #d1c1ff;
 	}
 }
 ```
 
 Use `[data-theme="light"]` and `[data-theme="dark"]` for explicit theme overrides, as shown in the theme section below.
 
-There is normally no need to edit `stylewire.css` directly.
+There is normally no need to edit `middleclass.css` directly.
 
 ## Typography Variables
 
 | Variable | Default | Purpose |
 | --- | --- | --- |
-| `--sw-font-sans` | System sans-serif stack | Default text font |
-| `--sw-font-mono` | System monospace stack | Code and keyboard text |
-| `--sw-font-size` | `1rem` | Default body font size |
-| `--sw-line-height` | `1.6` | Default body line height |
+| `--mc-font-sans` | System sans-serif stack | Default text font |
+| `--mc-font-mono` | System monospace stack | Code and keyboard text |
+| `--mc-font-size` | `1rem` | Default body font size |
+| `--mc-line-height` | `1.6` | Default body line height |
 
 ## Layout Variables
 
 | Variable | Default | Purpose |
 | --- | --- | --- |
-| `--sw-content-width` | `72rem` | Maximum main container width |
-| `--sw-reading-width` | `48rem` | Maximum long-form reading width |
-| `--sw-gutter` | `clamp(1rem, 4vw, 2rem)` | Responsive page gutter |
-| `--sw-radius` | `0.5rem` | Standard component radius |
-| `--sw-radius-small` | `0.25rem` | Smaller control radius |
-| `--sw-border-width` | `1px` | Standard hairline border width |
+| `--mc-content-width` | `72rem` | Maximum main container width |
+| `--mc-reading-width` | `48rem` | Maximum long-form reading width |
+| `--mc-gutter` | `clamp(1rem, 4vw, 2rem)` | Responsive page gutter |
+| `--mc-radius` | `0.5rem` | Standard component radius |
+| `--mc-radius-small` | `0.25rem` | Smaller control radius |
+| `--mc-border-width` | `1px` | Standard hairline border width |
 
 ## Spacing Variables
 
 | Variable | Default |
 | --- | ---: |
-| `--sw-space-1` | `0.25rem` |
-| `--sw-space-2` | `0.5rem` |
-| `--sw-space-3` | `0.75rem` |
-| `--sw-space-4` | `1rem` |
-| `--sw-space-5` | `1.5rem` |
-| `--sw-space-6` | `2rem` |
-| `--sw-space-7` | `3rem` |
-| `--sw-space-8` | `4rem` |
+| `--mc-space-1` | `0.25rem` |
+| `--mc-space-2` | `0.5rem` |
+| `--mc-space-3` | `0.75rem` |
+| `--mc-space-4` | `1rem` |
+| `--mc-space-5` | `1.5rem` |
+| `--mc-space-6` | `2rem` |
+| `--mc-space-7` | `3rem` |
+| `--mc-space-8` | `4rem` |
 
 Use the existing spacing scale before adding unrelated one-off spacing values. See [Sizing and units](sizing.md) for the unit policy behind this scale.
 
@@ -115,52 +115,52 @@ Use the existing spacing scale before adding unrelated one-off spacing values. S
 
 | Variable | Light default | Dark default | Purpose |
 | --- | --- | --- | --- |
-| `--sw-background` | `#ffffff` | `#11161c` | Page and form-control background |
-| `--sw-surface` | `#f5f7f9` | `#19212a` | Standard component surface |
-| `--sw-surface-strong` | `#e8edf2` | `#25313d` | Stronger secondary surface |
-| `--sw-text` | `#18212b` | `#edf2f7` | Main text color |
-| `--sw-text-muted` | `#5d6875` | `#aab5c0` | Secondary text color |
-| `--sw-border` | `#7b8a99` | `#607080` | Standard border color |
-| `--sw-accent` | `#175cd3` | `#78a9ff` | Primary interactive accent |
-| `--sw-accent-hover` | `#114aa9` | `#a6c5ff` | Hover-state accent |
-| `--sw-accent-text` | `#ffffff` | `#101820` | Text shown on the accent color |
-| `--sw-focus` | `#9a6700` | `#ffd166` | Keyboard focus outline |
-| `--sw-code-background` | `#eef2f6` | `#202a34` | Code background |
-| `--sw-success` | `#217a3c` | `#68c77b` | Success status accent |
-| `--sw-warning` | `#8a5a00` | `#f0bd5a` | Warning status accent |
-| `--sw-danger` | `#b42318` | `#ff8b82` | Danger status accent |
+| `--mc-background` | `#ffffff` | `#11161c` | Page and form-control background |
+| `--mc-surface` | `#f5f7f9` | `#19212a` | Standard component surface |
+| `--mc-surface-strong` | `#e8edf2` | `#25313d` | Stronger secondary surface |
+| `--mc-text` | `#18212b` | `#edf2f7` | Main text color |
+| `--mc-text-muted` | `#5d6875` | `#aab5c0` | Secondary text color |
+| `--mc-border` | `#7b8a99` | `#607080` | Standard border color |
+| `--mc-accent` | `#175cd3` | `#78a9ff` | Primary interactive accent |
+| `--mc-accent-hover` | `#114aa9` | `#a6c5ff` | Hover-state accent |
+| `--mc-accent-text` | `#ffffff` | `#101820` | Text shown on the accent color |
+| `--mc-focus` | `#9a6700` | `#ffd166` | Keyboard focus outline |
+| `--mc-code-background` | `#eef2f6` | `#202a34` | Code background |
+| `--mc-success` | `#217a3c` | `#68c77b` | Success status accent |
+| `--mc-warning` | `#8a5a00` | `#f0bd5a` | Warning status accent |
+| `--mc-danger` | `#b42318` | `#ff8b82` | Danger status accent |
 
 ## Color Pairing and Contrast
 
 Color variables work as related groups rather than isolated values. When overriding colors:
 
-- review `--sw-accent`, `--sw-accent-hover`, and `--sw-accent-text` together
-- verify `--sw-text` and `--sw-text-muted` against the page and surface backgrounds
-- keep `--sw-border` visible against every surface where it appears
-- ensure `--sw-focus` remains clearly visible around interactive elements
+- review `--mc-accent`, `--mc-accent-hover`, and `--mc-accent-text` together
+- verify `--mc-text` and `--mc-text-muted` against the page and surface backgrounds
+- keep `--mc-border` visible against every surface where it appears
+- ensure `--mc-focus` remains clearly visible around interactive elements
 - review success, warning, and danger accents in both light and dark themes
 
 Test normal, hover, focus, and disabled states after changing a color group. A color that looks acceptable by itself may not provide sufficient contrast when used for text, backgrounds, borders, or focus indicators.
 
-StyleWire provides balanced defaults, but a site that overrides color variables is responsible for preserving accessible contrast in every supported theme.
+MiddleClass provides balanced defaults, but a site that overrides color variables is responsible for preserving accessible contrast in every supported theme.
 
 ## Light and Dark Themes
 
 Color variables change with the active color theme. Non-color variables remain shared.
 
-StyleWire follows the operating system preference by default. A site can force a theme with `data-theme="light"` or `data-theme="dark"` on the root element.
+MiddleClass follows the operating system preference by default. A site can force a theme with `data-theme="light"` or `data-theme="dark"` on the root element.
 
 Theme-specific overrides should target the same selectors:
 
 ```css
 [data-theme="light"] {
-	--sw-accent: #6b3fc8;
-	--sw-accent-hover: #5630a7;
+	--mc-accent: #6b3fc8;
+	--mc-accent-hover: #5630a7;
 }
 
 [data-theme="dark"] {
-	--sw-accent: #b69cff;
-	--sw-accent-hover: #d1c1ff;
+	--mc-accent: #b69cff;
+	--mc-accent-hover: #d1c1ff;
 }
 ```
 
@@ -170,19 +170,19 @@ When automatic system theming must also use custom dark colors, override the var
 
 A few variables customize one layout instance rather than the entire framework:
 
-- `--sw-stack-space` controls the gap inside `.stack`
-- `--sw-cluster-space` controls the gap inside `.cluster`
-- `--sw-columns-space` controls the gap inside `.columns`
+- `--mc-stack-space` controls the gap inside `.stack`
+- `--mc-cluster-space` controls the gap inside `.cluster`
+- `--mc-columns-space` controls the gap inside `.columns`
 
 They can be set directly on a component:
 
 ```html
-<div class="columns" style="--sw-columns-space: 2rem;">
+<div class="columns" style="--mc-columns-space: 2rem;">
 	...
 </div>
 ```
 
-Each component variable falls back to the normal StyleWire spacing scale when it is not set.
+Each component variable falls back to the normal MiddleClass spacing scale when it is not set.
 
 Because CSS variables inherit, setting a component variable on a shared ancestor can affect every nested matching component. Set the variable directly on a specific `.stack`, `.cluster`, or `.columns` element when only one instance should change.
 
@@ -192,7 +192,7 @@ Variables inherit through the document. A variable set on `:root` applies global
 
 ```css
 .special-section {
-	--sw-accent: #9b2c2c;
+	--mc-accent: #9b2c2c;
 }
 ```
 
