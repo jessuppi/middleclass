@@ -1,8 +1,8 @@
 # Classes
 
-StyleWire is classless-first, but it provides a small public class API for layout and presentation choices that semantic HTML cannot express by itself.
+MiddleClass is classless-first, but it provides a small public class API for layout and presentation choices that semantic HTML cannot express by itself.
 
-This file is the canonical reference for every supported public class. Class names not listed here should be treated as site-specific rather than part of StyleWire's public API.
+This file is the canonical reference for every supported public class. Class names not listed here should be treated as site-specific rather than part of MiddleClass's public API.
 
 ## Layout
 
@@ -16,7 +16,7 @@ Centers content within the site width and responsive page gutters.
 </div>
 ```
 
-The maximum width is controlled by `--sw-content-width`, and the side gutters are controlled by `--sw-gutter`.
+The maximum width is controlled by `--mc-content-width`, and the side gutters are controlled by `--mc-gutter`.
 
 ### `.reading-width`
 
@@ -28,7 +28,7 @@ Limits long-form content to a comfortable reading width without centering it aut
 </article>
 ```
 
-The width is controlled by `--sw-reading-width`.
+The width is controlled by `--mc-reading-width`.
 
 ### `.stack`
 
@@ -41,12 +41,12 @@ Arranges direct children vertically with consistent spacing.
 </div>
 ```
 
-StyleWire removes the direct children's outer block margins so the stack gap is the single source of spacing between them. Content inside each child keeps its normal document rhythm.
+MiddleClass removes the direct children's outer block margins so the stack gap is the single source of spacing between them. Content inside each child keeps its normal document rhythm.
 
-Override the spacing for one stack with `--sw-stack-space`:
+Override the spacing for one stack with `--mc-stack-space`:
 
 ```html
-<div class="stack" style="--sw-stack-space: 2rem;">
+<div class="stack" style="--mc-stack-space: 2rem;">
 	...
 </div>
 ```
@@ -62,7 +62,7 @@ Arranges related items in a wrapping horizontal row with centered cross-axis ali
 </div>
 ```
 
-Override the spacing for one cluster with `--sw-cluster-space`.
+Override the spacing for one cluster with `--mc-cluster-space`.
 
 On narrow screens, direct button-like children can grow to share available row width.
 
@@ -77,7 +77,7 @@ Creates responsive equal-width columns that collapse naturally when space become
 </div>
 ```
 
-Override the spacing for one column group with `--sw-columns-space`.
+Override the spacing for one column group with `--mc-columns-space`.
 
 ### `.push-end`
 
@@ -104,7 +104,7 @@ Gives a link the same button presentation as native buttons and button-type inpu
 <a class="button" href="/download/">Download</a>
 ```
 
-Use native `<button>` elements for actions and `.button` links for navigation. Direct SVG children receive consistent spacing and are normalized to `1em`; StyleWire does not bundle icons.
+Use native `<button>` elements for actions and `.button` links for navigation. Direct SVG children receive consistent spacing and are normalized to `1em`; MiddleClass does not bundle icons.
 
 ### `.secondary`
 
@@ -308,4 +308,4 @@ Avoid adding framework classes merely to reproduce individual CSS declarations. 
 - [Architecture](architecture.md) explains why these classes are part of the public API.
 - [Accessibility](accessibility.md) covers author responsibilities and component-specific accessibility guidance.
 - [CSS variables](variables.md) documents the values used to customize shared styling.
-- [Sizing and units](sizing.md) explains StyleWire's unit choices.
+- [Sizing and units](sizing.md) explains MiddleClass's unit choices.
