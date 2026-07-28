@@ -202,9 +202,53 @@ Turns a native `<details>` element into an overlaid link menu. Unclassed `<detai
 </details>
 ```
 
-The supported structure is a direct `<summary>` followed by a direct `<ul>`. The open list is positioned over nearby content instead of shifting the layout, while opening and closing remain native `<details>` behavior.
+The supported structure is a direct `<summary>` followed by a direct `<ul>`. By default, the panel opens below the trigger and its inline-end edge aligns with the trigger's inline-end edge. The open list overlays nearby content instead of shifting the layout, while opening and closing remain native `<details>` behavior.
 
 The links remain ordinary links. Do not add application-style `menu` or `menuitem` roles. The CSS-only component does not close automatically when the user clicks elsewhere.
+
+### `.dropdown-start`
+
+Changes a `.dropdown` panel from inline-end alignment to inline-start alignment. On a left-to-right page, this aligns the panel's left edge with the trigger's left edge. On a right-to-left page, it aligns their right edges.
+
+```html
+<details class="dropdown dropdown-start">
+	<summary>Products</summary>
+	<ul>
+		<li><a href="/products/one/">Product One</a></li>
+		<li><a href="/products/two/">Product Two</a></li>
+	</ul>
+</details>
+```
+
+Use this modifier when the trigger is near the inline-start side of its container. It has no supported standalone behavior without `.dropdown`.
+
+### `.dropup`
+
+Makes a `.dropdown` panel open above its trigger instead of below it. The chevron also points upward while closed and downward while open.
+
+```html
+<details class="dropdown dropup">
+	<summary>Products</summary>
+	<ul>
+		<li><a href="/products/one/">Product One</a></li>
+		<li><a href="/products/two/">Product Two</a></li>
+	</ul>
+</details>
+```
+
+Use this modifier where space below the trigger is limited. It does not detect viewport space automatically and has no supported standalone behavior without `.dropdown`.
+
+The alignment and direction modifiers may be combined:
+
+```html
+<details class="dropdown dropdown-start dropup">
+	<summary>Products</summary>
+	<ul>
+		<li><a href="/products/one/">Product One</a></li>
+		<li><a href="/products/two/">Product Two</a></li>
+	</ul>
+</details>
+```
 
 ## Supporting Behavior
 
@@ -252,6 +296,7 @@ Classes may be combined when their roles are compatible:
 ```html
 <a class="button secondary outline" href="/source/">View source</a>
 <div class="notice warning">Check this setting.</div>
+<details class="dropdown dropdown-start dropup">...</details>
 ```
 
 Avoid adding framework classes merely to reproduce individual CSS declarations. Site-specific layouts and visual treatments should remain in the site's own stylesheet.
