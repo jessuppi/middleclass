@@ -48,6 +48,10 @@ The `summary` remains the native keyboard-operable trigger, and links inside the
 </details>
 ```
 
+`.dropdown-start` changes only the panel's logical horizontal alignment, and `.dropup` changes only its opening direction. These presentation modifiers preserve the same native trigger and ordinary links and may be combined with `.dropdown`.
+
+Choose the alignment and direction deliberately for the component's position. The CSS does not detect available viewport space or switch direction automatically, so test keyboard focus, zoom, narrow viewports, and panel visibility in each placement.
+
 The CSS-only component does not add application-style menu roles or JavaScript behavior such as closing when a user clicks elsewhere. Ordinary navigation links should not be given `menu` or `menuitem` roles.
 
 ## Visually Hidden Text
