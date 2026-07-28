@@ -1,6 +1,6 @@
 # Sizing and Units
 
-StyleWire uses a small, predictable sizing policy rather than forcing one CSS unit everywhere.
+MiddleClass uses a small, predictable sizing policy rather than forcing one CSS unit everywhere.
 
 This document describes the current framework approach. The policy may evolve, but unit changes should always be deliberate and based on the behavior a value needs.
 
@@ -14,9 +14,9 @@ Use:
 - unitless values where CSS defines proportional behavior, especially `line-height` and zero
 - `%`, viewport units, `fr`, and CSS math functions when sizing must respond to available space
 
-StyleWire does not ban any valid CSS unit. It chooses units according to what each dimension should follow.
+MiddleClass does not ban any valid CSS unit. It chooses units according to what each dimension should follow.
 
-## Why StyleWire Uses `rem`
+## Why MiddleClass Uses `rem`
 
 A `rem` value is relative to the root `<html>` font size. It does not compound when components are nested, so spacing and typography remain predictable throughout a page.
 
@@ -28,12 +28,12 @@ A `rem` value is relative to the root `<html>` font size. It does not compound w
 
 The card padding remains tied to the root font size regardless of the font size inherited by the card.
 
-StyleWire does not set a pixel font size on `<html>`. This allows browser and user font-size preferences to remain effective.
+MiddleClass does not set a pixel font size on `<html>`. This allows browser and user font-size preferences to remain effective.
 
 Common uses for `rem` include:
 
 - font sizes
-- spacing tokens
+- spacing variables
 - component heights and widths
 - content-width limits
 - border radii
@@ -53,7 +53,7 @@ A larger badge font will automatically produce proportionally larger badge paddi
 
 When `em` is used for the `font-size` property itself, it is relative to the inherited font size from the parent rather than the element's final computed font size.
 
-StyleWire also uses `em` for small typographic details that should follow nearby text, such as underline offsets and inline-code sizing.
+MiddleClass also uses `em` for small typographic details that should follow nearby text, such as underline offsets and inline-code sizing.
 
 Avoid using `em` for the main spacing system. Nested font-size changes can make `em` dimensions compound and become difficult to predict.
 
@@ -63,11 +63,11 @@ Pixels remain appropriate for details that should stay visually fixed.
 
 ```css
 :root {
-	--sw-border-width: 1px;
+	--mc-border-width: 1px;
 }
 
 :focus-visible {
-	outline: 3px solid var(--sw-focus);
+	outline: 3px solid var(--mc-focus);
 }
 ```
 
@@ -78,7 +78,7 @@ Typical `px` uses include:
 - small shadows
 - implementation values used to visually hide accessible text
 
-StyleWire does not use `px` for the general spacing or typography scales. Replacing every pixel value with a relative unit would reduce clarity without improving accessibility.
+MiddleClass does not use `px` for the general spacing or typography scales. Replacing every pixel value with a relative unit would reduce clarity without improving accessibility.
 
 ## Borders and Decorative Accents
 
@@ -88,7 +88,7 @@ Use `px` for hairline borders that should remain visually thin:
 
 ```css
 .card {
-	border: 1px solid var(--sw-border);
+	border: 1px solid var(--mc-border);
 }
 ```
 
@@ -96,7 +96,7 @@ Use `rem` or `em` for wider decorative accents that should scale with the interf
 
 ```css
 .notice {
-	border-inline-start: 0.25rem solid var(--sw-accent);
+	border-inline-start: 0.25rem solid var(--mc-accent);
 }
 ```
 
@@ -128,11 +128,11 @@ Do not add units to zero unless a particular CSS function or syntax requires the
 
 Use percentages and viewport-relative units when a dimension should respond to its container or the viewport.
 
-StyleWire combines relative units with CSS math functions when values need limits:
+MiddleClass combines relative units with CSS math functions when values need limits:
 
 ```css
 :root {
-	--sw-gutter: clamp(1rem, 4vw, 2rem);
+	--mc-gutter: clamp(1rem, 4vw, 2rem);
 }
 ```
 
@@ -151,7 +151,7 @@ Traditional `vh` remains valid when its browser behavior is acceptable. Prefer `
 
 ## Breakpoints
 
-StyleWire uses `rem` for media-query breakpoints:
+MiddleClass uses `rem` for media-query breakpoints:
 
 ```css
 @media (max-width: 40rem) {
@@ -163,18 +163,18 @@ This keeps breakpoints aligned with the document's root scale instead of treatin
 
 ## Default Spacing Scale
 
-StyleWire uses a root-relative spacing scale:
+MiddleClass uses a root-relative spacing scale:
 
-| Token | Value | Approximate size at a 16px root |
+| Variable | Value | Approximate size at a 16px root |
 | --- | ---: | ---: |
-| `--sw-space-1` | `0.25rem` | 4px |
-| `--sw-space-2` | `0.5rem` | 8px |
-| `--sw-space-3` | `0.75rem` | 12px |
-| `--sw-space-4` | `1rem` | 16px |
-| `--sw-space-5` | `1.5rem` | 24px |
-| `--sw-space-6` | `2rem` | 32px |
-| `--sw-space-7` | `3rem` | 48px |
-| `--sw-space-8` | `4rem` | 64px |
+| `--mc-space-1` | `0.25rem` | 4px |
+| `--mc-space-2` | `0.5rem` | 8px |
+| `--mc-space-3` | `0.75rem` | 12px |
+| `--mc-space-4` | `1rem` | 16px |
+| `--mc-space-5` | `1.5rem` | 24px |
+| `--mc-space-6` | `2rem` | 32px |
+| `--mc-space-7` | `3rem` | 48px |
+| `--mc-space-8` | `4rem` | 64px |
 
 The pixel column is only a familiar reference. Actual rendered sizes follow the user's root font size.
 
@@ -186,7 +186,7 @@ For example, visually hidden text may use `1px` dimensions and a negative pixel 
 
 ## Practical Review Rule
 
-When adding or reviewing StyleWire CSS, ask what the dimension should follow:
+When adding or reviewing MiddleClass CSS, ask what the dimension should follow:
 
 - The document's root scale: use `rem`
 - The current component's text: use `em`
