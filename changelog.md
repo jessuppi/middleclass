@@ -11,10 +11,13 @@ The project follows semantic versioning.
 - Added responsive layout primitives and a small component set.
 - Added the direction-aware `.push-end` layout helper for horizontal flex layouts.
 - Added consistent spacing and normalized direct SVG sizing for buttons and `.button` links.
+- Added coherent heading rhythm and normalized final-child spacing inside disclosures.
 - Added a coherent neutral treatment for combined `.secondary.outline` buttons.
+- Added disabled-state safeguards so native button controls do not retain hover or pointer styling.
 - Added the native `details.dropdown` overlay component for link menus without layout shifts.
 - Added `.dropdown-start` and `.dropup` modifiers for logical alignment and opening direction.
 - Added light, dark, and system-aware color themes.
+- Added copyright and MIT license metadata to the distributed stylesheet header.
 - Normalized document block margins and made `.stack` direct-child spacing deterministic.
 - Added long-text wrapping and safer fieldset sizing for narrow layouts.
 - Added a comprehensive live demonstration page for components, content elements, forms, and responsive behavior.
