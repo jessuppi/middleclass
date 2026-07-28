@@ -4,6 +4,8 @@ StyleWire is a lightweight, classless-first CSS framework for semantic static we
 
 It gives plain HTML a clean responsive foundation, then adds a small set of layout and component classes for choices that semantic markup cannot express by itself.
 
+**Live demo:** [jessuppi.github.io/stylewire](https://jessuppi.github.io/stylewire/)
+
 ## Goals
 
 - Make ordinary semantic HTML look intentional.
@@ -15,7 +17,7 @@ It gives plain HTML a clean responsive foundation, then adds a small set of layo
 
 ## Usage
 
-Copy `stylewire.css` into a site and link it from the document head:
+Download or copy [`stylewire.css`](stylewire.css) into a site and link it from the document head:
 
 ```html
 <link rel="stylesheet" href="/assets/stylewire.css">
@@ -54,7 +56,7 @@ A minimal page can use semantic HTML without component classes:
 </html>
 ```
 
-Open `index.html` to see the current elements and components together.
+Use the [live demonstration](https://jessuppi.github.io/stylewire/) as a visual reference for semantic elements, public classes, forms, themes, and responsive behavior.
 
 ## Documentation
 
@@ -129,6 +131,8 @@ StyleWire is a CSS foundation, not an application framework. The project does no
 StyleWire follows semantic versioning. The version appears in the stylesheet header and changelog.
 
 Before 1.0, documented classes, variables, theme behavior, and semantic element styling may change between minor releases.
+
+Release tags use the plain numeric version, such as `0.1.0`, without a `v` prefix.
 
 ## License
 
