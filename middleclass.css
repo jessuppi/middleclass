@@ -63,7 +63,7 @@
 }
 
 @media (prefers-color-scheme: dark) {
-	:root:not([data-theme="light"]) {
+	:root:not([data-theme]) {
 		--mc-background: #11161c;
 		--mc-surface: #19212a;
 		--mc-surface-strong: #25313d;
@@ -671,7 +671,7 @@ summary {
 	cursor: pointer;
 }
 
-details[open] summary {
+details[open] > summary {
 	margin-block-end: var(--mc-space-4);
 }
 
