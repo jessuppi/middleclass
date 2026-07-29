@@ -52,7 +52,7 @@ The `summary` remains the native keyboard-operable trigger, and links inside the
 
 Choose the alignment and direction deliberately for the component's position. The CSS does not detect available viewport space or switch direction automatically, so test keyboard focus, zoom, narrow viewports, and panel visibility in each placement.
 
-The CSS-only component does not add application-style menu roles or JavaScript behavior such as closing when a user clicks elsewhere. Ordinary navigation links should not be given `menu` or `menuitem` roles.
+The CSS-only component does not add application-style menu roles or JavaScript behavior. While open, an invisible layer associated with the native `summary` covers the remaining viewport so a pointer click outside the panel closes the disclosure. Ordinary navigation links should not be given `menu` or `menuitem` roles.
 
 ## Visually Hidden Text
 
