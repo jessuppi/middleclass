@@ -14,7 +14,7 @@ MiddleClass currently provides:
 - minimum heights for text fields and button-like controls intended to support practical touch targets
 - layouts that can wrap and adapt on narrow screens
 - a `.screen-reader-text` class for visually hidden accessible text
-- no bundled JavaScript, animation, or interactive widget behavior
+- no bundled JavaScript or animation; supported interactive behavior remains native HTML
 
 Framework changes should preserve native semantics, keyboard access, text resizing, browser font preferences, and assistive-technology access.
 
