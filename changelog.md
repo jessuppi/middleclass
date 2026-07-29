@@ -5,7 +5,7 @@
 - added outside-click closing for dropdown menus without JavaScript
 - removed default top margins from `h2` through `h6` so preceding flow elements own vertical spacing
 - normalized padded semantic component edges, including content after legends and disclosure summaries, and trailing figure caption spacing
-- normalized nested list spacing so parent-level items keep the standard gap
+- normalized trailing nested list spacing so parent-level items keep the standard gap
 
 ## 0.1.0
 
