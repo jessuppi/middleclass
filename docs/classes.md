@@ -208,6 +208,8 @@ The supported structure is a direct `<summary>` followed by a direct `<ul>`. By 
 
 The links remain ordinary links. Do not add application-style `menu` or `menuitem` roles. When open, a pointer click outside the panel closes the disclosure through an invisible viewport layer owned by the native `<summary>`; no JavaScript is required.
 
+The outside-click dismissal pattern is adapted from the MIT-licensed [Pico CSS](https://github.com/picocss/pico) dropdown implementation.
+
 ### `.dropdown-start`
 
 Changes a `.dropdown` panel from inline-end alignment to inline-start alignment. On a left-to-right page, this aligns the panel's left edge with the trigger's left edge. On a right-to-left page, it aligns their right edges.
