@@ -190,7 +190,7 @@ MiddleClass currently uses a bottom-margin-first document rhythm. Ordinary flow 
 
 This avoids doubling the gap when a heading follows an element that already provides bottom spacing. Larger section separation should come from deliberate layout structure rather than an unconditional top margin on every heading.
 
-Component interiors may trim the first child's top margin or the last child's bottom margin when padding already provides the component edge spacing. Additional element and component spacing rules should be reviewed in stages rather than inferred from this baseline.
+Padded components remove the first child's top margin and the last child's bottom margin so the component's own padding controls the space at its edges. Child padding is not removed or changed.
 
 ## Accessibility Exceptions
 
