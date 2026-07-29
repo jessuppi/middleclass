@@ -6,6 +6,8 @@ This file is the canonical reference for every supported public class. Class nam
 
 ## Layout
 
+Layout classes control internal arrangement and remain externally marginless by default. The parent containing a layout class should provide any vertical spacing before or after it.
+
 ### `.container`
 
 Centers content within the site width and responsive page gutters.
