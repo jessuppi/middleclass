@@ -178,19 +178,7 @@ MiddleClass uses a root-relative spacing scale:
 
 The pixel column is only a familiar reference. Actual rendered sizes follow the user's root font size.
 
-## Vertical Spacing
-
-MiddleClass currently uses a bottom-margin-first document rhythm. Ordinary flow elements create space after themselves, while headings do not receive unconditional top margins.
-
-- `h1` through `h6` use `--mc-space-4` below and no default top margin
-- paragraphs, lists, definition lists, blockquotes, code blocks, tables, figures, forms, and disclosures use `--mc-space-5` below
-- the element before a heading normally supplies the separation above that heading
-- structural elements such as `div`, `section`, and `article` do not receive generic vertical margins
-- layout classes control spacing among their children and remain externally marginless by default
-
-This avoids doubling the gap when a heading follows an element that already provides bottom spacing. Larger section separation should come from deliberate layout structure rather than an unconditional top margin on every heading.
-
-Padded components remove the first child's top margin and the last child's bottom margin so the component's own padding controls the space at its edges. Child padding is not removed or changed.
+The spacing scale defines available values. [Spacing](spacing.md) defines how MiddleClass applies those values to document flow, structural elements, layout classes, padded components, and intentional exceptions.
 
 ## Accessibility Exceptions
 
