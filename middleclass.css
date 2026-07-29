@@ -470,6 +470,10 @@ fieldset {
 	border-radius: var(--mc-radius);
 }
 
+fieldset > :last-child {
+	margin-block-end: 0;
+}
+
 legend {
 	padding-inline: var(--mc-space-2);
 	font-weight: 700;
@@ -509,6 +513,11 @@ input[type="checkbox"],
 input[type="radio"],
 input[type="range"] {
 	accent-color: var(--mc-accent);
+}
+
+input[type="range"] {
+	width: 100%;
+	margin-block-end: var(--mc-space-4);
 }
 
 /* buttons */
@@ -800,14 +809,6 @@ details.dropdown > summary + ul a:hover {
 
 	nav > ul {
 		gap: var(--mc-space-3);
-	}
-
-	button,
-	.button,
-	input[type="button"],
-	input[type="reset"],
-	input[type="submit"] {
-		width: 100%;
 	}
 
 	.cluster > button,
