@@ -16,6 +16,7 @@
 					<li><a href="#principles">Principles</a></li>
 					<li><a href="#components">Components</a></li>
 					<li><a href="#content">Content</a></li>
+					<li><a href="#rhythm">Rhythm</a></li>
 					<li><a href="#forms">Forms</a></li>
 					<li><a href="#documentation">Documentation</a></li>
 					<li class="push-end"><a href="https://github.com/jessuppi/middleclass">GitHub</a></li>
@@ -207,6 +208,121 @@
 				</div>
 			</section>
 
+			<section id="rhythm">
+				<h2>Vertical rhythm</h2>
+				<p>This test area keeps spacing relationships visible so they can be reviewed before framework defaults change.</p>
+
+				<div class="stack">
+					<section class="reading-width">
+						<h3>Document flow</h3>
+						<p>This paragraph comes immediately before a heading.</p>
+						<h4>Heading after a paragraph</h4>
+						<p>The preceding paragraph supplies the space above this heading, while the heading supplies the space below itself.</p>
+
+						<ul>
+							<li>First list item</li>
+							<li>Second list item</li>
+						</ul>
+						<h4>Heading after a list</h4>
+						<p>The list owns the space before this heading.</p>
+
+						<div class="table-wrap">
+							<table>
+								<caption>Rhythm test table</caption>
+								<thead>
+									<tr>
+										<th scope="col">Element</th>
+										<th scope="col">Spacing owner</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Table</td>
+										<td>Bottom margin</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<h4>Heading after a table</h4>
+						<p>The responsive table wrapper owns the space before this heading.</p>
+
+						<figure>
+							<blockquote>
+								<p>Visible rhythm is easier to judge when several semantic relationships appear together.</p>
+							</blockquote>
+							<figcaption>Example figure caption</figcaption>
+						</figure>
+						<h4>Heading after a figure</h4>
+						<p>The figure supplies the preceding space.</p>
+
+						<details>
+							<summary>Disclosure used in the rhythm test</summary>
+							<p>The padded disclosure controls the space at its inner edges.</p>
+						</details>
+						<h4>Heading after a disclosure</h4>
+						<p>The disclosure supplies the space before this heading.</p>
+
+						<form action="#" method="get">
+							<label for="rhythm-email">Email for spacing test</label>
+							<input id="rhythm-email" name="rhythm-email" type="email" placeholder="name@example.com">
+							<button type="button">Example action</button>
+						</form>
+						<h4>Heading after a form</h4>
+						<p>The form supplies the space before this heading.</p>
+
+						<hr>
+						<p>This paragraph follows a thematic break, which intentionally uses equal space above and below.</p>
+					</section>
+
+					<section>
+						<h3>Padded component edges</h3>
+						<p>The component padding should be the only spacing source at the top and bottom edges.</p>
+						<div class="columns">
+							<article class="card">
+								<h4>Card heading</h4>
+								<p>The first and last child margins should not add to the card padding.</p>
+							</article>
+							<aside class="notice">
+								<h4>Notice heading</h4>
+								<p>The notice padding controls its inner edge spacing.</p>
+							</aside>
+							<details>
+								<summary>Disclosure edge test</summary>
+								<p>The final paragraph should not add extra space below the disclosure padding.</p>
+							</details>
+						</div>
+					</section>
+
+					<section>
+						<h3>Gap layouts</h3>
+						<p>Each layout controls spacing among its own children, while this outer stack controls spacing between the examples.</p>
+						<div class="stack">
+							<section>
+								<h4>Stack</h4>
+								<div class="stack">
+									<article class="card">First stacked item</article>
+									<article class="card">Second stacked item</article>
+								</div>
+							</section>
+							<section>
+								<h4>Cluster</h4>
+								<div class="cluster">
+									<button type="button">First action</button>
+									<button class="secondary" type="button">Second action</button>
+								</div>
+							</section>
+							<section>
+								<h4>Columns</h4>
+								<div class="columns">
+									<article class="card">First column</article>
+									<article class="card">Second column</article>
+								</div>
+							</section>
+						</div>
+					</section>
+				</div>
+			</section>
+
 			<section id="forms" class="reading-width">
 				<h2>Forms</h2>
 				<form action="#" method="get">
@@ -268,6 +384,10 @@
 					<article class="card">
 						<h3><a href="https://github.com/jessuppi/middleclass/blob/master/docs/variables.md">CSS variables</a></h3>
 						<p>Typography, spacing, layout, color, and component customization points.</p>
+					</article>
+					<article class="card">
+						<h3><a href="https://github.com/jessuppi/middleclass/blob/master/docs/spacing.md">Spacing</a></h3>
+						<p>Vertical rhythm, structural ownership, padded edges, gap layouts, and intentional exceptions.</p>
 					</article>
 					<article class="card">
 						<h3><a href="https://github.com/jessuppi/middleclass/blob/master/docs/accessibility.md">Accessibility</a></h3>
