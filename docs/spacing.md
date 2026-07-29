@@ -32,7 +32,7 @@ MiddleClass currently uses these main relationships:
 
 Paragraphs, lists, definition lists, blockquotes, code blocks, tables, figures, forms, and disclosures use no default top margin and use `--mc-space-5` below.
 
-Lists nested directly inside a list item do not keep that full bottom margin. The normal adjacent-item gap controls the space before the next parent-level item instead.
+A list nested as the final child of a list item does not keep that full bottom margin. The normal adjacent-item gap controls the space before the next parent-level item instead, while a nested list followed by more content keeps its ordinary bottom spacing.
 
 ## Structural Elements
 
