@@ -1,9 +1,5 @@
 # Changelog
 
-All notable changes to MiddleClass are documented in this file.
-
-The project follows semantic versioning.
-
 ## 0.1.0
 
 - Added the initial classless-first stylesheet.
