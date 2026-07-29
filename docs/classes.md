@@ -206,7 +206,7 @@ Turns a native `<details>` element into an overlaid link menu. Unclassed `<detai
 
 The supported structure is a direct `<summary>` followed by a direct `<ul>`. By default, the panel opens below the trigger and its inline-end edge aligns with the trigger's inline-end edge. The open list overlays nearby content instead of shifting the layout, while opening and closing remain native `<details>` behavior.
 
-The links remain ordinary links. Do not add application-style `menu` or `menuitem` roles. The CSS-only component does not close automatically when the user clicks elsewhere.
+The links remain ordinary links. Do not add application-style `menu` or `menuitem` roles. When open, a pointer click outside the panel closes the disclosure through an invisible viewport layer owned by the native `<summary>`; no JavaScript is required.
 
 ### `.dropdown-start`
 
