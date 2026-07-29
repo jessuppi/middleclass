@@ -131,8 +131,7 @@ dd {
 img,
 picture,
 video,
-canvas,
-svg {
+canvas {
 	display: block;
 	max-width: 100%;
 	height: auto;
@@ -155,7 +154,6 @@ body {
 	font-size: var(--mc-font-size);
 	line-height: var(--mc-line-height);
 	overflow-wrap: break-word;
-	text-rendering: optimizeLegibility;
 }
 
 header,
