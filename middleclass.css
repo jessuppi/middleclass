@@ -374,6 +374,10 @@ blockquote {
 	background: var(--mc-surface);
 }
 
+blockquote > :first-child {
+	margin-block-start: 0;
+}
+
 blockquote > :last-child {
 	margin-block-end: 0;
 }
@@ -414,6 +418,10 @@ pre code {
 
 figure {
 	margin-inline: 0;
+}
+
+figure > :has(+ figcaption:last-child) {
+	margin-block-end: 0;
 }
 
 figcaption {
@@ -466,6 +474,10 @@ fieldset {
 	padding: var(--mc-space-5);
 	border: var(--mc-border-width) solid var(--mc-border);
 	border-radius: var(--mc-radius);
+}
+
+fieldset > :first-child {
+	margin-block-start: 0;
 }
 
 fieldset > :last-child {
@@ -667,6 +679,10 @@ details {
 	border: var(--mc-border-width) solid var(--mc-border);
 	border-radius: var(--mc-radius);
 	background: var(--mc-surface);
+}
+
+details > :first-child {
+	margin-block-start: 0;
 }
 
 details > :last-child {
