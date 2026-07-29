@@ -56,7 +56,7 @@ A minimal page can use semantic HTML without component classes:
 </html>
 ```
 
-Use the [live demonstration](https://jessuppi.github.io/middleclass/) as a visual reference for semantic elements, public classes, forms, themes, and responsive behavior.
+Use the [live demonstration](https://jessuppi.github.io/middleclass/) as a visual reference for semantic elements, public classes, forms, vertical rhythm, themes, and responsive behavior.
 
 ## Documentation
 
@@ -64,6 +64,7 @@ Use the [live demonstration](https://jessuppi.github.io/middleclass/) as a visua
 - [Classes](docs/classes.md) is the canonical reference for every supported public class, its expected markup, and important limitations.
 - [Accessibility](docs/accessibility.md) describes the current accessibility baseline, author responsibilities, and basic testing expectations.
 - [Sizing and units](docs/sizing.md) explains when MiddleClass uses `rem`, `em`, `px`, unitless values, and responsive layout units.
+- [Spacing](docs/spacing.md) defines the vertical rhythm, structural spacing ownership, padded component edges, layout gaps, and intentional exceptions.
 - [CSS variables](docs/variables.md) documents the reusable values available for framework customization.
 
 ## Public classes
