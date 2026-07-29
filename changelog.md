@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1
+
+- added outside-click closing for dropdown menus without JavaScript
+
 ## 0.1.0
 
 - added the initial classless-first stylesheet for semantic static websites
