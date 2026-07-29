@@ -481,7 +481,8 @@ fieldset {
 	border-radius: var(--mc-radius);
 }
 
-fieldset > :first-child {
+fieldset > :first-child,
+fieldset > legend + * {
 	margin-block-start: 0;
 }
 
@@ -686,7 +687,8 @@ details {
 	background: var(--mc-surface);
 }
 
-details > :first-child {
+details > :first-child,
+details > summary + * {
 	margin-block-start: 0;
 }
 
