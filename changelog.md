@@ -3,6 +3,7 @@
 ## 0.1.1
 
 - added outside-click closing for dropdown menus without JavaScript
+- removed default top margins from `h2` through `h6` so preceding flow elements own vertical spacing
 
 ## 0.1.0
 
