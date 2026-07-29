@@ -286,8 +286,8 @@ ol {
 	padding-inline-start: var(--mc-space-5);
 }
 
-li > ul,
-li > ol {
+li > ul:last-child,
+li > ol:last-child {
 	margin-block-end: 0;
 }
 
