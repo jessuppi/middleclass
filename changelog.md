@@ -4,6 +4,7 @@
 
 - added outside-click closing for dropdown menus without JavaScript
 - removed default top margins from `h2` through `h6` so preceding flow elements own vertical spacing
+- documented the vertical spacing policy and added dedicated rhythm tests to the live demo
 
 ## 0.1.0
 
