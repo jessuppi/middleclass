@@ -94,6 +94,14 @@ Color overrides require theme-aware selectors. See [CSS variables](docs/variable
 
 All public custom properties use the `--mc-` prefix.
 
+Dropdowns use a Font Awesome chevron by default. A site can switch every dropdown to another bundled family with one root attribute:
+
+```html
+<html lang="en" data-mc-icon-family="material">
+```
+
+Supported dropdown chevron families are Font Awesome, Material Icons, Lucide, and Heroicons. The attribute may also be scoped to one section or dropdown, and `--mc-dropdown-chevron` accepts a custom image. See [CSS variables](docs/variables.md) for the complete API.
+
 ## Color themes
 
 MiddleClass follows the operating system color preference by default.
@@ -123,9 +131,11 @@ MiddleClass is a CSS foundation, not an application framework. The project does 
 - CSS preprocessors
 - package-manager requirements
 - framework adapters
-- icon libraries
+- general-purpose icon libraries
 - bundled fonts
 - application state or routing
+
+The embedded dropdown chevrons are narrowly scoped component affordances, not an author-facing icon collection.
 
 ## Versioning
 
@@ -137,4 +147,4 @@ Release tags use the plain numeric version, such as `0.1.0`, without a `v` prefi
 
 ## License
 
-MiddleClass is available under the MIT License.
+MiddleClass is available under the MIT License. Embedded dropdown chevrons retain their upstream licenses and attribution in [Third-party notices](third-party-notices.md).
