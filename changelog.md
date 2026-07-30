@@ -6,7 +6,6 @@
 - added Font Awesome, Material Icons, Lucide, and Heroicons dropdown-chevron presets
 - added the inheritable `data-mc-icon-family` switch for global or scoped family selection
 - added public chevron variables for direct preset selection and custom-image overrides
-- added live family comparisons, documentation, and third-party icon attribution
 
 ## 0.1.1
 
