@@ -1,6 +1,6 @@
 # CSS Variables
 
-MiddleClass uses CSS variables to store reusable framework values such as colors, spacing, widths, radii, and typography settings.
+MiddleClass uses CSS variables to store reusable framework values such as colors, spacing, widths, radii, typography settings, and component icon choices.
 
 The formal CSS term is custom properties. This documentation uses CSS variables because it is the more familiar name.
 
@@ -46,6 +46,7 @@ Current variables expect values in these general categories:
 | Font-size, width, gutter, radius, border-width, spacing, and component-gap variables | A valid CSS length or math expression that resolves to a length |
 | `--mc-line-height` | A unitless number |
 | Color variables | A valid CSS color |
+| Chevron image variables | A valid CSS image such as `url(...)` |
 
 Overrides should preserve the existing value category of each variable.
 
@@ -110,6 +111,55 @@ There is normally no need to edit `middleclass.css` directly.
 | `--mc-space-8` | `4rem` |
 
 Use the existing spacing scale before adding unrelated one-off spacing values. See [Sizing and units](sizing.md) for the unit policy behind this scale.
+
+## Dropdown Icon Variables
+
+MiddleClass embeds four compact SVG-mask presets for the chevron used by `.dropdown`. Font Awesome is the default.
+
+| Variable | Purpose |
+| --- | --- |
+| `--mc-chevron-font-awesome` | Font Awesome Free chevron preset |
+| `--mc-chevron-material` | Material Icons chevron preset |
+| `--mc-chevron-lucide` | Lucide chevron preset |
+| `--mc-chevron-heroicons` | Heroicons chevron preset |
+| `--mc-dropdown-chevron` | Active chevron image used by dropdowns |
+
+Select a family for the whole page with one attribute:
+
+```html
+<html lang="en" data-mc-icon-family="material">
+```
+
+Supported values are `font-awesome`, `material`, `lucide`, and `heroicons`.
+
+The attribute may also be placed on a section or individual dropdown. The selected variable inherits through that subtree:
+
+```html
+<details class="dropdown" data-mc-icon-family="heroicons">
+	<summary>Products</summary>
+	<ul>
+		<li><a href="/products/one/">Product One</a></li>
+	</ul>
+</details>
+```
+
+A site may select a bundled preset directly instead of using the attribute:
+
+```css
+:root {
+	--mc-dropdown-chevron: var(--mc-chevron-lucide);
+}
+```
+
+A custom SVG or other mask-compatible image can replace the presets through the same variable:
+
+```css
+:root {
+	--mc-dropdown-chevron: url("data:image/svg+xml,...");
+}
+```
+
+The active variable changes only the silhouette. MiddleClass continues to own the chevron's size, color, alignment, direction, and open-state rotation. These presets support one component affordance; they are not a general-purpose icon library. See [Third-party notices](../third-party-notices.md) for icon sources and licenses.
 
 ## Color Variables
 
