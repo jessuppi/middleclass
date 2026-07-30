@@ -64,6 +64,17 @@ Arranges related items in a wrapping horizontal row with centered cross-axis ali
 </div>
 ```
 
+`.cluster` controls only the arrangement of its children and intentionally adds no outer margin. When a cluster should participate in normal document rhythm, apply the class to an appropriate semantic element:
+
+```html
+<p class="cluster">
+	<a class="button" href="/download/">Download</a>
+	<a class="button outline" href="/docs/">Documentation</a>
+</p>
+```
+
+Here the paragraph keeps its normal bottom margin while `.cluster` controls the links' internal arrangement. Use a structural wrapper such as `<div>` when the group should remain marginless, or place larger groups inside a parent layout such as `.stack`.
+
 Override the spacing for one cluster with `--mc-cluster-space`.
 
 On narrow screens, direct button-like children can grow to share available row width.
