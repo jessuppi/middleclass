@@ -147,9 +147,11 @@ MiddleClass does not require:
 - generated utility classes
 - JavaScript
 - framework adapters
-- bundled fonts or icons
+- bundled fonts or general-purpose icon libraries
 
 The source file is the product, not an intermediate build artifact.
+
+The four embedded dropdown-chevron presets are component-specific visual affordances. They replace a fragile CSS-drawn shape and let common icon-family sites match that control without extra markup or selector overrides. They do not expose general icon classes, provide unrelated symbols, or establish an expandable icon-library API.
 
 Documentation and the demonstration page may use separate files, but the framework itself remains directly readable and copyable.
 
@@ -175,21 +177,23 @@ New rules should be placed in the most relevant existing section. A new section 
 
 ## Variables and Local Customization
 
-Public CSS variables use the `--mc-` prefix and hold shared framework values such as colors, spacing, widths, radii, and typography settings.
+Public CSS variables use the `--mc-` prefix and hold shared framework values such as colors, spacing, widths, radii, typography settings, and the active dropdown-chevron image.
 
 Variables provide the normal customization layer. Sites should prefer overriding a documented variable when changing a shared framework choice and use site-specific CSS for isolated behavior.
 
-Component-specific variables may customize an individual `.stack`, `.cluster`, or `.columns` instance without creating additional classes.
+Component-specific variables may customize an individual `.stack`, `.cluster`, `.columns`, or `.dropdown` instance without creating additional classes.
+
+The `data-mc-icon-family` attribute maps the supported Font Awesome, Material Icons, Lucide, and Heroicons presets to `--mc-dropdown-chevron`. It may be placed on the root element or scoped to an ancestor because CSS variables inherit.
 
 See [CSS variables](variables.md) for the current variable reference and [Sizing and units](sizing.md) for unit policy.
 
 ## Public API Boundaries
 
-The public API consists of documented classes, documented CSS variables, supported theme attributes, and the semantic element behavior users reasonably depend on.
+The public API consists of documented classes, documented CSS variables, supported theme and icon-family attributes, and the semantic element behavior users reasonably depend on.
 
 Internal selector structure and one-off property values are implementation details unless documented otherwise.
 
-MiddleClass is pre-1.0 and does not promise API stability. Documented classes, variables, theme attributes, and semantic element behavior may change between minor releases. Changes should remain deliberate, narrowly scoped, and recorded in the changelog.
+MiddleClass is pre-1.0 and does not promise API stability. Documented classes, variables, theme attributes, icon-family attributes, and semantic element behavior may change between minor releases. Changes should remain deliberate, narrowly scoped, and recorded in the changelog.
 
 ## Accessibility Baseline
 
@@ -237,6 +241,7 @@ MiddleClass is not intended to become:
 - a JavaScript component library
 - an application shell or routing system
 - a generated design-system pipeline
+- a general-purpose icon library
 - a collection of highly specialized page templates
 - a replacement for site-specific styling
 
