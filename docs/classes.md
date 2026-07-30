@@ -117,7 +117,7 @@ Gives a link the same button presentation as native buttons and button-type inpu
 <a class="button" href="/download/">Download</a>
 ```
 
-Use native `<button>` elements for actions and `.button` links for navigation. Direct SVG children receive consistent spacing and are normalized to `1em`; MiddleClass does not bundle icons.
+Use native `<button>` elements for actions and `.button` links for navigation. Direct SVG children receive consistent spacing and are normalized to `1em`; MiddleClass does not provide a general-purpose icon library.
 
 ### `.secondary`
 
@@ -218,6 +218,23 @@ Turns a native `<details>` element into an overlaid link menu. Unclassed `<detai
 ```
 
 The supported structure is a direct `<summary>` followed by a direct `<ul>`. By default, the panel opens below the trigger and its inline-end edge aligns with the trigger's inline-end edge. The open list overlays nearby content instead of shifting the layout, while opening and closing remain native `<details>` behavior.
+
+The trigger chevron uses Font Awesome by default. Set `data-mc-icon-family` to `material`, `lucide`, or `heroicons` on the root element, a shared ancestor, or one dropdown to match the site's icon family:
+
+```html
+<html lang="en" data-mc-icon-family="material">
+```
+
+```html
+<details class="dropdown" data-mc-icon-family="heroicons">
+	<summary>Products</summary>
+	<ul>
+		<li><a href="/products/one/">Product One</a></li>
+	</ul>
+</details>
+```
+
+The value `font-awesome` is also supported when an explicit default is useful. MiddleClass owns the chevron's size, color, alignment, direction, and rotation. See [CSS variables](variables.md) for direct preset and custom-image overrides.
 
 The links remain ordinary links. Do not add application-style `menu` or `menuitem` roles. When open, a pointer click outside the panel closes the disclosure through an invisible viewport layer owned by the native `<summary>`; no JavaScript is required.
 
