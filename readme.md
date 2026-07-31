@@ -100,7 +100,7 @@ Dropdowns use a Font Awesome chevron by default. A site can switch every dropdow
 <html lang="en" data-mc-icon-family="material">
 ```
 
-Supported dropdown chevron families are Font Awesome, Material Icons, Lucide, and Heroicons. The attribute may also be scoped to one section or dropdown, and `--mc-dropdown-chevron` accepts a custom image. See [CSS variables](docs/variables.md) for the complete API.
+Supported dropdown chevron families are Font Awesome, Material Symbols, Lucide, and Heroicons. The attribute may also be scoped to one section or dropdown, and `--mc-dropdown-chevron` accepts a custom image. See [CSS variables](docs/variables.md) for the complete API.
 
 ## Color themes
 
