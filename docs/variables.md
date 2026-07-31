@@ -119,7 +119,7 @@ MiddleClass embeds four compact SVG-mask presets for the chevron used by `.dropd
 | Variable | Purpose |
 | --- | --- |
 | `--mc-chevron-font-awesome` | Font Awesome Free chevron preset |
-| `--mc-chevron-material` | Material Icons chevron preset |
+| `--mc-chevron-material` | Material Symbols chevron preset |
 | `--mc-chevron-lucide` | Lucide chevron preset |
 | `--mc-chevron-heroicons` | Heroicons chevron preset |
 | `--mc-dropdown-chevron` | Active chevron image used by dropdowns |
