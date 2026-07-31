@@ -21,7 +21,7 @@ Font Awesome Free identifies embedded attribution comments or equivalent attribu
 - Project: Google Material Design Icons
 - Source: https://github.com/google/material-design-icons
 - License: Apache License 2.0
-- License text: [`material-icons-license.txt`](material-icons-license.txt)
+- License text: [`material-symbols-license.txt`](material-symbols-license.txt)
 - Copyright: Google LLC and contributors
 
 MiddleClass repackages the SVG as a CSS mask and changes its view box to normalize the visible shape for dropdown sizing.
