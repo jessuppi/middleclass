@@ -32,14 +32,14 @@ MiddleClass repackages the SVG as a CSS mask and changes its view box to normali
 - Project: Lucide
 - Source: https://github.com/lucide-icons/lucide
 - License: ISC License
-- License text: [`lucide-and-feather-license.txt`](lucide-and-feather-license.txt)
+- License text: [`lucide-license.txt`](lucide-license.txt)
 - Copyright: Copyright 2026 Lucide Icons and Contributors
 
 Lucide identifies `chevron-down` as derived from Feather Icons. That icon is also covered by the following upstream notice:
 
 - Project: Feather Icons
 - License: MIT License
-- License text: [`lucide-and-feather-license.txt`](lucide-and-feather-license.txt)
+- License text: [`lucide-license.txt`](lucide-license.txt)
 - Copyright: Copyright 2013-present Cole Bemis
 
 ## Heroicons
