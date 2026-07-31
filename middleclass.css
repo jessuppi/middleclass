@@ -8,6 +8,10 @@
 
 /* variables */
 
+/* Dropdown chevrons include modified third-party icon shapes.
+ * Sources and license texts: https://github.com/jessuppi/middleclass/blob/master/licenses/notice.md
+ */
+
 :root {
 	color-scheme: light dark;
 	--mc-font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;

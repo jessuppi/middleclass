@@ -147,4 +147,4 @@ Release tags use the plain numeric version, such as `0.1.0`, without a `v` prefi
 
 ## License
 
-MiddleClass is available under the MIT License. Embedded dropdown chevrons retain their upstream licenses and attribution in [Third-party notices](third-party-notices.md).
+MiddleClass is available under the MIT License. Embedded dropdown chevrons retain their upstream licenses and attribution in [Third-party notices](licenses/notice.md).

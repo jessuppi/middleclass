@@ -159,7 +159,7 @@ A custom SVG or other mask-compatible image can replace the presets through the 
 }
 ```
 
-The active variable changes only the silhouette. MiddleClass continues to own the chevron's size, color, alignment, direction, and open-state rotation. These presets support one component affordance; they are not a general-purpose icon library. See [Third-party notices](../third-party-notices.md) for icon sources and licenses.
+The active variable changes only the silhouette. MiddleClass continues to own the chevron's size, color, alignment, direction, and open-state rotation. These presets support one component affordance; they are not a general-purpose icon library. See [Third-party notices](../licenses/notice.md) for icon sources and licenses.
 
 ## Color Variables
 
