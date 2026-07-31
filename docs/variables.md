@@ -114,44 +114,22 @@ Use the existing spacing scale before adding unrelated one-off spacing values. S
 
 ## Dropdown Icon Variables
 
-MiddleClass embeds four compact SVG-mask presets for the chevron used by `.dropdown`. Font Awesome is the default.
+MiddleClass embeds a compact Font Awesome SVG mask for the chevron used by `.dropdown`.
 
 | Variable | Purpose |
 | --- | --- |
-| `--mc-chevron-font-awesome` | Font Awesome Free chevron preset |
-| `--mc-chevron-material` | Material Symbols chevron preset |
-| `--mc-chevron-lucide` | Lucide chevron preset |
-| `--mc-chevron-heroicons` | Heroicons chevron preset |
+| `--mc-chevron-font-awesome` | Bundled Font Awesome Free chevron |
 | `--mc-dropdown-chevron` | Active chevron image used by dropdowns |
 
-Select a family for the whole page with one attribute:
-
-```html
-<html lang="en" data-mc-icon-family="material">
-```
-
-Supported values are `font-awesome`, `material`, `lucide`, and `heroicons`.
-
-The attribute may also be placed on a section or individual dropdown. The selected variable inherits through that subtree:
-
-```html
-<details class="dropdown" data-mc-icon-family="heroicons">
-	<summary>Products</summary>
-	<ul>
-		<li><a href="/products/one/">Product One</a></li>
-	</ul>
-</details>
-```
-
-A site may select a bundled preset directly instead of using the attribute:
+The Font Awesome variable is the default:
 
 ```css
 :root {
-	--mc-dropdown-chevron: var(--mc-chevron-lucide);
+	--mc-dropdown-chevron: var(--mc-chevron-font-awesome);
 }
 ```
 
-A custom SVG or other mask-compatible image can replace the presets through the same variable:
+A site can replace it globally with another mask-compatible SVG or image:
 
 ```css
 :root {
@@ -159,7 +137,15 @@ A custom SVG or other mask-compatible image can replace the presets through the 
 }
 ```
 
-The active variable changes only the silhouette. MiddleClass continues to own the chevron's size, color, alignment, direction, and open-state rotation. These presets support one component affordance; they are not a general-purpose icon library. See [Third-party notices](../licenses/notice.md) for icon sources and licenses.
+Because CSS variables inherit, the override may also be scoped to one section or dropdown:
+
+```css
+.special-menu {
+	--mc-dropdown-chevron: url("data:image/svg+xml,...");
+}
+```
+
+MiddleClass continues to own the chevron's size, color, alignment, direction, and open-state rotation. The bundled Font Awesome shape supports one component affordance; it is not a general-purpose icon library. See [Third-party notices](../licenses/notice.md) for its source and license.
 
 ## Color Variables
 
