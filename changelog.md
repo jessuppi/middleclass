@@ -3,7 +3,7 @@
 ## 0.2.0
 
 - replaced the CSS border-built dropdown chevron with a centered SVG mask
-- added Font Awesome, Material Icons, Lucide, and Heroicons dropdown-chevron presets
+- added Font Awesome, Material Symbols, Lucide, and Heroicons dropdown-chevron presets
 - added the inheritable `data-mc-icon-family` switch for global or scoped family selection
 - added public chevron variables for direct preset selection and custom-image overrides
 
