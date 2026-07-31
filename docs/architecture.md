@@ -153,6 +153,8 @@ The source file is the product, not an intermediate build artifact.
 
 The four embedded dropdown-chevron presets are component-specific visual affordances. They replace a fragile CSS-drawn shape and let common icon-family sites match that control without extra markup or selector overrides. They do not expose general icon classes, provide unrelated symbols, or establish an expandable icon-library API.
 
+For author-provided icons, MiddleClass favors inline SVG rather than mandatory wrapper classes or a bundled general-purpose icon library. An inline SVG inside a button, link, or navigation item should normally use `fill="currentColor"` or `stroke="currentColor"` so it inherits surrounding colors and interaction states. Framework styles may normalize common component sizing and alignment, while unusual presentation belongs in the site's own stylesheet. MiddleClass should embed an icon only when one of its own components requires that visual affordance automatically.
+
 Documentation and the demonstration page may use separate files, but the framework itself remains directly readable and copyable.
 
 ## Stylesheet Order
