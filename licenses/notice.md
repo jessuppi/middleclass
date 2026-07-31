@@ -15,16 +15,16 @@ MiddleClass changes only the SVG packaging and view box used to normalize each i
 
 Font Awesome Free identifies embedded attribution comments or equivalent attribution as sufficient for normal SVG use. MiddleClass preserves the project name, icon name, copyright, source, license, and modification details here.
 
-## Material Icons
+## Material Symbols
 
-- Icon: `expand_more`
-- Project: Google Material Design Icons
-- Source: https://github.com/google/material-design-icons
+- Icon: `keyboard_arrow_down`
+- Project: Google Material Symbols
+- Source: https://fonts.google.com/icons
 - License: Apache License 2.0
 - License text: [`material-symbols-license.txt`](material-symbols-license.txt)
 - Copyright: Google LLC and contributors
 
-MiddleClass repackages the SVG as a CSS mask and changes its view box to normalize the visible shape for dropdown sizing.
+MiddleClass repackages the SVG as a CSS mask and crops its view box to normalize the visible shape for dropdown sizing.
 
 ## Lucide
 
