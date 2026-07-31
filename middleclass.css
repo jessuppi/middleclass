@@ -8,8 +8,10 @@
 
 /* variables */
 
-/* Dropdown chevrons include modified third-party icon shapes.
- * Sources and license texts: https://github.com/jessuppi/middleclass/blob/master/licenses/notice.md
+/* Font Awesome Free chevron-down, Copyright 2026 Fonticons, Inc.
+ * Licensed under CC BY 4.0: https://creativecommons.org/licenses/by/4.0/
+ * Source: https://github.com/FortAwesome/Font-Awesome
+ * Modified for use as a normalized CSS mask.
  */
 
 :root {
@@ -47,26 +49,7 @@
 	--mc-warning: #8a5a00;
 	--mc-danger: #b42318;
 	--mc-chevron-font-awesome: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%20144%20448%20288%27%3E%3Cpath%20fill%3D%27black%27%20d%3D%27M201.4%20406.6c12.5%2012.5%2032.8%2012.5%2045.3%200l192-192c12.5-12.5%2012.5-32.8%200-45.3s-32.8-12.5-45.3%200L224%20338.7%2054.6%20169.4c-12.5-12.5-32.8-12.5-45.3%200s-12.5%2032.8%200%2045.3l192%20192z%27%2F%3E%3C%2Fsvg%3E");
-	--mc-chevron-material: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%27240%20-640%20480%20296%27%3E%3Cpath%20fill%3D%27black%27%20d%3D%27M480-344%20240-584l56-56%20184%20184%20184-184%2056%2056-240%20240Z%27%2F%3E%3C%2Fsvg%3E");
-	--mc-chevron-lucide: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%274.5%207.5%2015%209%27%20fill%3D%27none%27%20stroke%3D%27black%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27m6%209%206%206%206-6%27%2F%3E%3C%2Fsvg%3E");
-	--mc-chevron-heroicons: url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%273%207%2018%2010%27%20fill%3D%27none%27%20stroke%3D%27black%27%20stroke-width%3D%271.5%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27m19.5%208.25-7.5%207.5-7.5-7.5%27%2F%3E%3C%2Fsvg%3E");
 	--mc-dropdown-chevron: var(--mc-chevron-font-awesome);
-}
-
-[data-mc-icon-family="font-awesome"] {
-	--mc-dropdown-chevron: var(--mc-chevron-font-awesome);
-}
-
-[data-mc-icon-family="material"] {
-	--mc-dropdown-chevron: var(--mc-chevron-material);
-}
-
-[data-mc-icon-family="lucide"] {
-	--mc-dropdown-chevron: var(--mc-chevron-lucide);
-}
-
-[data-mc-icon-family="heroicons"] {
-	--mc-dropdown-chevron: var(--mc-chevron-heroicons);
 }
 
 [data-theme="light"] {
