@@ -183,7 +183,7 @@ Variables provide the normal customization layer. Sites should prefer overriding
 
 Component-specific variables may customize an individual `.stack`, `.cluster`, `.columns`, or `.dropdown` instance without creating additional classes.
 
-The `data-mc-icon-family` attribute maps the supported Font Awesome, Material Icons, Lucide, and Heroicons presets to `--mc-dropdown-chevron`. It may be placed on the root element or scoped to an ancestor because CSS variables inherit.
+The `data-mc-icon-family` attribute maps the supported Font Awesome, Material Symbols, Lucide, and Heroicons presets to `--mc-dropdown-chevron`. It may be placed on the root element or scoped to an ancestor because CSS variables inherit.
 
 See [CSS variables](variables.md) for the current variable reference and [Sizing and units](sizing.md) for unit policy.
 
