@@ -219,22 +219,15 @@ Turns a native `<details>` element into an overlaid link menu. Unclassed `<detai
 
 The supported structure is a direct `<summary>` followed by a direct `<ul>`. By default, the panel opens below the trigger and its inline-end edge aligns with the trigger's inline-end edge. The open list overlays nearby content instead of shifting the layout, while opening and closing remain native `<details>` behavior.
 
-The trigger chevron uses Font Awesome by default. Set `data-mc-icon-family` to `material`, `lucide`, or `heroicons` on the root element, a shared ancestor, or one dropdown to match the site's icon family:
+The trigger uses a bundled Font Awesome chevron by default. A site can replace it globally or within a particular subtree by overriding `--mc-dropdown-chevron` with another mask-compatible image:
 
-```html
-<html lang="en" data-mc-icon-family="material">
+```css
+:root {
+	--mc-dropdown-chevron: url("data:image/svg+xml,...");
+}
 ```
 
-```html
-<details class="dropdown" data-mc-icon-family="heroicons">
-	<summary>Products</summary>
-	<ul>
-		<li><a href="/products/one/">Product One</a></li>
-	</ul>
-</details>
-```
-
-The value `font-awesome` is also supported when an explicit default is useful. MiddleClass owns the chevron's size, color, alignment, direction, and rotation. See [CSS variables](variables.md) for direct preset and custom-image overrides.
+MiddleClass owns the chevron's size, color, alignment, direction, and rotation. See [CSS variables](variables.md) for the complete override guidance.
 
 The links remain ordinary links. Do not add application-style `menu` or `menuitem` roles. When open, a pointer click outside the panel closes the disclosure through an invisible viewport layer owned by the native `<summary>`; no JavaScript is required.
 
