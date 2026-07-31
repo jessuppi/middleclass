@@ -1,8 +1,6 @@
 # Third-Party Notices
 
-MiddleClass is licensed under the MIT License. The dropdown-chevron presets embedded in `middleclass.css` include the following third-party icon shapes under their respective upstream licenses.
-
-MiddleClass changes only the SVG packaging and view box used to normalize each icon as a CSS mask. The original path geometry and stroke styling remain attributable to the named projects. Complete upstream license notices are included in this directory.
+MiddleClass is licensed under the MIT License. The dropdown chevron embedded in `middleclass.css` uses the following third-party icon shape under its upstream license.
 
 ## Font Awesome Free
 
@@ -13,44 +11,6 @@ MiddleClass changes only the SVG packaging and view box used to normalize each i
 - License text: [`font-awesome-license.txt`](font-awesome-license.txt)
 - Copyright: Copyright 2026 Fonticons, Inc.
 
-Font Awesome Free identifies embedded attribution comments or equivalent attribution as sufficient for normal SVG use. MiddleClass preserves the project name, icon name, copyright, source, license, and modification details here.
+MiddleClass changes the SVG packaging and view box to normalize the icon as a CSS mask. Equivalent attribution is retained directly in `middleclass.css` so the standalone stylesheet remains self-contained.
 
-## Material Symbols
-
-- Icon: `keyboard_arrow_down`
-- Project: Google Material Symbols
-- Source: https://fonts.google.com/icons
-- License: Apache License 2.0
-- License text: [`material-symbols-license.txt`](material-symbols-license.txt)
-- Copyright: Google LLC and contributors
-
-MiddleClass repackages the SVG as a CSS mask and crops its view box to normalize the visible shape for dropdown sizing.
-
-## Lucide
-
-- Icon: `chevron-down`
-- Project: Lucide
-- Source: https://github.com/lucide-icons/lucide
-- License: ISC License
-- License text: [`lucide-license.txt`](lucide-license.txt)
-- Copyright: Copyright 2026 Lucide Icons and Contributors
-
-Lucide identifies `chevron-down` as derived from Feather Icons. That icon is also covered by the following upstream notice:
-
-- Project: Feather Icons
-- License: MIT License
-- License text: [`lucide-license.txt`](lucide-license.txt)
-- Copyright: Copyright 2013-present Cole Bemis
-
-## Heroicons
-
-- Icon: `chevron-down`, 24-pixel outline variant
-- Project: Heroicons
-- Source: https://github.com/tailwindlabs/heroicons
-- License: MIT License
-- License text: [`heroicons-license.txt`](heroicons-license.txt)
-- Copyright: Copyright Tailwind Labs, Inc.
-
-## No Endorsement
-
-The inclusion of these icon shapes does not imply endorsement of MiddleClass by Fonticons, Google, Lucide, Feather, or Tailwind Labs. The family names are used only to identify the selectable visual presets.
+The inclusion of this icon shape does not imply endorsement of MiddleClass by Fonticons.
