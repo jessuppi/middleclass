@@ -8,15 +8,13 @@ MiddleClass can be used for blogs, documentation, landing pages, small business 
 
 ## Usage
 
-Download or copy [`middleclass.css`](middleclass.css) into your own repository or project, then link the local file from the document head:
+Copy [`middleclass.css`](middleclass.css) into your project and link the local file from the document head:
 
 ```html
 <link rel="stylesheet" href="/assets/middleclass.css">
 ```
 
-Always host the stylesheet with the project that uses it. Do not link a production site directly to the GitHub repository, a raw GitHub URL, or the demonstration site; these are not supported CDN endpoints and may change without notice.
-
-MiddleClass does not currently provide an official CDN. A supported CDN option may be introduced later through a provider such as Cloudflare, but local hosting is the recommended and supported approach for now.
+Host the stylesheet with your project rather than linking to GitHub, a raw GitHub URL, or the demo site. MiddleClass has no official CDN yet; a supported option may be introduced later through a provider such as Cloudflare, but local hosting is the supported approach for now.
 
 A minimal page can use semantic HTML without component classes:
 
@@ -53,7 +51,7 @@ A minimal page can use semantic HTML without component classes:
 
 ## Documentation
 
-The [live demonstration](https://jessuppi.github.io/middleclass/) is the quickest way to see MiddleClass styles, public classes, forms, themes, and responsive behavior together. The documents below explain the framework's design, boundaries, supported API, customization options, and implementation details in more depth.
+The [demo site](https://jessuppi.github.io/middleclass/) is the quickest way to see MiddleClass styles, public classes, forms, themes, and responsive behavior together. The documents below cover the framework's design, scope, supported API, customization options, and implementation details.
 
 | Document | Description |
 | --- | --- |
