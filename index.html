@@ -7,13 +7,22 @@
 	<title>MiddleClass CSS Framework</title>
 	<link rel="stylesheet" href="middleclass.css">
 	<style>
-		.github-icon {
+		.github-icon,
+		.download-icon {
 			width: 1em;
 			height: 1em;
 			flex: 0 0 auto;
 			background: currentColor;
+		}
+
+		.github-icon {
 			-webkit-mask: url("assets/icons/github.svg") center / contain no-repeat;
 			mask: url("assets/icons/github.svg") center / contain no-repeat;
+		}
+
+		.download-icon {
+			-webkit-mask: url("assets/icons/download.svg") center / contain no-repeat;
+			mask: url("assets/icons/download.svg") center / contain no-repeat;
 		}
 	</style>
 </head>
@@ -35,7 +44,10 @@
 				<h1>Pragmatic CSS for clean static websites, because a little class never hurt nobody.</h1>
 				<p>MiddleClass is a lightweight, classless-first CSS framework for semantic static websites. This page starts with a practical tour of the framework and ends with a separate regression-testing area.</p>
 				<p class="cluster">
-					<a class="button" href="middleclass.css" download>Download MiddleClass 0.2.0</a>
+					<a class="button" href="middleclass.css" download>
+						<span class="download-icon" aria-hidden="true"></span>
+						Download MiddleClass 0.2.0
+					</a>
 					<a class="button secondary outline" href="https://github.com/jessuppi/middleclass">
 						<span class="github-icon" aria-hidden="true"></span>
 						GitHub
