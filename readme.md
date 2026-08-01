@@ -43,6 +43,10 @@ Pages can use semantic HTML alone or add MiddleClass's limited public classes fo
 		<div class="container reading-width">
 			<h1>Hello, world.</h1>
 			<p>MiddleClass handles the foundation while the document remains ordinary HTML.</p>
+			<p class="cluster">
+				<a class="button" href="/start/">Get started</a>
+				<a class="button outline" href="/about/">Learn more</a>
+			</p>
 		</div>
 	</main>
 </body>
