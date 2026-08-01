@@ -55,7 +55,7 @@ Use the [live demonstration](https://jessuppi.github.io/middleclass/) as a visua
 
 ## Documentation
 
-- [Architecture](docs/architecture.md) explains the classless-first model, limited class API, selector strategy, and framework boundaries.
+- [Architecture](docs/architecture.md) explains the classless-first model, limited class API, selector strategy, browser approach, and framework boundaries.
 - [Scope](docs/scope.md) defines what MiddleClass is intended to provide and what remains outside the project.
 - [Customization](docs/customization.md) explains the recommended override workflow, themes, typography, spacing, and site-specific styling.
 - [Classes](docs/classes.md) is the canonical reference for every supported public class, its expected markup, and important limitations.
@@ -63,10 +63,6 @@ Use the [live demonstration](https://jessuppi.github.io/middleclass/) as a visua
 - [Sizing and units](docs/sizing.md) explains when MiddleClass uses `rem`, `em`, `px`, unitless values, and responsive layout units.
 - [Spacing](docs/spacing.md) defines the vertical rhythm, structural spacing ownership, padded component edges, layout gaps, and intentional exceptions.
 - [CSS variables](docs/variables.md) documents the reusable values available for framework customization.
-
-## Browser approach
-
-MiddleClass targets modern browsers without transpilation or compatibility bundles. The source stays readable and uses progressive CSS features that fail safely where practical.
 
 ## License
 
