@@ -53,6 +53,8 @@ A minimal page can use semantic HTML without component classes:
 
 ## Documentation
 
+The [live demonstration](https://jessuppi.github.io/middleclass/) is the quickest way to see MiddleClass styles, public classes, forms, themes, and responsive behavior together. The documents below explain the framework's design, boundaries, supported API, customization options, and implementation details in more depth.
+
 | Document | Description |
 | --- | --- |
 | [Architecture](docs/architecture.md) | Explains the classless-first model, why the limited class layer exists, class admission rules, selector strategy, stylesheet organization, public API boundaries, browser expectations, and criteria for evaluating new features. |
