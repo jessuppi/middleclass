@@ -147,7 +147,7 @@ A dropdown-specific override can replace only the dropdown icon globally or with
 }
 ```
 
-MiddleClass continues to own the chevron's size, color, alignment, direction, and open-state rotation. The bundled Font Awesome shape supports component affordances; it is not a general-purpose icon library. See [Third-party notices](../licenses/notice.md) for its source and license.
+MiddleClass continues to own the chevron's size, color, alignment, direction, and open-state rotation. The bundled Font Awesome shape supports component affordances; it is not a general-purpose icon library. See [Third-party notices](../notices.md) for its source and license.
 
 ## Color Variables
 
