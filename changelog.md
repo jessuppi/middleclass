@@ -2,8 +2,9 @@
 
 ## 0.2.0
 
-- replaced the CSS border-built dropdown chevron with a centered Font Awesome SVG mask
-- added public chevron variables for the bundled default and custom-image overrides
+- replaced the CSS border-built dropdown chevron with the Font Awesome Free `chevron-down` path embedded as an SVG data URI and rendered through a `currentColor` CSS mask
+- added `--mc-chevron-font-awesome` for the bundled source image and inheritable `--mc-dropdown-chevron` overrides for global, scoped, or custom mask replacement
+- normalized the masked chevron to `0.8em`, retained automatic open and dropup rotation, and added Font Awesome source, modification, and CC BY 4.0 attribution
 
 ## 0.1.1
 
