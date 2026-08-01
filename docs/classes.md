@@ -4,6 +4,17 @@ MiddleClass is classless-first, but it provides a small public class API for lay
 
 This file is the canonical reference for every supported public class. Class names not listed here should be treated as site-specific rather than part of MiddleClass's public API.
 
+## Public Class Overview
+
+MiddleClass intentionally keeps its public class API small:
+
+- Layout: `.container`, `.reading-width`, `.stack`, `.cluster`, `.columns`, and `.push-end`
+- Buttons and variants: `.button`, `.secondary`, and `.outline`
+- Content components: `.card`, `.notice`, `.success`, `.warning`, `.danger`, `.dropdown`, `.dropdown-start`, and `.dropup`
+- Supporting behavior: `.table-wrap`, `.muted`, and `.screen-reader-text`
+
+Semantic element defaults remain the foundation of the framework, and site-specific presentation should remain in the site's own stylesheet.
+
 ## Layout
 
 Layout classes control internal arrangement and remain externally marginless by default. The parent containing a layout class should provide any vertical spacing before or after it.
