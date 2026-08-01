@@ -114,30 +114,32 @@ Use the existing spacing scale before adding unrelated one-off spacing values. S
 
 ## Dropdown Icon Variables
 
-MiddleClass embeds a compact Font Awesome SVG mask for the chevron used by `.dropdown`.
+MiddleClass embeds a compact Font Awesome SVG mask for the down-chevron used by `.dropdown` and potentially other controls.
 
 | Variable | Purpose |
 | --- | --- |
 | `--mc-chevron-down-font-awesome` | Bundled Font Awesome Free chevron-down icon |
+| `--mc-chevron-down` | Shared framework default for down-chevron images |
 | `--mc-dropdown-chevron` | Active chevron image used by dropdowns |
 
-The Font Awesome variable is the default:
+The bundled asset feeds the shared default, and dropdowns use that shared value:
 
 ```css
 :root {
-	--mc-dropdown-chevron: var(--mc-chevron-down-font-awesome);
+	--mc-chevron-down: var(--mc-chevron-down-font-awesome);
+	--mc-dropdown-chevron: var(--mc-chevron-down);
 }
 ```
 
-A site can replace it globally with another mask-compatible SVG or image:
+A site can replace the shared default globally with another mask-compatible SVG or image. Any component that uses `--mc-chevron-down` as its default will inherit the change:
 
 ```css
 :root {
-	--mc-dropdown-chevron: url("data:image/svg+xml,...");
+	--mc-chevron-down: url("data:image/svg+xml,...");
 }
 ```
 
-Because CSS variables inherit, the override may also be scoped to one section or dropdown:
+A dropdown-specific override can replace only the dropdown icon globally or within one subtree:
 
 ```css
 .special-menu {
@@ -145,7 +147,7 @@ Because CSS variables inherit, the override may also be scoped to one section or
 }
 ```
 
-MiddleClass continues to own the chevron's size, color, alignment, direction, and open-state rotation. The bundled Font Awesome shape supports one component affordance; it is not a general-purpose icon library. See [Third-party notices](../licenses/notice.md) for its source and license.
+MiddleClass continues to own the chevron's size, color, alignment, direction, and open-state rotation. The bundled Font Awesome shape supports component affordances; it is not a general-purpose icon library. See [Third-party notices](../licenses/notice.md) for its source and license.
 
 ## Color Variables
 
