@@ -69,20 +69,6 @@ Use the [live demonstration](https://jessuppi.github.io/middleclass/) as a visua
 - [Spacing](docs/spacing.md) defines the vertical rhythm, structural spacing ownership, padded component edges, layout gaps, and intentional exceptions.
 - [CSS variables](docs/variables.md) documents the reusable values available for framework customization.
 
-## Customization
-
-Load a site stylesheet after MiddleClass and override documented variables there:
-
-```css
-:root {
-	--mc-content-width: 80rem;
-	--mc-reading-width: 44rem;
-	--mc-radius: 0.25rem;
-}
-```
-
-See [Customization](docs/customization.md) for themes, typography, scoped overrides, component styling, and testing guidance. See [CSS variables](docs/variables.md) for the complete variable reference.
-
 ## Browser approach
 
 MiddleClass targets modern browsers without transpilation or compatibility bundles. The source stays readable and uses progressive CSS features that fail safely where practical.
