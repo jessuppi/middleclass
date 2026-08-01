@@ -1,19 +1,14 @@
 # MiddleClass
 
-MiddleClass is a lightweight, classless-first CSS framework for semantic static websites.
+## Description
 
-It gives plain HTML a clean responsive foundation, then adds a small set of layout and component classes for choices that semantic markup cannot express by itself.
+MiddleClass is a lightweight, classless-first CSS framework for semantic static websites. It gives ordinary HTML a clean, responsive foundation before any component classes are added.
+
+A small public class API handles layout and presentation choices that semantic markup cannot express by itself. The framework is distributed as one readable CSS file with no build step, package manager, preprocessor, JavaScript dependency, or rigid component structure.
+
+MiddleClass is designed for straightforward static hosting and easy site-level customization through understandable selectors, documented variables, and a deliberately limited public API.
 
 **Live demo:** [jessuppi.github.io/middleclass](https://jessuppi.github.io/middleclass/)
-
-## Goals
-
-- Make ordinary semantic HTML look intentional.
-- Work from one readable CSS file with no build step.
-- Keep selectors understandable and easy to override.
-- Keep the public class API small and deliberate.
-- Support static hosting such as GitHub Pages and Cloudflare Pages.
-- Avoid JavaScript, package managers, preprocessors, and rigid component markup structures.
 
 ## Usage
 
