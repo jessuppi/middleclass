@@ -57,14 +57,14 @@ Use the [live demonstration](https://jessuppi.github.io/middleclass/) as a visua
 
 | Document | Description |
 | --- | --- |
-| [Architecture](docs/architecture.md) | Explains the classless-first model, limited class API, selector strategy, browser approach, and framework boundaries. |
-| [Scope](docs/scope.md) | Defines what MiddleClass is intended to provide and what remains outside the project. |
-| [Customization](docs/customization.md) | Explains the recommended override workflow, themes, typography, spacing, and site-specific styling. |
-| [Classes](docs/classes.md) | The canonical reference for every supported public class, its expected markup, and important limitations. |
-| [Accessibility](docs/accessibility.md) | Describes the current accessibility baseline, author responsibilities, and basic testing expectations. |
-| [Sizing and units](docs/sizing.md) | Explains when MiddleClass uses `rem`, `em`, `px`, unitless values, and responsive layout units. |
-| [Spacing](docs/spacing.md) | Defines the vertical rhythm, structural spacing ownership, padded component edges, layout gaps, and intentional exceptions. |
-| [CSS variables](docs/variables.md) | Documents the reusable values available for framework customization. |
+| [Architecture](docs/architecture.md) | Explains the classless-first model, why the limited class layer exists, class admission rules, selector strategy, stylesheet organization, public API boundaries, browser expectations, and criteria for evaluating new features. |
+| [Scope](docs/scope.md) | Defines the framework's intended purpose and development goals, together with explicit boundaries around tooling, JavaScript, utility generation, fonts, icons, routing, and other application concerns. |
+| [Customization](docs/customization.md) | Provides a practical guide to loading site styles, overriding global or scoped variables, changing typography, widths, spacing, colors, themes, component presentation, and testing the result. |
+| [Classes](docs/classes.md) | Serves as the canonical reference for every supported public class, including its purpose, expected markup, compatible variants, local variables, behavior, limitations, and usage examples. |
+| [Accessibility](docs/accessibility.md) | Describes the framework's accessibility baseline, the responsibilities that remain with site authors, component-specific considerations, and basic checks for semantics, focus, contrast, forms, and assistive technology. |
+| [Sizing and units](docs/sizing.md) | Explains where and why MiddleClass uses `rem`, `em`, `px`, unitless values, percentages, viewport-aware expressions, and responsive layout units throughout the stylesheet. |
+| [Spacing](docs/spacing.md) | Defines the vertical rhythm model, which elements own external spacing, how layout classes control internal gaps, how padded components trim their edges, and where intentional exceptions apply. |
+| [CSS variables](docs/variables.md) | Lists the documented customization variables, default values, expected value types, theme-aware color overrides, component-level variables, inheritance behavior, and guidance for extending the variable API. |
 
 ## License
 
