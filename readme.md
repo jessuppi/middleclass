@@ -25,7 +25,7 @@ Pages can use semantic HTML alone or add MiddleClass's limited public classes fo
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Example</title>
-	<link rel="stylesheet" href="middleclass.css">
+	<link rel="stylesheet" href="/assets/middleclass.css">
 </head>
 <body>
 	<header>
