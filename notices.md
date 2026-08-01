@@ -16,6 +16,7 @@ The inclusion of this icon shape does not imply endorsement of MiddleClass by Fo
 
 ## Font Awesome Free License
 
+```text
 Fonticons, Inc. (https://fontawesome.com)
 
 --------------------------------------------------------------------------------
@@ -69,7 +70,7 @@ to any document created using the fonts or their derivatives.
 
 DEFINITIONS
 "Font Software" refers to the set of files released by the Copyright
-Holder(s) under this license and clearly marked as such. This may
+Holder(s) and clearly marked as such. This may
 include source files, build scripts and documentation.
 
 "Reserved Font Name" refers to any names specified as such after the
@@ -181,3 +182,4 @@ All brand icons are trademarks of their respective owners. The use of these
 trademarks does not indicate endorsement of the trademark holder by Font
 Awesome, nor vice versa. **Please do not use brand logos for any purpose except
 to represent the company, product, or service to which they refer.**
+```
