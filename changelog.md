@@ -2,10 +2,11 @@
 
 ## 0.2.0
 
-- introduced a built-in dropdown chevron using Font Awesome Free's `chevron-down` icon so sites that already use icons get a polished, consistent control without adding icon markup or recreating the shape in each project
-- embedded the icon as an SVG data URI rendered through a `currentColor` CSS mask, keeping its color, sizing, alignment, and open or dropup rotation under MiddleClass control
+- introduced a built-in dropdown chevron using Font Awesome Free's `chevron-down` icon so sites that use icons can ship a polished, consistent control without adding icon markup or recreating the shape in each project
+- retained the original icon path in a percent-encoded SVG data URI with a cropped `viewBox`, then applied it as a CSS mask over `currentColor` for consistent sizing, alignment, theming, open-state rotation, and dropup orientation
 - added `--mc-chevron-down-font-awesome` for the bundled asset, `--mc-chevron-down` for the shared framework default, and inheritable `--mc-dropdown-chevron` overrides for dropdown-specific customization
-- added Font Awesome source, modification, and CC BY 4.0 attribution for the bundled third-party icon
+- added the Font Awesome source, modification details, and complete upstream license notices in root-level `notices.md`
+- expanded the customization and scope documentation, clarified the icon-variable implementation, and reorganized the demo to cover the framework's layouts, components, semantic elements, forms, and documentation more completely
 
 ## 0.1.1
 
