@@ -8,11 +8,15 @@ MiddleClass can be used for blogs, documentation, landing pages, small business 
 
 ## Usage
 
-Download or copy [`middleclass.css`](middleclass.css) into a site and link it from the document head:
+Download or copy [`middleclass.css`](middleclass.css) into your own repository or project, then link the local file from the document head:
 
 ```html
 <link rel="stylesheet" href="/assets/middleclass.css">
 ```
+
+Always host the stylesheet with the project that uses it. Do not link a production site directly to the GitHub repository, a raw GitHub URL, or the demonstration site; these are not supported CDN endpoints and may change without notice.
+
+MiddleClass does not currently provide an official CDN. A supported CDN option may be introduced later through a provider such as Cloudflare, but local hosting is the recommended and supported approach for now.
 
 A minimal page can use semantic HTML without component classes:
 
