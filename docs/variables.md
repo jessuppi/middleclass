@@ -116,6 +116,8 @@ Use the existing spacing scale before adding unrelated one-off spacing values. S
 
 MiddleClass embeds a compact Font Awesome SVG mask for the down-chevron used by `.dropdown` and potentially other controls.
 
+The embedded SVG retains Font Awesome's original path data while cropping the `viewBox` to remove unused vertical canvas. It is percent-encoded directly in the stylesheet and used as a mask so controls can size it consistently, color it with `currentColor` across themes and states, and avoid an additional asset request.
+
 | Variable | Purpose |
 | --- | --- |
 | `--mc-chevron-down-font-awesome` | Bundled Font Awesome Free chevron-down icon |
