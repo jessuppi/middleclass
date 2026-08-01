@@ -118,14 +118,14 @@ MiddleClass embeds a compact Font Awesome SVG mask for the chevron used by `.dro
 
 | Variable | Purpose |
 | --- | --- |
-| `--mc-chevron-font-awesome` | Bundled Font Awesome Free chevron |
+| `--mc-chevron-down-font-awesome` | Bundled Font Awesome Free chevron-down icon |
 | `--mc-dropdown-chevron` | Active chevron image used by dropdowns |
 
 The Font Awesome variable is the default:
 
 ```css
 :root {
-	--mc-dropdown-chevron: var(--mc-chevron-font-awesome);
+	--mc-dropdown-chevron: var(--mc-chevron-down-font-awesome);
 }
 ```
 
