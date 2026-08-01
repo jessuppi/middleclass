@@ -61,6 +61,7 @@ Use the [live demonstration](https://jessuppi.github.io/middleclass/) as a visua
 ## Documentation
 
 - [Architecture](docs/architecture.md) explains the classless-first model, limited class API, selector strategy, and framework boundaries.
+- [Scope](docs/scope.md) defines what MiddleClass is intended to provide and what remains outside the project.
 - [Classes](docs/classes.md) is the canonical reference for every supported public class, its expected markup, and important limitations.
 - [Accessibility](docs/accessibility.md) describes the current accessibility baseline, author responsibilities, and basic testing expectations.
 - [Sizing and units](docs/sizing.md) explains when MiddleClass uses `rem`, `em`, `px`, unitless values, and responsive layout units.
@@ -123,21 +124,6 @@ MiddleClass does not include a theme toggle because interactive behavior belongs
 ## Browser approach
 
 MiddleClass targets modern browsers without transpilation or compatibility bundles. The source stays readable and uses progressive CSS features that fail safely where practical.
-
-## Project scope
-
-MiddleClass is a CSS foundation, not an application framework. The project does not plan to include:
-
-- JavaScript widgets
-- utility-class generation
-- CSS preprocessors
-- package-manager requirements
-- framework adapters
-- general-purpose icon libraries
-- bundled fonts
-- application state or routing
-
-The embedded Font Awesome dropdown chevron is a narrowly scoped component affordance, not an author-facing icon collection.
 
 ## Versioning
 
