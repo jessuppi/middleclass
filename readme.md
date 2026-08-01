@@ -47,8 +47,6 @@ A minimal page can use semantic HTML without component classes:
 </html>
 ```
 
-Use the [live demonstration](https://jessuppi.github.io/middleclass/) as a visual reference for semantic elements, public classes, forms, vertical rhythm, themes, and responsive behavior.
-
 ## Documentation
 
 | Document | Description |
