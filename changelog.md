@@ -6,7 +6,6 @@
 - retained the original icon path in a percent-encoded SVG data URI with a cropped `viewBox`, then applied it as a CSS mask over `currentColor` for consistent sizing, alignment, theming, open-state rotation, and dropup orientation
 - added `--mc-chevron-down-font-awesome` for the bundled asset, `--mc-chevron-down` for the shared framework default, and inheritable `--mc-dropdown-chevron` overrides for dropdown-specific customization
 - added the Font Awesome source, modification details, and complete upstream license notices in root-level `notices.md`
-- expanded the customization and scope documentation, clarified the icon-variable implementation, and reorganized the demo to cover the framework's layouts, components, semantic elements, forms, and documentation more completely
 
 ## 0.1.1
 
