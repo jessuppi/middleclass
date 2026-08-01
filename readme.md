@@ -62,6 +62,7 @@ Use the [live demonstration](https://jessuppi.github.io/middleclass/) as a visua
 
 - [Architecture](docs/architecture.md) explains the classless-first model, limited class API, selector strategy, and framework boundaries.
 - [Scope](docs/scope.md) defines what MiddleClass is intended to provide and what remains outside the project.
+- [Customization](docs/customization.md) explains the recommended override workflow, themes, typography, spacing, and site-specific styling.
 - [Classes](docs/classes.md) is the canonical reference for every supported public class, its expected markup, and important limitations.
 - [Accessibility](docs/accessibility.md) describes the current accessibility baseline, author responsibilities, and basic testing expectations.
 - [Sizing and units](docs/sizing.md) explains when MiddleClass uses `rem`, `em`, `px`, unitless values, and responsive layout units.
@@ -70,7 +71,7 @@ Use the [live demonstration](https://jessuppi.github.io/middleclass/) as a visua
 
 ## Customization
 
-Override variables after loading MiddleClass:
+Load a site stylesheet after MiddleClass and override documented variables there:
 
 ```css
 :root {
@@ -80,35 +81,7 @@ Override variables after loading MiddleClass:
 }
 ```
 
-Color overrides require theme-aware selectors. See [CSS variables](docs/variables.md) for examples.
-
-All public custom properties use the `--mc-` prefix.
-
-Dropdowns use a bundled Font Awesome chevron by default. A site can replace it globally or within a particular subtree by overriding `--mc-dropdown-chevron` with another mask-compatible image:
-
-```css
-:root {
-	--mc-dropdown-chevron: url("data:image/svg+xml,...");
-}
-```
-
-See [CSS variables](docs/variables.md) for the complete override guidance.
-
-## Color themes
-
-MiddleClass follows the operating system color preference by default.
-
-Set an explicit theme on the root element when a site needs to override that behavior:
-
-```html
-<html lang="en" data-theme="light">
-```
-
-```html
-<html lang="en" data-theme="dark">
-```
-
-MiddleClass does not include a theme toggle because interactive behavior belongs to the site, not the CSS framework.
+See [Customization](docs/customization.md) for themes, typography, scoped overrides, component styling, and testing guidance. See [CSS variables](docs/variables.md) for the complete variable reference.
 
 ## Browser approach
 
