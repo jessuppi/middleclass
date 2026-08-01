@@ -14,10 +14,11 @@
 				<ul>
 					<li><strong>MiddleClass</strong></li>
 					<li><a href="#principles">Principles</a></li>
+					<li><a href="#layout">Layout</a></li>
 					<li><a href="#components">Components</a></li>
 					<li><a href="#content">Content</a></li>
-					<li><a href="#rhythm">Rhythm</a></li>
 					<li><a href="#forms">Forms</a></li>
+					<li><a href="#rhythm">Rhythm</a></li>
 					<li><a href="#documentation">Documentation</a></li>
 					<li class="push-end"><a href="https://github.com/jessuppi/middleclass">GitHub</a></li>
 				</ul>
@@ -49,22 +50,64 @@
 				<div class="columns">
 					<article class="card">
 						<h3>Semantic first</h3>
-						<p>Plain headings, paragraphs, links, lists, tables, and forms look intentional without extra classes.</p>
+						<p>Plain headings, paragraphs, links, lists, tables, forms, and disclosures look intentional without extra classes.</p>
 					</article>
 					<article class="card">
 						<h3>No build step</h3>
-						<p>Link one CSS file from a static page. There is no package manager, preprocessor, or JavaScript dependency.</p>
+						<p>Link one readable CSS file from a static page. There is no package manager, preprocessor, or JavaScript dependency.</p>
 					</article>
 					<article class="card">
 						<h3>Easy to override</h3>
-						<p>Public custom properties control colors, spacing, widths, typography, and component shape.</p>
+						<p>Public custom properties control typography, widths, spacing, colors, and component-specific presentation.</p>
+					</article>
+				</div>
+			</section>
+
+			<section id="layout">
+				<h2>Layout classes</h2>
+				<p>MiddleClass provides a small set of composable layout classes for choices that semantic HTML cannot express by itself.</p>
+
+				<div class="columns">
+					<article class="card">
+						<h3>Container and reading width</h3>
+						<p><code>.container</code> centers the page within a responsive maximum width. <code>.reading-width</code> narrows long-form content without changing its meaning.</p>
+					</article>
+					<article class="card">
+						<h3>Stack</h3>
+						<div class="stack">
+							<div class="notice">First stacked item</div>
+							<div class="notice">Second stacked item</div>
+						</div>
+					</article>
+					<article class="card">
+						<h3>Cluster</h3>
+						<div class="cluster">
+							<button type="button">First action</button>
+							<button class="secondary" type="button">Second action</button>
+						</div>
+					</article>
+					<article class="card">
+						<h3>Columns</h3>
+						<p><code>.columns</code> creates responsive equal-width tracks that collapse naturally when space becomes limited.</p>
+						<div class="columns">
+							<div class="notice">One</div>
+							<div class="notice">Two</div>
+						</div>
+					</article>
+					<article class="card">
+						<h3>Push end</h3>
+						<p><code>.push-end</code> moves one flex item toward the logical inline end, including in right-to-left layouts.</p>
+						<div class="cluster">
+							<span>Start</span>
+							<a class="push-end" href="#documentation">Pushed to end</a>
+						</div>
 					</article>
 				</div>
 			</section>
 
 			<section id="components">
 				<h2>Components</h2>
-				<p>MiddleClass adds classes only where semantic HTML cannot express layout or presentation by itself.</p>
+				<p>Classes are added only where semantic HTML cannot express the intended layout or presentation on its own.</p>
 
 				<div class="columns">
 					<article class="card">
@@ -74,7 +117,7 @@
 					</article>
 					<article class="card">
 						<h3>Buttons</h3>
-						<p>Native buttons and submit inputs share the same base style. Links can opt in with <code>.button</code>.</p>
+						<p>Native buttons and button-type inputs share the base style. Links can opt in with <code>.button</code>.</p>
 						<div class="cluster">
 							<button type="button">Primary</button>
 							<button class="secondary" type="button">Secondary</button>
@@ -90,7 +133,11 @@
 					</article>
 				</div>
 
+				<h3>Notices</h3>
 				<div class="stack">
+					<div class="notice">
+						<strong>Note:</strong> The base notice uses the normal accent color.
+					</div>
 					<div class="notice success">
 						<strong>Success:</strong> Semantic HTML receives useful defaults without extra component markup.
 					</div>
@@ -103,6 +150,7 @@
 				</div>
 
 				<h3>Dropdown variations</h3>
+				<p>The dropdown trigger uses the shared down-chevron asset introduced in 0.2.0 while retaining a dropdown-specific override hook.</p>
 				<div class="cluster">
 					<details class="dropdown">
 						<summary>End aligned</summary>
@@ -134,9 +182,16 @@
 					</details>
 				</div>
 
+				<div class="reading-width">
+					<pre><code>:root {
+	--mc-chevron-down: var(--mc-chevron-down-font-awesome);
+	--mc-dropdown-chevron: var(--mc-chevron-down);
+}</code></pre>
+				</div>
+
 				<details>
 					<summary>Why classless-first instead of completely classless?</summary>
-					<p>Semantic selectors can style content safely, but they cannot infer whether a group should become columns, a cluster, or a card. A few explicit classes keep those choices understandable.</p>
+					<p>Semantic selectors can style content safely, but they cannot infer whether a group should become columns, a cluster, a card, or an overlaid dropdown menu. A few explicit classes keep those choices understandable.</p>
 				</details>
 			</section>
 
@@ -171,11 +226,21 @@
 				</div>
 
 				<div class="reading-width">
+					<h3>Heading scale</h3>
+					<h4>Heading level four</h4>
+					<p>Headings use a compact, responsive hierarchy while normal document flow owns the space between sections.</p>
+					<h5>Heading level five</h5>
+					<p>Lower heading levels remain readable without becoming visually dominant.</p>
+					<h6>Heading level six</h6>
+					<p>The smallest heading retains the same weight as the rest of the hierarchy.</p>
+
 					<blockquote>
 						<p>A framework should make the common path easy without making custom work difficult.</p>
 					</blockquote>
-					<p>Inline <code>code</code>, keyboard input such as <kbd>Ctrl</kbd> + <kbd>S</kbd>, <mark>highlighted text</mark>, and ordinary links receive useful defaults.</p>
-					<p>Long text wraps rather than forcing page overflow: <a href="https://example.com/releases/middleclass/0.1.0/documentation/very-long-static-site-example">https://example.com/releases/middleclass/0.1.0/documentation/very-long-static-site-example</a></p>
+
+					<p>Inline <code>code</code>, keyboard input such as <kbd>Ctrl</kbd> + <kbd>S</kbd>, sample output such as <samp>Build complete</samp>, <mark>highlighted text</mark>, and an <abbr title="Cascading Style Sheets">CSS</abbr> abbreviation receive useful defaults.</p>
+					<p><small>Supporting text can use the browser's normal small-text semantics, while <code>.muted</code> is available when a secondary color is the intended presentation.</small></p>
+					<p>Long text wraps rather than forcing page overflow: <a href="https://example.com/releases/middleclass/0.2.0/documentation/very-long-static-site-example">https://example.com/releases/middleclass/0.2.0/documentation/very-long-static-site-example</a></p>
 					<pre><code>&lt;div class="container reading-width"&gt;
 	&lt;h1&gt;Hello, world.&lt;/h1&gt;
 &lt;/div&gt;</code></pre>
@@ -208,9 +273,60 @@
 				</div>
 			</section>
 
+			<section id="forms" class="reading-width">
+				<h2>Forms</h2>
+				<form action="#" method="get">
+					<fieldset>
+						<legend>Example fields</legend>
+
+						<label for="name">Name</label>
+						<input id="name" name="name" type="text" autocomplete="name" placeholder="Your name">
+
+						<label for="email">Disabled email</label>
+						<input id="email" name="email" type="email" value="name@example.com" disabled>
+
+						<label for="topic">Topic</label>
+						<select id="topic" name="topic">
+							<option value="">Choose a topic</option>
+							<option value="layout">Layout</option>
+							<option value="components">Components</option>
+							<option value="accessibility">Accessibility</option>
+						</select>
+
+						<label for="message">Message</label>
+						<textarea id="message" name="message" placeholder="Write a short message"></textarea>
+					</fieldset>
+
+					<fieldset>
+						<legend>Example choices</legend>
+						<label>
+							<input type="radio" name="frequency" value="weekly" checked>
+							Weekly updates
+						</label>
+						<label>
+							<input type="radio" name="frequency" value="monthly">
+							Monthly updates
+						</label>
+						<label>
+							<input type="checkbox" name="examples">
+							Include code examples
+						</label>
+						<label for="density">Interface density</label>
+						<input id="density" name="density" type="range" min="1" max="5" value="3">
+					</fieldset>
+
+					<div class="cluster">
+						<button type="submit">Submit example</button>
+						<input type="button" value="Input button">
+						<button type="reset" class="secondary">Reset</button>
+						<button type="button" disabled>Disabled</button>
+					</div>
+				</form>
+			</section>
+
 			<section id="rhythm">
 				<h2>Vertical rhythm</h2>
-				<p>This test area keeps spacing relationships visible so they can be reviewed before framework defaults change.</p>
+				<p>This test area keeps spacing relationships visible so framework changes can be reviewed against real document flow.</p>
 
 				<div class="stack">
 					<section class="reading-width">
@@ -297,85 +413,7 @@
 							</details>
 						</div>
 					</section>
-
-					<section>
-						<h3>Gap layouts</h3>
-						<p>Each layout controls spacing among its own children, while this outer stack controls spacing between the examples.</p>
-						<div class="stack">
-							<section>
-								<h4>Stack</h4>
-								<div class="stack">
-									<article class="card">First stacked item</article>
-									<article class="card">Second stacked item</article>
-								</div>
-							</section>
-							<section>
-								<h4>Cluster</h4>
-								<div class="cluster">
-									<button type="button">First action</button>
-									<button class="secondary" type="button">Second action</button>
-								</div>
-							</section>
-							<section>
-								<h4>Columns</h4>
-								<div class="columns">
-									<article class="card">First column</article>
-									<article class="card">Second column</article>
-								</div>
-							</section>
-						</div>
-					</section>
 				</div>
-			</section>
-
-			<section id="forms" class="reading-width">
-				<h2>Forms</h2>
-				<form action="#" method="get">
-					<fieldset>
-						<legend>Example fields</legend>
-
-						<label for="name">Name</label>
-						<input id="name" name="name" type="text" autocomplete="name" placeholder="Your name">
-
-						<label for="email">Disabled email</label>
-						<input id="email" name="email" type="email" value="name@example.com" disabled>
-
-						<label for="topic">Topic</label>
-						<select id="topic" name="topic">
-							<option value="">Choose a topic</option>
-							<option value="layout">Layout</option>
-							<option value="components">Components</option>
-							<option value="accessibility">Accessibility</option>
-						</select>
-
-						<label for="message">Message</label>
-						<textarea id="message" name="message" placeholder="Write a short message"></textarea>
-					</fieldset>
-
-					<fieldset>
-						<legend>Example choices</legend>
-						<label>
-							<input type="radio" name="frequency" value="weekly" checked>
-							Weekly updates
-						</label>
-						<label>
-							<input type="radio" name="frequency" value="monthly">
-							Monthly updates
-						</label>
-						<label>
-							<input type="checkbox" name="examples">
-							Include code examples
-						</label>
-						<label for="density">Interface density</label>
-						<input id="density" name="density" type="range" min="1" max="5" value="3">
-					</fieldset>
-
-					<div class="cluster">
-						<button type="submit">Submit example</button>
-						<button type="reset" class="secondary">Reset</button>
-						<button type="button" disabled>Disabled</button>
-					</div>
-				</form>
 			</section>
 
 			<section id="documentation">
@@ -383,24 +421,40 @@
 				<p>The complete reference remains in the GitHub repository so the framework and its documentation can evolve together.</p>
 				<div class="columns">
 					<article class="card">
-						<h3><a href="https://github.com/jessuppi/middleclass/blob/master/docs/classes.md">Classes</a></h3>
-						<p>Every supported public class, expected markup, combinations, and limitations.</p>
+						<h3><a href="https://github.com/jessuppi/middleclass/blob/master/docs/architecture.md">Architecture</a></h3>
+						<p>The classless-first model, class admission rules, selector strategy, and public API boundaries.</p>
 					</article>
 					<article class="card">
-						<h3><a href="https://github.com/jessuppi/middleclass/blob/master/docs/variables.md">CSS variables</a></h3>
-						<p>Typography, spacing, layout, color, and component customization points.</p>
+						<h3><a href="https://github.com/jessuppi/middleclass/blob/master/docs/scope.md">Scope</a></h3>
+						<p>The framework's goals and explicit boundaries around tooling, JavaScript, fonts, icons, and application concerns.</p>
+					</article>
+					<article class="card">
+						<h3><a href="https://github.com/jessuppi/middleclass/blob/master/docs/customization.md">Customization</a></h3>
+						<p>Loading site styles, overriding variables, changing themes, and testing project-specific presentation.</p>
+					</article>
+					<article class="card">
+						<h3><a href="https://github.com/jessuppi/middleclass/blob/master/docs/classes.md">Classes</a></h3>
+						<p>Every supported public class, expected markup, combinations, behavior, and limitations.</p>
+					</article>
+					<article class="card">
+						<h3><a href="https://github.com/jessuppi/middleclass/blob/master/docs/accessibility.md">Accessibility</a></h3>
+						<p>Framework defaults, author responsibilities, component considerations, and the testing baseline.</p>
+					</article>
+					<article class="card">
+						<h3><a href="https://github.com/jessuppi/middleclass/blob/master/docs/sizing.md">Sizing and units</a></h3>
+						<p>Where and why the stylesheet uses rems, ems, pixels, percentages, and responsive expressions.</p>
 					</article>
 					<article class="card">
 						<h3><a href="https://github.com/jessuppi/middleclass/blob/master/docs/spacing.md">Spacing</a></h3>
 						<p>Vertical rhythm, structural ownership, padded edges, gap layouts, and intentional exceptions.</p>
 					</article>
 					<article class="card">
-						<h3><a href="https://github.com/jessuppi/middleclass/blob/master/docs/accessibility.md">Accessibility</a></h3>
-						<p>Framework defaults, author responsibilities, and the release testing baseline.</p>
+						<h3><a href="https://github.com/jessuppi/middleclass/blob/master/docs/variables.md">CSS variables</a></h3>
+						<p>Typography, spacing, layout, color, chevron images, and component customization points.</p>
 					</article>
 					<article class="card">
-						<h3><a href="https://github.com/jessuppi/middleclass/blob/master/docs/architecture.md">Architecture</a></h3>
-						<p>The classless-first model, class admission rules, selector strategy, and project boundaries.</p>
+						<h3><a href="https://github.com/jessuppi/middleclass/blob/master/changelog.md">Changelog</a></h3>
+						<p>Release-by-release changes to the stylesheet, public API, documentation, and bundled assets.</p>
 					</article>
 				</div>
 			</section>
