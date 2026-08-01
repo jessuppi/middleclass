@@ -1,12 +1,10 @@
 # MiddleClass
 
-MiddleClass is a lightweight, classless-first CSS framework for semantic static websites. It gives ordinary HTML a clean, responsive foundation before any component classes are added, covering common document elements, navigation, forms, tables, and content structure with sensible defaults.
+MiddleClass is a lightweight, classless-first CSS framework for semantic static websites. It gives common HTML elements, navigation, forms, tables, and content structures clean, responsive defaults before any component classes are added.
 
-A small public class API handles layout and presentation choices that semantic markup cannot express by itself. The framework is distributed as one readable CSS file with no build step, package manager, preprocessor, JavaScript dependency, or rigid component structure.
+The framework is distributed as one readable CSS file with no build step, package manager, preprocessor, or JavaScript dependency. A small public class API handles common layout and presentation choices that semantic markup cannot express by itself.
 
-MiddleClass can support blogs, documentation, landing pages, small business websites, and other content-focused projects. Its primary audience is smaller sites deployed with services such as GitHub Pages or Cloudflare Workers, where simple source files, low maintenance, and direct customization are more useful than a large frontend toolchain.
-
-The framework is designed for straightforward hosting and easy site-level customization through understandable selectors, documented variables, and a deliberately limited public API. Sites can adopt the semantic foundation as-is, override shared design choices, or add their own project-specific styles without working against the framework.
+MiddleClass can be used for blogs, documentation, landing pages, small business websites, and other content-focused projects, but its primary audience is smaller sites deployed with services such as GitHub Pages or Cloudflare Workers. It works without customization, while projects that need their own design can load an optional `style.css` after `middleclass.css` to override variables, element styles, or public classes.
 
 ## Usage
 
