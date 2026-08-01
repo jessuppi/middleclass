@@ -16,7 +16,7 @@ Copy [`middleclass.css`](middleclass.css) into your project and link the local f
 
 Host the stylesheet with your project rather than linking to GitHub, a raw GitHub URL, or the demo site. MiddleClass has no official CDN yet; a supported option may be introduced later through a provider such as Cloudflare, but local hosting is the supported approach for now.
 
-A minimal page can use semantic HTML without component classes:
+Pages can use semantic HTML alone or add MiddleClass's limited public classes for layout and presentation. This example uses a few of those optional classes:
 
 ```html
 <!doctype html>
