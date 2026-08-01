@@ -73,14 +73,6 @@ Use the [live demonstration](https://jessuppi.github.io/middleclass/) as a visua
 
 MiddleClass targets modern browsers without transpilation or compatibility bundles. The source stays readable and uses progressive CSS features that fail safely where practical.
 
-## Versioning
-
-MiddleClass follows semantic versioning. The version appears in the stylesheet header and changelog.
-
-Before 1.0, documented classes, variables, theme behavior, and semantic element styling may change between minor releases.
-
-Release tags use the plain numeric version, such as `0.1.0`, without a `v` prefix.
-
 ## License
 
 MiddleClass is available under the MIT License. The embedded Font Awesome dropdown chevron retains its upstream license and attribution in the stylesheet and [Third-party notices](licenses/notice.md).
