@@ -55,14 +55,16 @@ Use the [live demonstration](https://jessuppi.github.io/middleclass/) as a visua
 
 ## Documentation
 
-- [Architecture](docs/architecture.md) explains the classless-first model, limited class API, selector strategy, browser approach, and framework boundaries.
-- [Scope](docs/scope.md) defines what MiddleClass is intended to provide and what remains outside the project.
-- [Customization](docs/customization.md) explains the recommended override workflow, themes, typography, spacing, and site-specific styling.
-- [Classes](docs/classes.md) is the canonical reference for every supported public class, its expected markup, and important limitations.
-- [Accessibility](docs/accessibility.md) describes the current accessibility baseline, author responsibilities, and basic testing expectations.
-- [Sizing and units](docs/sizing.md) explains when MiddleClass uses `rem`, `em`, `px`, unitless values, and responsive layout units.
-- [Spacing](docs/spacing.md) defines the vertical rhythm, structural spacing ownership, padded component edges, layout gaps, and intentional exceptions.
-- [CSS variables](docs/variables.md) documents the reusable values available for framework customization.
+| Document | Description |
+| --- | --- |
+| [Architecture](docs/architecture.md) | Explains the classless-first model, limited class API, selector strategy, browser approach, and framework boundaries. |
+| [Scope](docs/scope.md) | Defines what MiddleClass is intended to provide and what remains outside the project. |
+| [Customization](docs/customization.md) | Explains the recommended override workflow, themes, typography, spacing, and site-specific styling. |
+| [Classes](docs/classes.md) | The canonical reference for every supported public class, its expected markup, and important limitations. |
+| [Accessibility](docs/accessibility.md) | Describes the current accessibility baseline, author responsibilities, and basic testing expectations. |
+| [Sizing and units](docs/sizing.md) | Explains when MiddleClass uses `rem`, `em`, `px`, unitless values, and responsive layout units. |
+| [Spacing](docs/spacing.md) | Defines the vertical rhythm, structural spacing ownership, padded component edges, layout gaps, and intentional exceptions. |
+| [CSS variables](docs/variables.md) | Documents the reusable values available for framework customization. |
 
 ## License
 
