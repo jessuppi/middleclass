@@ -13,12 +13,12 @@
 			<nav aria-label="Primary navigation">
 				<ul>
 					<li><strong>MiddleClass</strong></li>
-					<li><a href="#principles">Principles</a></li>
+					<li><a href="#typography">Typography</a></li>
 					<li><a href="#layout">Layout</a></li>
 					<li><a href="#components">Components</a></li>
-					<li><a href="#content">Content</a></li>
 					<li><a href="#forms">Forms</a></li>
-					<li><a href="#rhythm">Rhythm</a></li>
+					<li><a href="#tables">Tables</a></li>
+					<li><a href="#tests">Tests</a></li>
 					<li><a href="#documentation">Documentation</a></li>
 					<li class="push-end"><a href="https://github.com/jessuppi/middleclass">GitHub</a></li>
 				</ul>
@@ -31,47 +31,84 @@
 			<section class="reading-width">
 				<p class="muted">MiddleClass 0.2.0</p>
 				<h1>Good defaults, minimal markup.</h1>
-				<p>MiddleClass gives semantic HTML a clean, responsive foundation while keeping layout and component classes small and predictable.</p>
-				<div class="cluster">
+				<p>MiddleClass is a lightweight, classless-first CSS framework for semantic static websites. This page starts with a practical tour of the framework and ends with a separate regression-testing area.</p>
+				<p class="cluster">
 					<a class="button" href="middleclass.css" download>Download CSS</a>
 					<a class="button outline" href="#installation">Installation</a>
-					<a class="button secondary outline" href="https://github.com/jessuppi/middleclass">Browse the repository</a>
-				</div>
+					<a class="button secondary outline" href="https://github.com/jessuppi/middleclass">View source</a>
+				</p>
 			</section>
 
 			<section id="installation" class="reading-width">
 				<h2>Installation</h2>
-				<p>Copy the single stylesheet into your project and link it from the document head. There is no build step, package manager, or JavaScript dependency.</p>
+				<p>Copy the single stylesheet into your project and link it from the document head. There is no build step, package manager, preprocessor, or JavaScript dependency.</p>
 				<pre><code>&lt;link rel="stylesheet" href="/assets/middleclass.css"&gt;</code></pre>
 			</section>
 
-			<section id="principles">
-				<h2>Principles</h2>
+			<section id="typography">
+				<h2>Typography and content</h2>
+				<p>Ordinary semantic elements receive readable defaults without component classes.</p>
+
 				<div class="columns">
 					<article class="card">
-						<h3>Semantic first</h3>
-						<p>Plain headings, paragraphs, links, lists, tables, forms, and disclosures look intentional without extra classes.</p>
+						<h3>Unordered list</h3>
+						<ul>
+							<li>First list item</li>
+							<li>Second list item</li>
+							<li>Third list item</li>
+						</ul>
 					</article>
 					<article class="card">
-						<h3>No build step</h3>
-						<p>Link one readable CSS file from a static page. There is no package manager, preprocessor, or JavaScript dependency.</p>
+						<h3>Ordered list</h3>
+						<ol>
+							<li>First step</li>
+							<li>Second step</li>
+							<li>Third step</li>
+						</ol>
 					</article>
 					<article class="card">
-						<h3>Easy to override</h3>
-						<p>Public custom properties control typography, widths, spacing, colors, and component-specific presentation.</p>
+						<h3>Definition list</h3>
+						<dl>
+							<dt>Term one</dt>
+							<dd>A short definition for the first term.</dd>
+							<dt>Term two</dt>
+							<dd>A short definition for the second term.</dd>
+						</dl>
 					</article>
+				</div>
+
+				<div class="reading-width">
+					<h3>Heading scale</h3>
+					<h4>Heading level four</h4>
+					<p>Body text follows the heading with the standard content rhythm.</p>
+					<h5>Heading level five</h5>
+					<p>Lower heading levels remain distinct without becoming visually dominant.</p>
+					<h6>Heading level six</h6>
+					<p>The smallest heading uses the same weight as the rest of the hierarchy.</p>
+
+					<blockquote>
+						<p>A short quotation demonstrates the default blockquote treatment.</p>
+					</blockquote>
+
+					<p>Inline <code>code</code>, keyboard input such as <kbd>Ctrl</kbd> + <kbd>S</kbd>, sample output such as <samp>Build complete</samp>, <mark>highlighted text</mark>, and an <abbr title="Cascading Style Sheets">CSS</abbr> abbreviation receive useful defaults.</p>
+					<p><small>Small text follows the browser's normal semantics, while <span class="muted">muted text</span> uses the framework's secondary color.</small></p>
+					<pre><code>&lt;article class="reading-width"&gt;
+	&lt;h1&gt;Example article&lt;/h1&gt;
+	&lt;p&gt;Readable content with ordinary HTML.&lt;/p&gt;
+&lt;/article&gt;</code></pre>
 				</div>
 			</section>
 
 			<section id="layout">
-				<h2>Layout classes</h2>
-				<p>MiddleClass provides a small set of composable layout classes for choices that semantic HTML cannot express by itself.</p>
+				<h2>Layout</h2>
+				<p>The public layout classes handle width, spacing, wrapping, columns, and logical alignment.</p>
 
 				<div class="columns">
 					<article class="card">
 						<h3>Container and reading width</h3>
-						<p><code>.container</code> centers the page within a responsive maximum width. <code>.reading-width</code> narrows long-form content without changing its meaning.</p>
+						<p><code>.container</code> centers content within a responsive maximum width. <code>.reading-width</code> limits long-form text without centering it automatically.</p>
 					</article>
+
 					<article class="card">
 						<h3>Stack</h3>
 						<div class="stack">
@@ -79,6 +116,7 @@
 							<div class="notice">Second stacked item</div>
 						</div>
 					</article>
+
 					<article class="card">
 						<h3>Cluster</h3>
 						<div class="cluster">
@@ -86,20 +124,20 @@
 							<button class="secondary" type="button">Second action</button>
 						</div>
 					</article>
+
 					<article class="card">
 						<h3>Columns</h3>
-						<p><code>.columns</code> creates responsive equal-width tracks that collapse naturally when space becomes limited.</p>
 						<div class="columns">
-							<div class="notice">One</div>
-							<div class="notice">Two</div>
+							<div class="notice">Column one</div>
+							<div class="notice">Column two</div>
 						</div>
 					</article>
+
 					<article class="card">
 						<h3>Push end</h3>
-						<p><code>.push-end</code> moves one flex item toward the logical inline end, including in right-to-left layouts.</p>
 						<div class="cluster">
 							<span>Start</span>
-							<a class="push-end" href="#documentation">Pushed to end</a>
+							<a class="push-end" href="#documentation">End</a>
 						</div>
 					</article>
 				</div>
@@ -107,77 +145,72 @@
 
 			<section id="components">
 				<h2>Components</h2>
-				<p>Classes are added only where semantic HTML cannot express the intended layout or presentation on its own.</p>
+				<p>MiddleClass adds a small presentation layer where semantic HTML alone cannot express the intended treatment.</p>
 
-				<div class="columns">
-					<article class="card">
-						<h3>Card</h3>
-						<p>Use <code>.card</code> for a contained section with a subtle surface and border.</p>
-						<a href="#forms">Continue to forms</a>
-					</article>
-					<article class="card">
-						<h3>Buttons</h3>
-						<p>Native buttons and button-type inputs share the base style. Links can opt in with <code>.button</code>.</p>
-						<div class="cluster">
-							<button type="button">Primary</button>
-							<button class="secondary" type="button">Secondary</button>
-							<a class="button outline" href="#components">Outline</a>
-							<a class="button secondary outline" href="#documentation">Secondary outline</a>
-							<a class="button outline" href="#documentation">
-								<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor">
-									<path d="M4 4h16v16H4V4Zm2 2v12h12V6H6Zm2 2h8v2H8V8Zm0 4h8v2H8v-2Z"></path>
-								</svg>
-								<span class="screen-reader-text">Documentation</span>
-							</a>
-						</div>
-					</article>
-				</div>
+				<h3>Buttons</h3>
+				<p class="cluster">
+					<button type="button">Primary</button>
+					<button class="secondary" type="button">Secondary</button>
+					<a class="button outline" href="#components">Outline</a>
+					<a class="button secondary outline" href="#documentation">Secondary outline</a>
+					<a class="button outline" href="#documentation">
+						<svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor">
+							<path d="M4 4h16v16H4V4Zm2 2v12h12V6H6Zm2 2h8v2H8V8Zm0 4h8v2H8v-2Z"></path>
+						</svg>
+						<span class="screen-reader-text">Documentation</span>
+					</a>
+				</p>
+
+				<h3>Card</h3>
+				<article class="card reading-width">
+					<h4>Example card</h4>
+					<p>A card provides a contained surface with padding, a border, and rounded corners.</p>
+					<a href="#forms">Continue to forms</a>
+				</article>
 
 				<h3>Notices</h3>
-				<div class="stack">
-					<div class="notice">
-						<strong>Note:</strong> The base notice uses the normal accent color.
-					</div>
-					<div class="notice success">
-						<strong>Success:</strong> Semantic HTML receives useful defaults without extra component markup.
-					</div>
-					<div class="notice warning">
-						<strong>Warning:</strong> Test local color overrides in both supported themes.
-					</div>
-					<div class="notice danger">
-						<strong>Danger:</strong> Do not rely on color alone to communicate status.
-					</div>
+				<div class="stack reading-width">
+					<div class="notice"><strong>Note:</strong> General supporting information.</div>
+					<div class="notice success"><strong>Success:</strong> The operation completed successfully.</div>
+					<div class="notice warning"><strong>Warning:</strong> Review this setting before continuing.</div>
+					<div class="notice danger"><strong>Danger:</strong> The operation could not be completed.</div>
 				</div>
 
-				<h3>Dropdown variations</h3>
-				<p>The dropdown trigger uses the shared down-chevron asset introduced in 0.2.0 while retaining a dropdown-specific override hook.</p>
+				<h3>Disclosure</h3>
+				<details class="reading-width">
+					<summary>Show additional information</summary>
+					<p>This is an ordinary block-style disclosure using native <code>details</code> and <code>summary</code> elements.</p>
+				</details>
+
+				<h3>Dropdowns</h3>
+				<p>The same native disclosure behavior can present an overlaid link list. Alignment and opening direction are explicit modifiers.</p>
 				<div class="cluster">
 					<details class="dropdown">
 						<summary>End aligned</summary>
 						<ul>
-							<li><a href="#principles">Principles</a></li>
-							<li><a href="#forms">Forms</a></li>
+							<li><a href="#typography">First item</a></li>
+							<li><a href="#layout">Second item</a></li>
 						</ul>
 					</details>
 					<details class="dropdown dropdown-start">
 						<summary>Start aligned</summary>
 						<ul>
-							<li><a href="#principles">Principles</a></li>
-							<li><a href="#forms">Forms</a></li>
+							<li><a href="#typography">First item</a></li>
+							<li><a href="#layout">Second item</a></li>
 						</ul>
 					</details>
 					<details class="dropdown dropup">
 						<summary>Opens upward</summary>
 						<ul>
-							<li><a href="#principles">Principles</a></li>
-							<li><a href="#forms">Forms</a></li>
+							<li><a href="#typography">First item</a></li>
+							<li><a href="#layout">Second item</a></li>
 						</ul>
 					</details>
 					<details class="dropdown dropdown-start dropup">
 						<summary>Start and upward</summary>
 						<ul>
-							<li><a href="#principles">Principles</a></li>
-							<li><a href="#forms">Forms</a></li>
+							<li><a href="#typography">First item</a></li>
+							<li><a href="#layout">Second item</a></li>
 						</ul>
 					</details>
 				</div>
@@ -188,96 +221,15 @@
 	--mc-dropdown-chevron: var(--mc-chevron-down);
 }</code></pre>
 				</div>
-
-				<details>
-					<summary>Why classless-first instead of completely classless?</summary>
-					<p>Semantic selectors can style content safely, but they cannot infer whether a group should become columns, a cluster, a card, or an overlaid dropdown menu. A few explicit classes keep those choices understandable.</p>
-				</details>
-			</section>
-
-			<section id="content">
-				<h2>Content elements</h2>
-				<div class="columns">
-					<article class="card">
-						<h3>Unordered list</h3>
-						<ul>
-							<li>Semantic defaults</li>
-							<li>Responsive layouts</li>
-							<li>Theme-aware colors</li>
-						</ul>
-					</article>
-					<article class="card">
-						<h3>Ordered list</h3>
-						<ol>
-							<li>Copy the stylesheet</li>
-							<li>Link it from HTML</li>
-							<li>Add classes only when needed</li>
-						</ol>
-					</article>
-					<article class="card">
-						<h3>Definition list</h3>
-						<dl>
-							<dt>Classless-first</dt>
-							<dd>Useful defaults before optional component classes.</dd>
-							<dt>Static-friendly</dt>
-							<dd>No build tools or runtime dependencies.</dd>
-						</dl>
-					</article>
-				</div>
-
-				<div class="reading-width">
-					<h3>Heading scale</h3>
-					<h4>Heading level four</h4>
-					<p>Headings use a compact, responsive hierarchy while normal document flow owns the space between sections.</p>
-					<h5>Heading level five</h5>
-					<p>Lower heading levels remain readable without becoming visually dominant.</p>
-					<h6>Heading level six</h6>
-					<p>The smallest heading retains the same weight as the rest of the hierarchy.</p>
-
-					<blockquote>
-						<p>A framework should make the common path easy without making custom work difficult.</p>
-					</blockquote>
-
-					<p>Inline <code>code</code>, keyboard input such as <kbd>Ctrl</kbd> + <kbd>S</kbd>, sample output such as <samp>Build complete</samp>, <mark>highlighted text</mark>, and an <abbr title="Cascading Style Sheets">CSS</abbr> abbreviation receive useful defaults.</p>
-					<p><small>Supporting text can use the browser's normal small-text semantics, while <code>.muted</code> is available when a secondary color is the intended presentation.</small></p>
-					<p>Long text wraps rather than forcing page overflow: <a href="https://example.com/releases/middleclass/0.2.0/documentation/very-long-static-site-example">https://example.com/releases/middleclass/0.2.0/documentation/very-long-static-site-example</a></p>
-					<pre><code>&lt;div class="container reading-width"&gt;
-	&lt;h1&gt;Hello, world.&lt;/h1&gt;
-&lt;/div&gt;</code></pre>
-				</div>
-
-				<div class="table-wrap">
-					<table>
-						<caption>Included foundations</caption>
-						<thead>
-							<tr>
-								<th scope="col">Area</th>
-								<th scope="col">Default behavior</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Typography</td>
-								<td>Responsive headings and readable content rhythm</td>
-							</tr>
-							<tr>
-								<td>Color</td>
-								<td>Light, dark, and explicit theme variables</td>
-							</tr>
-							<tr>
-								<td>Accessibility</td>
-								<td>Visible focus, semantic controls, and screen-reader utility</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
 			</section>
 
 			<section id="forms" class="reading-width">
 				<h2>Forms</h2>
+				<p>Native fields and controls share consistent sizing, spacing, borders, focus treatment, and disabled states.</p>
+
 				<form action="#" method="get">
 					<fieldset>
-						<legend>Example fields</legend>
+						<legend>Text fields</legend>
 
 						<label for="name">Name</label>
 						<input id="name" name="name" type="text" autocomplete="name" placeholder="Your name">
@@ -288,9 +240,9 @@
 						<label for="topic">Topic</label>
 						<select id="topic" name="topic">
 							<option value="">Choose a topic</option>
-							<option value="layout">Layout</option>
-							<option value="components">Components</option>
-							<option value="accessibility">Accessibility</option>
+							<option value="one">First option</option>
+							<option value="two">Second option</option>
+							<option value="three">Third option</option>
 						</select>
 
 						<label for="message">Message</label>
@@ -298,35 +250,78 @@
 					</fieldset>
 
 					<fieldset>
-						<legend>Example choices</legend>
+						<legend>Choices</legend>
+
 						<label>
 							<input type="radio" name="frequency" value="weekly" checked>
-							Weekly updates
+							Weekly
 						</label>
 						<label>
 							<input type="radio" name="frequency" value="monthly">
-							Monthly updates
+							Monthly
 						</label>
 						<label>
 							<input type="checkbox" name="examples">
-							Include code examples
+							Include examples
 						</label>
-						<label for="density">Interface density</label>
+
+						<label for="density">Range</label>
 						<input id="density" name="density" type="range" min="1" max="5" value="3">
 					</fieldset>
 
-					<div class="cluster">
-						<button type="submit">Submit example</button>
+					<p class="cluster">
+						<button type="submit">Submit</button>
 						<input type="button" value="Input button">
 						<button type="reset" class="secondary">Reset</button>
 						<button type="button" disabled>Disabled</button>
-					</div>
+					</p>
 				</form>
 			</section>
 
-			<section id="rhythm">
-				<h2>Vertical rhythm</h2>
-				<p>This test area keeps spacing relationships visible so framework changes can be reviewed against real document flow.</p>
+			<section id="tables">
+				<h2>Tables</h2>
+				<p>Tables use readable defaults, while <code>.table-wrap</code> provides horizontal scrolling when the content is wider than the viewport.</p>
+
+				<div class="table-wrap">
+					<table>
+						<caption>Example project status</caption>
+						<thead>
+							<tr>
+								<th scope="col">Project</th>
+								<th scope="col">Owner</th>
+								<th scope="col">Status</th>
+								<th scope="col">Updated</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Alpha</td>
+								<td>Jordan</td>
+								<td>Complete</td>
+								<td>July 28</td>
+							</tr>
+							<tr>
+								<td>Beta</td>
+								<td>Morgan</td>
+								<td>In progress</td>
+								<td>July 30</td>
+							</tr>
+							<tr>
+								<td>Gamma</td>
+								<td>Taylor</td>
+								<td>Planned</td>
+								<td>August 2</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+
+			<section id="tests">
+				<h2>Layout and rhythm tests</h2>
+				<div class="notice warning reading-width">
+					<strong>Regression area:</strong> The examples below intentionally repeat and combine elements to expose spacing, wrapping, overflow, and component-edge problems. They are tests rather than part of the feature tour.
+				</div>
 
 				<div class="stack">
 					<section class="reading-width">
@@ -413,56 +408,35 @@
 							</details>
 						</div>
 					</section>
+
+					<section class="reading-width">
+						<h3>Long content and overflow</h3>
+						<p>This long link should wrap rather than force the page to overflow: <a href="https://example.com/releases/middleclass/0.2.0/documentation/very-long-static-site-example">https://example.com/releases/middleclass/0.2.0/documentation/very-long-static-site-example</a></p>
+						<pre><code>example-command --with-a-very-long-option-name --and-another-long-option=value</code></pre>
+					</section>
 				</div>
 			</section>
 
-			<section id="documentation">
+			<section id="documentation" class="reading-width">
 				<h2>Documentation</h2>
-				<p>The complete reference remains in the GitHub repository so the framework and its documentation can evolve together.</p>
-				<div class="columns">
-					<article class="card">
-						<h3><a href="https://github.com/jessuppi/middleclass/blob/master/docs/architecture.md">Architecture</a></h3>
-						<p>The classless-first model, class admission rules, selector strategy, and public API boundaries.</p>
-					</article>
-					<article class="card">
-						<h3><a href="https://github.com/jessuppi/middleclass/blob/master/docs/scope.md">Scope</a></h3>
-						<p>The framework's goals and explicit boundaries around tooling, JavaScript, fonts, icons, and application concerns.</p>
-					</article>
-					<article class="card">
-						<h3><a href="https://github.com/jessuppi/middleclass/blob/master/docs/customization.md">Customization</a></h3>
-						<p>Loading site styles, overriding variables, changing themes, and testing project-specific presentation.</p>
-					</article>
-					<article class="card">
-						<h3><a href="https://github.com/jessuppi/middleclass/blob/master/docs/classes.md">Classes</a></h3>
-						<p>Every supported public class, expected markup, combinations, behavior, and limitations.</p>
-					</article>
-					<article class="card">
-						<h3><a href="https://github.com/jessuppi/middleclass/blob/master/docs/accessibility.md">Accessibility</a></h3>
-						<p>Framework defaults, author responsibilities, component considerations, and the testing baseline.</p>
-					</article>
-					<article class="card">
-						<h3><a href="https://github.com/jessuppi/middleclass/blob/master/docs/sizing.md">Sizing and units</a></h3>
-						<p>Where and why the stylesheet uses rems, ems, pixels, percentages, and responsive expressions.</p>
-					</article>
-					<article class="card">
-						<h3><a href="https://github.com/jessuppi/middleclass/blob/master/docs/spacing.md">Spacing</a></h3>
-						<p>Vertical rhythm, structural ownership, padded edges, gap layouts, and intentional exceptions.</p>
-					</article>
-					<article class="card">
-						<h3><a href="https://github.com/jessuppi/middleclass/blob/master/docs/variables.md">CSS variables</a></h3>
-						<p>Typography, spacing, layout, color, chevron images, and component customization points.</p>
-					</article>
-					<article class="card">
-						<h3><a href="https://github.com/jessuppi/middleclass/blob/master/changelog.md">Changelog</a></h3>
-						<p>Release-by-release changes to the stylesheet, public API, documentation, and bundled assets.</p>
-					</article>
-				</div>
+				<p>The repository contains focused guides for the framework's design, API, customization, accessibility, sizing, and spacing policies.</p>
+				<ul>
+					<li><a href="https://github.com/jessuppi/middleclass/blob/master/docs/architecture.md">Architecture</a></li>
+					<li><a href="https://github.com/jessuppi/middleclass/blob/master/docs/scope.md">Scope</a></li>
+					<li><a href="https://github.com/jessuppi/middleclass/blob/master/docs/customization.md">Customization</a></li>
+					<li><a href="https://github.com/jessuppi/middleclass/blob/master/docs/classes.md">Classes</a></li>
+					<li><a href="https://github.com/jessuppi/middleclass/blob/master/docs/accessibility.md">Accessibility</a></li>
+					<li><a href="https://github.com/jessuppi/middleclass/blob/master/docs/sizing.md">Sizing and units</a></li>
+					<li><a href="https://github.com/jessuppi/middleclass/blob/master/docs/spacing.md">Spacing</a></li>
+					<li><a href="https://github.com/jessuppi/middleclass/blob/master/docs/variables.md">CSS variables</a></li>
+					<li><a href="https://github.com/jessuppi/middleclass/blob/master/changelog.md">Changelog</a></li>
+				</ul>
 			</section>
 		</div>
 	</main>
 
 	<footer>
-		<div class="container stack">
+		<div class="container">
 			<p>MiddleClass is a lightweight CSS foundation for semantic static websites.</p>
 		</div>
 	</footer>
