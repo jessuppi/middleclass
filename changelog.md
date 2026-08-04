@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.0
+
+- added the public `.eyebrow` typography class for compact contextual text above headings
+
 ## 0.2.0
 
 - introduced a built-in dropdown chevron using Font Awesome Free's `chevron-down` icon so sites that use icons can ship a polished, consistent control without adding icon markup or recreating the shape in each project
