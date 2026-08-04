@@ -32,7 +32,7 @@ Pages can use semantic HTML alone or add MiddleClass's limited public classes fo
 		<div class="container">
 			<nav aria-label="Primary navigation">
 				<ul>
-					<li><strong>Example</strong></li>
+					<li><a class="brand" href="/">Example</a></li>
 					<li><a href="/about/">About</a></li>
 				</ul>
 			</nav>
