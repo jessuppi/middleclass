@@ -2,6 +2,7 @@
 
 ## 0.3.0
 
+- added the public `.brand` typography class for prominent site or product names in navigation
 - added the public `.eyebrow` typography class for compact contextual text above headings
 
 ## 0.2.0
