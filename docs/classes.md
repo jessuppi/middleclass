@@ -9,6 +9,7 @@ This file is the canonical reference for every supported public class. Class nam
 MiddleClass intentionally keeps its public class API small:
 
 - Layout: `.container`, `.reading-width`, `.stack`, `.cluster`, `.columns`, and `.push-end`
+- Typography: `.eyebrow`
 - Buttons and variants: `.button`, `.secondary`, and `.outline`
 - Content components: `.card`, `.notice`, `.success`, `.warning`, `.danger`, `.dropdown`, `.dropdown-start`, and `.dropup`
 - Supporting behavior: `.table-wrap`, `.muted`, and `.screen-reader-text`
@@ -117,6 +118,19 @@ Moves one item to the inline end of a horizontal flex layout when free space is 
 ```
 
 The inline end is the right side in left-to-right documents and the left side in right-to-left documents. The class has no useful pushing effect unless the parent is a horizontal flex container.
+
+## Typography
+
+### `.eyebrow`
+
+Styles compact contextual text above a heading with a muted color, small uppercase lettering, bold weight, letter spacing, and generous separation from the heading.
+
+```html
+<p class="eyebrow">Lightweight CSS framework</p>
+<h1>Pragmatic CSS for clean static websites</h1>
+```
+
+Use concise wording that communicates a category, product type, or section context rather than decorative filler. The class changes presentation only, so use an element that remains appropriate for the content, usually a paragraph.
 
 ## Buttons and Variants
 
