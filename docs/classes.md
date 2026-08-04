@@ -9,7 +9,7 @@ This file is the canonical reference for every supported public class. Class nam
 MiddleClass intentionally keeps its public class API small:
 
 - Layout: `.container`, `.reading-width`, `.stack`, `.cluster`, `.columns`, and `.push-end`
-- Typography: `.eyebrow`
+- Typography: `.brand` and `.eyebrow`
 - Buttons and variants: `.button`, `.secondary`, and `.outline`
 - Content components: `.card`, `.notice`, `.success`, `.warning`, `.danger`, `.dropdown`, `.dropdown-start`, and `.dropup`
 - Supporting behavior: `.table-wrap`, `.muted`, and `.screen-reader-text`
@@ -120,6 +120,21 @@ Moves one item to the inline end of a horizontal flex layout when free space is 
 The inline end is the right side in left-to-right documents and the left side in right-to-left documents. The class has no useful pushing effect unless the parent is a horizontal flex container.
 
 ## Typography
+
+### `.brand`
+
+Styles a site or product name as prominent navigation text without making it a document heading.
+
+```html
+<nav aria-label="Primary navigation">
+	<ul>
+		<li><a class="brand" href="/">Example</a></li>
+		<li><a href="/about/">About</a></li>
+	</ul>
+</nav>
+```
+
+Use a link when selecting the brand should return to the home page. The class may also be applied to an appropriate text element when the brand is not a link. It changes typography only and does not create navigation or heading semantics.
 
 ### `.eyebrow`
 
