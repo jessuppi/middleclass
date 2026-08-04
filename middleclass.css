@@ -312,6 +312,14 @@ dd + dt {
 	margin-block-start: var(--mc-space-3);
 }
 
+.brand {
+	color: var(--mc-text);
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 1.2;
+	text-decoration: none;
+}
+
 .eyebrow {
 	margin-block: 0 var(--mc-space-7);
 	color: var(--mc-text-muted);
