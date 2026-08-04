@@ -1,5 +1,5 @@
 /*
- * MiddleClass 0.2.0
+ * MiddleClass 0.3.0
  * A lightweight, classless-first CSS framework for static websites.
  * Copyright (c) 2026 Jesse Nickles
  * Licensed under the MIT License.
@@ -310,6 +310,15 @@ dt {
 
 dd + dt {
 	margin-block-start: var(--mc-space-3);
+}
+
+.eyebrow {
+	margin-block: 0 var(--mc-space-7);
+	color: var(--mc-text-muted);
+	font-size: 0.8rem;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
 }
 
 small,
