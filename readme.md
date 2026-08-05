@@ -49,9 +49,17 @@ Pages can use semantic HTML alone or add MiddleClass's limited public classes fo
 			</p>
 		</div>
 	</main>
+
+	<footer>
+		<div class="container">
+			<small>&copy; 2026 Example</small>
+		</div>
+	</footer>
 </body>
 </html>
 ```
+
+Standard `header`-`main`-`footer` documents use a full-height vertical layout automatically. The main element fills unused space on short pages so the footer reaches the bottom of the viewport, while longer pages continue growing and scrolling normally.
 
 ## Documentation
 
@@ -59,7 +67,7 @@ The [demo site](https://jessuppi.github.io/middleclass/) is the quickest way to 
 
 | Document | Description |
 | --- | --- |
-| [Architecture](docs/architecture.md) | Explains the classless-first model, why the limited class layer exists, class admission rules, selector strategy, stylesheet organization, public API boundaries, browser expectations, and criteria for evaluating new features. |
+| [Architecture](docs/architecture.md) | Explains the classless-first model, built-in document layout, why the limited class layer exists, class admission rules, selector strategy, stylesheet organization, public API boundaries, browser expectations, and criteria for evaluating new features. |
 | [Scope](docs/scope.md) | Defines the framework's intended purpose and development goals, together with explicit boundaries around tooling, JavaScript, utility generation, fonts, icons, routing, and other application concerns. |
 | [Customization](docs/customization.md) | Provides a practical guide to loading site styles, overriding global or scoped variables, changing typography, widths, spacing, colors, themes, component presentation, and testing the result. |
 | [Classes](docs/classes.md) | Serves as the canonical reference for every supported public class, including its purpose, expected markup, compatible variants, local variables, behavior, limitations, and usage examples. |
