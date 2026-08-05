@@ -31,6 +31,28 @@ The framework should not require a special class merely to make a standard seman
 
 Classless-first does not mean that every layout or component must be inferred from element names.
 
+## Document Layout Defaults
+
+MiddleClass treats the conventional `header`-`main`-`footer` page structure as a classless document concern rather than something every site should rebuild locally.
+
+The document body is a full-height vertical flex container, and the main content region grows to consume unused viewport space:
+
+```css
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	flex: 1;
+}
+```
+
+This keeps the footer at the bottom of short pages while allowing longer documents to grow and scroll normally. The footer remains in ordinary document flow; it is not fixed to the viewport and does not cover page content.
+
+These defaults assume the common pattern where `header`, `main`, and `footer` are direct body children. Sites with specialized application shells or different document structures can override the body or main layout in a stylesheet loaded after `middleclass.css`.
+
 ## Why Classes Still Exist
 
 HTML describes meaning and document structure. It does not provide semantic elements for every common layout or visual role.
@@ -78,7 +100,7 @@ Page-specific names such as `.homepage-box` or `.pricing-blue-column` belong in 
 
 ## Current Class Layers
 
-The current public class API has three narrow roles. A fourth role may emerge later if the API develops a genuinely distinct group, but the framework does not target a fixed number of layers.
+The current public class API has four narrow roles. Additional roles should emerge only when the API develops a genuinely distinct group; the framework does not target a fixed number of layers.
 
 ### Layout
 
@@ -88,6 +110,11 @@ The current public class API has three narrow roles. A fourth role may emerge la
 - `.cluster`
 - `.columns`
 - `.push-end`
+
+### Typography
+
+- `.brand`
+- `.eyebrow`
 
 ### Components and Variants
 
