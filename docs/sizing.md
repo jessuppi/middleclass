@@ -149,6 +149,28 @@ Useful responsive tools include:
 
 Traditional `vh` remains valid when its browser behavior is acceptable. Prefer `svh`, `lvh`, or `dvh` when browser interface changes on mobile could materially affect the layout.
 
+## Viewport Height Default
+
+MiddleClass uses a traditional viewport-height minimum for its classless document layout:
+
+```css
+body {
+	min-height: 100vh;
+}
+```
+
+The property is a minimum rather than a fixed height. Short documents fill at least one viewport, while longer documents remain free to grow and scroll normally. This avoids the content constraints that can result from `height: 100vh`.
+
+The `100vh` choice favors a stable, broadly understood baseline for ordinary static pages. A site that specifically needs its minimum height to track changing mobile browser controls can override the framework after loading it:
+
+```css
+body {
+	min-height: 100dvh;
+}
+```
+
+That override may cause the available page height to change as browser controls expand or collapse, so it should be adopted when that dynamic behavior is intentional rather than as a mechanical replacement.
+
 ## Breakpoints
 
 MiddleClass uses `rem` for media-query breakpoints:
