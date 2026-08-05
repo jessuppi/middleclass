@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.1
+
+- made the document body a full-height column flex container and the main element flexible so standard header-main-footer pages keep the footer at the bottom of short viewports without project-specific CSS
+
 ## 0.3.0
 
 - added the public `.brand` typography class for prominent site or product names in navigation
