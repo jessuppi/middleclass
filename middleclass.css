@@ -1,5 +1,5 @@
 /*
- * MiddleClass 0.3.1
+ * MiddleClass 0.3.2
  * A lightweight, classless-first CSS framework for static websites.
  * Copyright (c) 2026 Jesse Nickles
  * Licensed under the MIT License.
@@ -206,10 +206,6 @@ footer {
 	gap: var(--mc-stack-space, var(--mc-space-5));
 }
 
-.stack > * {
-	margin-block: 0;
-}
-
 .cluster {
 	display: flex;
 	flex-wrap: wrap;
@@ -351,6 +347,10 @@ abbr[title] {
 	text-decoration: underline dotted;
 	text-underline-offset: 0.2em;
 	cursor: help;
+}
+
+.stack > * {
+	margin-block: 0;
 }
 
 /* links and focus */
