@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.2
+
+- fixed `.stack` direct-child margin normalization so later typography rules such as `.eyebrow` no longer override stack `gap` spacing
+
 ## 0.3.1
 
 - made the document body a full-height column flex container and set `main` to `flex: 1`, so standard `header`-`main`-`footer` pages keep the footer at the bottom of short viewports without project-specific CSS
