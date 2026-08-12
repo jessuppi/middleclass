@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.4.0
+
+- added hierarchical top spacing for `h2` through `h6` in ordinary document flow so section and subsection headings are visually separated from preceding content
+- kept `h1` top spacing unchanged and retained the standard `1rem` bottom margin for all heading levels
+- kept `.stack` gap behavior unchanged by continuing to normalize direct-child block margins
+
 ## 0.3.2
 
 - fixed `.stack` direct-child margin normalization so later typography rules such as `.eyebrow` no longer override stack `gap` spacing
