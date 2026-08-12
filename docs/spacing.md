@@ -21,8 +21,7 @@ MiddleClass currently uses these main relationships:
 | Relationship | Default |
 | --- | ---: |
 | `h2` top separation | `--mc-space-7` (`3rem`) |
-| `h3` top separation | `--mc-space-6` (`2rem`) |
-| `h4` through `h6` top separation | `--mc-space-5` (`1.5rem`) |
+| `h3` through `h6` top separation | `--mc-space-6` (`2rem`) |
 | heading to following content | `--mc-space-4` (`1rem`) |
 | ordinary block to following content | `--mc-space-5` (`1.5rem`) |
 | adjacent list items | `--mc-space-2` (`0.5rem`) |
@@ -31,7 +30,7 @@ MiddleClass currently uses these main relationships:
 | figure content to its caption | `--mc-space-2` (`0.5rem`) |
 | open disclosure summary to its content | `--mc-space-4` (`1rem`) |
 
-`h1` uses no default top margin and uses `--mc-space-4` below. `h2` uses `--mc-space-7` above, `h3` uses `--mc-space-6` above, and `h4` through `h6` use `--mc-space-5` above. All heading levels use `--mc-space-4` below.
+`h1` uses no default top margin and uses `--mc-space-4` below. `h2` uses `--mc-space-7` above, while `h3` through `h6` use `--mc-space-6` above. All heading levels use `--mc-space-4` below.
 
 Paragraphs, lists, definition lists, blockquotes, code blocks, tables, figures, forms, and disclosures use no default top margin and use `--mc-space-5` below.
 
@@ -78,8 +77,7 @@ Bottom-margin-first does not mean that every top margin is forbidden. Top margin
 The primary example is heading hierarchy:
 
 - `h2` receives the strongest top separation because it commonly begins a major section
-- `h3` receives a smaller top separation for a subsection
-- `h4` through `h6` receive a modest top separation for lower-level structure
+- `h3` through `h6` receive a smaller but clear top separation for subsections and lower-level structure
 
 Other contextual examples include:
 
