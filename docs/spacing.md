@@ -1,18 +1,18 @@
 # Spacing
 
-MiddleClass uses a small spacing scale and a bottom-margin-first vertical rhythm. The goal is to keep ordinary document flow predictable while leaving structural and layout decisions explicit.
+MiddleClass uses a small spacing scale and a bottom-margin-first vertical rhythm. The goal is to keep ordinary document flow predictable while giving headings enough separation to signal a new section or subsection.
 
 ## Core Policy
 
-Normal content elements create space after themselves, not before themselves.
+Normal content elements create space after themselves rather than before themselves. Headings that commonly introduce a new section are the intentional exception.
 
-- headings use a bottom margin and no default top margin
+- `h1` uses a bottom margin and no default top margin
+- `h2` through `h6` use hierarchical top margins plus a consistent bottom margin
 - ordinary block content uses a bottom margin and no default top margin
-- the preceding element normally provides the space above the next element
 - structural elements do not receive generic vertical margins
 - layout classes control spacing among their children but remain externally marginless
 
-This avoids doubled gaps when one element follows another and keeps spacing ownership easy to understand.
+This keeps ordinary flow simple while making section and subsection boundaries visually clearer without requiring separator elements or project-specific spacing rules.
 
 ## Default Flow Spacing
 
@@ -20,6 +20,9 @@ MiddleClass currently uses these main relationships:
 
 | Relationship | Default |
 | --- | ---: |
+| `h2` top separation | `--mc-space-7` (`3rem`) |
+| `h3` top separation | `--mc-space-6` (`2rem`) |
+| `h4` through `h6` top separation | `--mc-space-5` (`1.5rem`) |
 | heading to following content | `--mc-space-4` (`1rem`) |
 | ordinary block to following content | `--mc-space-5` (`1.5rem`) |
 | adjacent list items | `--mc-space-2` (`0.5rem`) |
@@ -28,9 +31,11 @@ MiddleClass currently uses these main relationships:
 | figure content to its caption | `--mc-space-2` (`0.5rem`) |
 | open disclosure summary to its content | `--mc-space-4` (`1rem`) |
 
-`h1` through `h6` use no default top margin and use `--mc-space-4` below.
+`h1` uses no default top margin and uses `--mc-space-4` below. `h2` uses `--mc-space-7` above, `h3` uses `--mc-space-6` above, and `h4` through `h6` use `--mc-space-5` above. All heading levels use `--mc-space-4` below.
 
 Paragraphs, lists, definition lists, blockquotes, code blocks, tables, figures, forms, and disclosures use no default top margin and use `--mc-space-5` below.
+
+In ordinary block flow, adjacent vertical margins collapse. A paragraph followed by an `h2`, for example, resolves to the larger `3rem` heading margin rather than adding the paragraph's `1.5rem` bottom margin to it.
 
 A list nested as the final child of a list item does not keep that full bottom margin. The normal adjacent-item gap controls the space before the next parent-level item instead, while a nested list followed by more content keeps its ordinary bottom spacing.
 
@@ -52,6 +57,8 @@ Layout classes control internal arrangement and remain externally marginless by 
 - `.container` and `.reading-width` control width rather than vertical spacing
 - `.push-end` controls inline alignment rather than vertical spacing
 
+Direct children of `.stack`, including headings, have their block margins normalized to zero so the stack's `gap` remains the sole spacing source. Heading top margins therefore affect ordinary document flow but do not compound a gap-based layout.
+
 A layout class should not add an outside bottom margin merely because it contains visually substantial content. Place it inside a parent layout, such as `.stack`, when consistent spacing between larger groups is needed.
 
 ## Padded Components
@@ -62,33 +69,40 @@ The first child has no top margin, and the last child's bottom margin is removed
 
 Child padding is not removed or changed. Padding that belongs to a child remains part of that child's own design.
 
-This policy applies to contained surfaces such as cards, notices, blockquotes, fieldsets, and disclosures. Some first-child margins are already zero because MiddleClass does not give ordinary elements default top margins; explicit edge normalization also protects components from compatible local overrides.
+This policy applies to contained surfaces such as cards, notices, blockquotes, fieldsets, and disclosures. Explicit edge normalization prevents a heading's top margin from adding to a component's top padding when that heading is the first child.
 
 ## Contextual Top Margins
 
-Bottom-margin-first does not mean that every top margin is forbidden. Small top margins are appropriate when they describe a relationship inside one element or content group.
+Bottom-margin-first does not mean that every top margin is forbidden. Top margins are appropriate when they communicate a meaningful relationship that cannot be expressed as ordinary trailing flow spacing.
 
-Examples include:
+The primary example is heading hierarchy:
+
+- `h2` receives the strongest top separation because it commonly begins a major section
+- `h3` receives a smaller top separation for a subsection
+- `h4` through `h6` receive a modest top separation for lower-level structure
+
+Other contextual examples include:
 
 - space between adjacent list items
 - space before a new definition term
 - space before a figure caption
 - space between an open disclosure summary and its content
 
-These are internal relationships, not generic outside spacing for structural containers.
+These are intentional relationships, not generic outside spacing for structural containers.
 
 ## Horizontal Rules
 
-`hr` is an intentional exception. It represents a thematic break and currently uses `--mc-space-7` above and below.
+`hr` is an intentional exception. In ordinary flow it uses `--mc-space-7` above and below.
 
-This symmetric spacing is deliberate because the rule separates two content groups rather than belonging more strongly to either one. It should be reviewed independently from ordinary flow margins.
+This symmetric spacing is deliberate because the rule separates two content groups rather than belonging more strongly to either one. As with other direct children of `.stack`, its margins are normalized when a stack's `gap` is intended to own the spacing.
 
 ## Avoiding Double Spacing
 
 Use one clear spacing source for each relationship:
 
-- ordinary document flow uses the preceding element's bottom margin
-- a gap-based layout uses its `gap` between direct children
+- ordinary document flow uses block margins, with heading top margins providing stronger section separation
+- adjacent vertical margins collapse rather than being added together in ordinary block flow
+- a gap-based layout uses its `gap` between direct children and normalizes those children's block margins
 - a padded component uses its own padding at its outer inner edges
 - a parent layout provides space around structural or layout groups
 
