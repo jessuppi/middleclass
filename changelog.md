@@ -2,9 +2,9 @@
 
 ## 0.4.0
 
-- added hierarchical top spacing in ordinary document flow, with `h2` using `3rem` and `h3` through `h6` using `2rem` so section and subsection headings are visually separated from preceding content
+- set default top margins to `3rem` for `h2` and `2rem` for `h3` through `h6` so section and subsection headings have clearer separation from preceding content
+- retained the `0` default top margin on `h1`
 - retained the existing `1rem` bottom margin for all heading levels
-- kept `h1` top spacing unchanged
 - kept `.stack` gap behavior unchanged by continuing to normalize direct-child block margins
 
 ## 0.3.2
