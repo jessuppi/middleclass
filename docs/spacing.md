@@ -32,7 +32,7 @@ MiddleClass currently uses these main relationships:
 
 `h1` uses no default top margin and uses `--mc-space-4` below. `h2` uses `--mc-space-7` above, while `h3` through `h6` use `--mc-space-6` above. All heading levels use `--mc-space-4` below.
 
-Paragraphs, lists, definition lists, blockquotes, code blocks, tables, figures, forms, and disclosures use no default top margin and use `--mc-space-5` below.
+Paragraphs, lists, definition lists, blockquotes, code blocks, tables, figures, forms, disclosures, and notices use no default top margin and use `--mc-space-5` below.
 
 In ordinary block flow, adjacent vertical margins collapse. A paragraph followed by an `h2`, for example, resolves to the larger `3rem` heading margin rather than adding the paragraph's `1.5rem` bottom margin to it.
 
@@ -44,7 +44,7 @@ Structural elements such as `div`, `section`, `article`, `header`, `main`, `foot
 
 These elements describe document structure and may be nested in many different ways. Giving them automatic margins would make spacing depend on nesting rather than the intended relationship between visible content.
 
-Structural elements may still receive intentional padding, borders, widths, or layout behavior. The no-margin policy applies only to generic external vertical spacing.
+Structural elements may still receive intentional padding, borders, widths, or layout behavior. The no-margin policy applies only to generic external vertical spacing. A structural element using the `.notice` component is an explicit exception and receives the standard ordinary block bottom spacing.
 
 ## Layout Classes
 
@@ -56,7 +56,7 @@ Layout classes control internal arrangement and remain externally marginless by 
 - `.container` and `.reading-width` control width rather than vertical spacing
 - `.push-end` controls inline alignment rather than vertical spacing
 
-Direct children of `.stack`, including headings, have their block margins normalized to zero so the stack's `gap` remains the sole spacing source. Heading top margins therefore affect ordinary document flow but do not compound a gap-based layout.
+Direct children of `.stack`, including headings and notices, have their block margins normalized to zero so the stack's `gap` remains the sole spacing source. Heading top margins therefore affect ordinary document flow but do not compound a gap-based layout.
 
 A layout class should not add an outside bottom margin merely because it contains visually substantial content. Place it inside a parent layout, such as `.stack`, when consistent spacing between larger groups is needed.
 
@@ -68,7 +68,7 @@ The first child has no top margin, and the last child's bottom margin is removed
 
 Child padding is not removed or changed. Padding that belongs to a child remains part of that child's own design.
 
-This policy applies to contained surfaces such as cards, notices, blockquotes, fieldsets, and disclosures. Explicit edge normalization prevents a heading's top margin from adding to a component's top padding when that heading is the first child.
+This policy applies to contained surfaces such as cards, notices, blockquotes, fieldsets, and disclosures. Explicit edge normalization prevents a heading's top margin from adding to a component's top padding when that heading is the first child. A notice's own external bottom margin is separate from this internal edge normalization.
 
 ## Contextual Top Margins
 
