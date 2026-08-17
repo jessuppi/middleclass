@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.1
+
+- gave `.notice` the standard `--mc-space-5` (`1.5rem`) bottom margin used by paragraphs and other ordinary block content
+- kept `.stack` as the sole spacing source for notices placed directly inside a stack by continuing to normalize direct-child block margins
+
 ## 0.4.0
 
 - set default top margins to `3rem` for `h2` and `2rem` for `h3` through `h6` so section and subsection headings have clearer separation from preceding content
