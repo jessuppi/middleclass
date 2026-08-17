@@ -1,5 +1,5 @@
 /*
- * MiddleClass 0.4.0
+ * MiddleClass 0.4.1
  * A lightweight, classless-first CSS framework for static websites.
  * Copyright (c) 2026 Jesse Nickles
  * Licensed under the MIT License.
@@ -268,7 +268,8 @@ pre,
 table,
 figure,
 form,
-details {
+details,
+.notice {
 	margin-block: 0 var(--mc-space-5);
 }
 
@@ -621,9 +622,9 @@ input[type="submit"].secondary {
 
 button.secondary:enabled:hover,
 .button.secondary:hover,
-input[type="button"].secondary:enabled:hover,
-input[type="reset"].secondary:enabled:hover,
-input[type="submit"].secondary:enabled:hover {
+input[type="button"]:enabled:hover,
+input[type="reset"]:enabled:hover,
+input[type="submit"]:enabled:hover {
 	border-color: var(--mc-text-muted);
 	background: var(--mc-surface);
 	color: var(--mc-text);
