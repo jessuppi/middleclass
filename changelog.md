@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.2
+
+- changed `.reading-width` to a max-width constraint so it can be combined with `.container` without overriding responsive page gutters
+
 ## 0.4.1
 
 - gave `.notice` the standard `--mc-space-5` (`1.5rem`) bottom margin used by paragraphs and other ordinary block content
