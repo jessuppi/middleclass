@@ -42,7 +42,13 @@ Limits long-form content to a comfortable reading width without centering it aut
 </article>
 ```
 
-The width is controlled by `--mc-reading-width`.
+The maximum width is controlled by `--mc-reading-width`. The class uses a max-width constraint, so it can be combined with `.container` without overriding the container's responsive gutters:
+
+```html
+<article class="container reading-width">
+	...
+</article>
+```
 
 ### `.stack`
 
