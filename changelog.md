@@ -2,7 +2,7 @@
 
 ## 0.4.3
 
-- reduced default `main` bottom padding from `3rem` to `2rem` while retaining `3rem` top padding, tightening the transition into the footer without changing narrow-screen spacing
+- reduced default `main` bottom padding from `3rem` to `2rem` on wider screens; mobile spacing remains `2rem`
 
 ## 0.4.2
 
