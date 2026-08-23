@@ -657,6 +657,7 @@ input[type="submit"].secondary.outline {
 	background: transparent;
 	color: var(--mc-text);
 }
+
 button.secondary.outline:enabled:hover,
 .button.secondary.outline:hover,
 input[type="button"].secondary.outline:enabled:hover,
