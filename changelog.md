@@ -3,6 +3,7 @@
 ## 0.4.2
 
 - changed `.reading-width` to a max-width constraint so it can be combined with `.container` without overriding responsive page gutters
+- reduced default `main` bottom padding from `3rem` to `2rem` while retaining `3rem` top padding, tightening the transition into the footer without changing narrow-screen spacing
 
 ## 0.4.1
 
