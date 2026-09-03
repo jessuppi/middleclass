@@ -1,10 +1,14 @@
 # Branding
 
-MiddleClass uses a compact `.MC` monogram as its primary logo. The mark is intentionally simple, geometric, and suitable for headers, favicons, documentation, and other small web surfaces.
+MiddleClass uses a compact `.MC` monogram as its primary logo. The mark is intentionally simple, geometric, and suitable for headers, documentation, and other web surfaces.
 
-Primary asset:
+Primary logo asset:
 
 `assets/middleclass-logo.svg`
+
+Favicon asset:
+
+`assets/middleclass-icon.svg`
 
 ## Logo Construction
 
@@ -38,14 +42,14 @@ Do not independently resize, stretch, raise, or lower the M, C, or period. If th
 
 The primary colors are:
 
-- period: `#2563EB`
+- period and favicon dot: `#2563EB`
 - letters: `#0F172A`
 
-Keep these colors for the standard logo unless a deliberate alternate branding variant is introduced later.
+Keep these colors for the standard logo and icon unless a deliberate alternate branding variant is introduced later.
 
 ## SVG Canvas
 
-The primary asset currently uses:
+The primary logo asset currently uses:
 
 ```svg
 viewBox="20 45 245 90"
@@ -57,7 +61,7 @@ When embedding the logo, size the SVG through its rendered width or height rathe
 
 ## Web Usage
 
-Preferred HTML:
+Preferred logo HTML:
 
 ```html
 <img src="/assets/middleclass-logo.svg" alt="MiddleClass">
@@ -67,17 +71,34 @@ When the logo is already inside a link whose purpose is clear from surrounding c
 
 The SVG should remain the canonical source for web use. Raster exports may be created when a platform requires them, but they should be generated from the SVG rather than becoming the source artwork.
 
-## Favicon and Small Sizes
+## Favicon
 
-The `.MC` mark is designed to remain recognizable at small sizes. For favicon or app-icon variants:
+The favicon intentionally uses only the blue class dot rather than the full `.MC` mark. This keeps the icon simple and legible at very small browser-tab sizes.
 
-- preserve the same basic geometry
-- preserve the shared bottom alignment
-- preserve equal M and C dimensions
-- avoid adding the full `MiddleClass` wordmark
-- avoid decorative effects, gradients, shadows, or extra shapes
+The canonical favicon asset is:
 
-If a very small favicon requires a specialized crop or simplified export, keep the primary SVG unchanged and create a separate derived asset.
+`assets/middleclass-icon.svg`
+
+Its geometry is:
+
+- square `128 × 128` viewBox
+- circle centered at `64,64`
+- circle radius `48`
+- circle diameter `96`
+- `16` units of padding on every side
+- `12.5%` padding per side
+- transparent background
+- brand blue `#2563EB`
+
+The favicon should remain a pure SVG circle with no letters, wordmark, gradients, shadows, raster data, fonts, scripts, or external dependencies.
+
+Preferred HTML:
+
+```html
+<link rel="icon" href="assets/middleclass-icon.svg" type="image/svg+xml" sizes="any">
+```
+
+Keep the dot perfectly centered. If additional favicon formats are ever required for a specific platform, derive them from this SVG while keeping `middleclass-icon.svg` as the canonical source.
 
 ## Graphics Direction
 
