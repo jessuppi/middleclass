@@ -22,9 +22,15 @@ The standalone `MiddleClass` wordmark is not part of the primary logo. Use the `
 
 The current SVG is a true vector asset built from SVG circle and path geometry. Do not replace it with an embedded PNG, JPEG, or other raster image.
 
+The letterforms use a subtly softened geometric style:
+
+- the `M` keeps its strong geometric silhouette but uses gently rounded outer corners and softened inner joins
+- the `C` uses a smooth curved path with rounded terminals
+- the smoothing should remain subtle; the mark should not become bubbly, playful, or resemble a rounded display font
+
 ## Geometry
 
-The geometry is intentionally normalized:
+The rendered geometry is intentionally normalized:
 
 - `M`: 92 units wide × 78 units high
 - `C`: 92 units wide × 78 units high
@@ -34,9 +40,9 @@ The geometry is intentionally normalized:
 - period center: `y=111`
 - period radius: `15`
 
-The equal letter width is intentional. The `C` is wider than a conventional typographic C so that the two-letter monogram has balanced geometric proportions.
+The equal letter width and height are intentional. The `C` is proportioned wider than a conventional typographic C so that the two-letter monogram has balanced geometric dimensions.
 
-Do not independently resize, stretch, raise, or lower the M, C, or period. If the logo is resized, scale the complete SVG uniformly.
+Do not independently resize, stretch, raise, lower, sharpen, or further round the M, C, or period. If the logo is resized, scale the complete SVG uniformly.
 
 ## Colors
 
@@ -107,9 +113,10 @@ Future MiddleClass graphics should follow the same visual character as the logo:
 - clean
 - modern
 - geometric
+- subtly softened
 - minimal
 - web-oriented
 - low-detail
 - easy to recognize at small sizes
 
-Avoid ornamental typography, glossy effects, faux-3D treatments, unnecessary gradients, and visual clutter. The branding should feel like a lightweight developer tool rather than a corporate or decorative identity.
+Avoid ornamental typography, glossy effects, faux-3D treatments, unnecessary gradients, overly rounded letterforms, and visual clutter. The branding should feel like a lightweight developer tool rather than a corporate or decorative identity.
