@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">MiddleClass icon</title>
+  <desc id="desc">Blue class dot followed by the MiddleClass M mark.</desc>
+
+  <!-- Class dot -->
+  <circle cx="12" cy="94" r="10" fill="#2563EB"/>
+
+  <!-- M -->
+  <path
+    d="M78 126V48h18l28 32.5L152 48h18v78h-18V75l-26 30.5h-4L96 75v51z"
+    fill="#0F172A"
+    transform="translate(30 24) scale(1.0256410256) translate(-78 -48)"
+  />
+</svg>
