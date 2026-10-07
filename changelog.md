@@ -2,8 +2,6 @@
 
 ## 0.4.4
 
-- added the official MiddleClass logo and favicon SVG assets together with branding guidance
-- updated the demonstration header to use the new MiddleClass logo and favicon
 - styled native single-select controls with the shared Font Awesome down-chevron while preserving native listbox and multiple-select presentation
 - added dark-theme chevron coloring, right-to-left positioning, and a forced-colors fallback that restores the browser-native select appearance
 
