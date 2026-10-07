@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.4.4
+
+- styled native single-select controls with the shared Font Awesome down-chevron while preserving native listbox and multiple-select presentation
+- added dark-theme chevron coloring, right-to-left positioning, and a forced-colors fallback that restores the browser-native select appearance
+
 ## 0.4.3
 
 - reduced default `main` bottom padding from `3rem` to `2rem` on wider screens; mobile spacing remains `2rem`
