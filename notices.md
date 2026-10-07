@@ -1,6 +1,6 @@
 # Notices
 
-MiddleClass is licensed under the MIT License. The dropdown chevron embedded in `middleclass.css` uses the following third-party icon shape under its upstream license.
+MiddleClass is licensed under the MIT License. The down-chevron embedded in `middleclass.css` for native single-select controls and dropdown triggers uses the following third-party icon shape under its upstream license.
 
 ## Font Awesome Free
 
@@ -10,7 +10,7 @@ MiddleClass is licensed under the MIT License. The dropdown chevron embedded in 
 - License: Creative Commons Attribution 4.0 International for SVG icons
 - Copyright: Copyright 2026 Fonticons, Inc.
 
-MiddleClass changes the SVG packaging and view box to normalize the icon as a CSS mask. Equivalent attribution is retained directly in `middleclass.css` so the standalone stylesheet remains self-contained.
+MiddleClass changes the SVG packaging and view box to normalize the icon for CSS use. Dropdowns render it as a mask, while native single-selects render theme-appropriate variants as background images. Equivalent attribution is retained directly in `middleclass.css` so the standalone stylesheet remains self-contained.
 
 The inclusion of this icon shape does not imply endorsement of MiddleClass by Fonticons.
 
