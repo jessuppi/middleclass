@@ -178,7 +178,7 @@ MiddleClass does not require:
 
 The source file is the product, not an intermediate build artifact.
 
-The embedded Font Awesome dropdown chevron is a component-specific visual affordance. It replaces a fragile CSS-drawn shape without requiring extra markup, but it does not expose general icon classes, provide unrelated symbols, or establish an expandable icon-library API. Sites may replace it through the documented dropdown-chevron variable.
+The embedded Font Awesome down-chevron is a framework control affordance shared by native single-selects and dropdown triggers. It provides a consistent shape without requiring extra markup, but it does not expose general icon classes, provide unrelated symbols, or establish an expandable icon-library API. Sites may replace the shared image through `--mc-chevron-down` or override dropdowns separately through `--mc-dropdown-chevron`.
 
 For author-provided icons, MiddleClass favors inline SVG rather than mandatory wrapper classes or a bundled general-purpose icon library. An inline SVG inside a button, link, or navigation item should normally use `fill="currentColor"` or `stroke="currentColor"` so it inherits surrounding colors and interaction states. Framework styles may normalize common component sizing and alignment, while unusual presentation belongs in the site's own stylesheet. MiddleClass should embed an icon only when one of its own components requires that visual affordance automatically.
 
@@ -206,13 +206,13 @@ New rules should be placed in the most relevant existing section. A new section 
 
 ## Variables and Local Customization
 
-Public CSS variables use the `--mc-` prefix and hold shared framework values such as colors, spacing, widths, radii, typography settings, and the active dropdown-chevron image.
+Public CSS variables use the `--mc-` prefix and hold shared framework values such as colors, spacing, widths, radii, typography settings, and shared control-chevron images.
 
 Variables provide the normal customization layer. Sites should prefer overriding a documented variable when changing a shared framework choice and use site-specific CSS for isolated behavior.
 
 Component-specific variables may customize an individual `.stack`, `.cluster`, `.columns`, or `.dropdown` instance without creating additional classes.
 
-The `--mc-dropdown-chevron` variable replaces the bundled Font Awesome mask globally or within any subtree because CSS variables inherit.
+The `--mc-chevron-down` variable replaces the shared down-chevron used by native single-selects and dropdowns. The `--mc-dropdown-chevron` variable can override dropdowns independently; selector-scoped `--mc-chevron-down` overrides can likewise target selects without changing dropdowns.
 
 See [CSS variables](variables.md) for the current variable reference and [Sizing and units](sizing.md) for unit policy.
 
