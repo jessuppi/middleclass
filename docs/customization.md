@@ -220,17 +220,19 @@ Use site-specific classes for presentation that belongs to one project. Do not r
 
 MiddleClass keeps selector specificity low so a later site stylesheet can normally override it without `!important`. See [Classes](classes.md) for the supported public class API.
 
-## Dropdown Chevron
+## Chevron
 
-Dropdowns use a bundled Font Awesome chevron by default. Replace it globally with another mask-compatible image:
+Native single-select controls and dropdown triggers share the bundled Font Awesome down-chevron by default. Replace the shared image globally with `--mc-chevron-down`:
 
 ```css
 :root {
-	--mc-dropdown-chevron: url("data:image/svg+xml,...");
+	--mc-chevron-down: url("data:image/svg+xml,...");
 }
 ```
 
-Or replace it only within one menu or section:
+The same image is rendered directly as a background on native single-selects and as a mask on dropdown triggers, so global replacements should remain visible in every supported theme and work cleanly as a simple control affordance.
+
+To change only dropdowns, keep using `--mc-dropdown-chevron`:
 
 ```css
 .account-menu {
@@ -238,7 +240,15 @@ Or replace it only within one menu or section:
 }
 ```
 
-MiddleClass continues to control the chevron's size, color, alignment, direction, and open-state rotation. The replacement should therefore be a simple single-color shape suitable for use as a CSS mask.
+To change only selects, scope the shared variable to those elements:
+
+```css
+select {
+	--mc-chevron-down: url("data:image/svg+xml,...");
+}
+```
+
+MiddleClass continues to control sizing, alignment, direction, dropdown rotation, and the native single-select presentation. Multiple selects and listbox-style selects keep their browser-native presentation.
 
 ## What Belongs in Site CSS
 
