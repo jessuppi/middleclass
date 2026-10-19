@@ -37,8 +37,8 @@ Currently maintained in `index.html`:
 
 - A descriptive page title and meta description
 - A canonical URL for the public GitHub Pages demo
-- Open Graph website, site name, title, description, and URL metadata
-- A basic `twitter:card` value of `summary`
+- Open Graph website, site name, title, description, URL, and social preview image metadata
+- A `twitter:card` value of `summary_large_image` with an explicit preview image URL
 - A favicon
 - JSON-LD using `SoftwareSourceCode` for MiddleClass and `WebSite` for the demo, with distinct linked identifiers
 
@@ -46,7 +46,7 @@ The demo's JSON-LD describes this project; it is not automatically applied to si
 
 ### Social Preview Image
 
-A dedicated preview PNG has not yet been added. Accordingly, the demo currently omits `og:image` and uses `twitter:card=summary`, not `summary_large_image`. Add image references only when the image exists at its published URL; then update the card type if appropriate. This is a **demo-site task**, not a MiddleClass core feature.
+The demo uses [`assets/middleclass-social.png`](../assets/middleclass-social.png), a 1200 × 630 PNG, for its Open Graph and Twitter large-image previews. `index.html` references the image at the absolute GitHub Pages URL `https://jessuppi.github.io/middleclass/assets/middleclass-social.png` with `og:image`, dimensions, image type, alternate text, and `twitter:image`. Social previews are a **demo-site feature**, not part of MiddleClass core CSS. Confirm the published image URL resolves before relying on third-party link previews.
 
 ## Sitemaps and Robots on GitHub Pages
 
