@@ -111,3 +111,5 @@ Do not add a generic structural margin merely to compensate for missing layout s
 Spacing changes should be tested in the live demo before becoming framework defaults. Review headings after different content elements, padded component edges, gap-based layouts, narrow screens, and both color themes.
 
 The demo includes a dedicated vertical-rhythm area for this purpose. Changes should remain staged so one relationship can be judged without unintentionally changing the entire document rhythm.
+
+See [Sizing and units](sizing.md) for the spacing scale's units and [Classes](classes.md) for supported layout-class behavior.
