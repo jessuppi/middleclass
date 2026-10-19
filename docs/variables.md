@@ -154,7 +154,7 @@ select {
 }
 ```
 
-MiddleClass continues to own chevron sizing, alignment, direction, dropdown rotation, and the native single-select presentation. Multiple selects and listbox-style selects retain their browser-native presentation, and forced-colors mode restores the native single-select appearance. The bundled Font Awesome shape is a control affordance rather than a general-purpose icon library. See [Third-party notices](../notices.md) for its source and license.
+MiddleClass continues to own chevron sizing, alignment, direction, dropdown rotation, and the native single-select presentation. Multiple selects and listbox-style selects retain their browser-native presentation, and forced-colors mode restores the native single-select appearance. The bundled Font Awesome shape is a control affordance rather than a general-purpose icon library. See [Attribution](attribution.md) for how core and demo icon credits differ, and [Third-party notices](../notices.md) for the bundled icon's source and license.
 
 ## Color Variables
 
