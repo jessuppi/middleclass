@@ -550,6 +550,12 @@ textarea {
 	color: var(--mc-text);
 }
 
+:where(input:not([type="button"]):not([type="checkbox"]):not([type="color"]):not([type="radio"]):not([type="range"]):not([type="reset"]):not([type="submit"])),
+select:not([multiple]):not([size]),
+select:not([multiple])[size="1"] {
+	line-height: 1.2;
+}
+
 select:not([multiple]):not([size]),
 select:not([multiple])[size="1"] {
 	appearance: none;
