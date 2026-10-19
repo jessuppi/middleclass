@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.5
+
+- reduced reserved spacing between native single-select text and the chevron from approximately `1em` to `0.5em`, matching the compact visual gap used by dropdown triggers while retaining the chevron size and right padding
+
 ## 0.4.4
 
 - styled native single-select controls with the shared Font Awesome down-chevron while preserving native listbox and multiple-select presentation
