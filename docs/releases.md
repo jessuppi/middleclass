@@ -4,7 +4,7 @@ MiddleClass is distributed as a single local stylesheet, `middleclass.css`. Adop
 
 ## Versioning and Compatibility
 
-The current project is **pre-1.0** and uses numbered releases (for example, `0.4.5`). As documented in [Architecture](architecture.md), its public classes, CSS variables, theme attributes, and semantic element behavior may change between minor releases. Do **not** interpret pre-1.0 version numbers as a guarantee of strict semantic-versioning compatibility.
+The current project is **pre-1.0** and uses numbered releases (for example, `0.4.6`). As documented in [Architecture](architecture.md), its public classes, CSS variables, theme attributes, and semantic element behavior may change between minor releases. Do **not** interpret pre-1.0 version numbers as a guarantee of strict semantic-versioning compatibility.
 
 - Keep changes deliberate, limited in scope, and documented in [Changelog](../changelog.md).
 - Identify visible behavior changes, renamed or removed classes, and changed variables so adopters can evaluate upgrades.
