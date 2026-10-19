@@ -38,7 +38,7 @@ The built-in full-height page behavior assumes the common `header`–`main`–`f
 - `.dropdown-start` and `.dropup` are optional direction modifiers; neither automatically detects room in the viewport.
 - Check for clipping by ancestor `overflow` rules when an overlay panel is cut off.
 - Single-select controls use a decorative chevron; multiple selects and listbox-style selects retain native appearance. Native controls can vary by browser, and forced-colors mode intentionally restores native single-select presentation.
-- If a custom chevron is invisible, inspect the `--mc-dropdown-chevron` override and the applicable theme or mask colors.
+- If a custom chevron is invisible, check `--mc-chevron-down` for native single-selects and `--mc-dropdown-chevron` for dropdowns, along with the relevant theme colors. Selects render the image directly as a background, while dropdowns use it as a mask.
 
 See [Classes](classes.md), [Customization](customization.md), and [Browser Support](browser-support.md).
 
