@@ -62,7 +62,7 @@ Load MiddleClass first, then define overrides in the site's own stylesheet:
 }
 ```
 
-Color variables require theme-aware selectors because MiddleClass's theme rules are more specific than a plain `:root` rule. To customize colors used by automatic dark mode, match the framework selector:
+When customizing colors, account for theme-specific selectors: the automatic dark-theme selector `:root:not([data-theme])` is more specific than `:root`, while `[data-theme="light"]` and `[data-theme="dark"]` have the same specificity as `:root` (so source order decides between matching rules). To customize colors used by automatic dark mode, match the framework selector:
 
 ```css
 @media (prefers-color-scheme: dark) {
