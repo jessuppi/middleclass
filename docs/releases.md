@@ -18,7 +18,7 @@ This guide describes the release process to follow, not an assertion that histor
 When publishing an updated framework stylesheet:
 
 1. Review the proposed change against [Scope](scope.md), [Architecture](architecture.md), and the supported [Classes](classes.md) and [CSS variables](variables.md).
-2. Check the stylesheet's copyright/license header, source notices, and any third-party attribution implications; retain required notices.
+2. Check the stylesheet's copyright/license header, source notices, and any third-party attribution implications; retain required notices. See [Attribution](attribution.md) for the distinction between bundled and demo-only assets.
 3. Run the manual checks in [Testing](testing.md), especially affected elements, themes, viewports, and browsers.
 4. Select the next version deliberately. Keep the version comment in `middleclass.css`, the demo's download label, and the demo's `SoftwareSourceCode` structured-data `version` consistent when they describe a released CSS version.
 5. Add a concise entry to [Changelog](../changelog.md) identifying notable changes and possible compatibility effects.
