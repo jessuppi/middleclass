@@ -181,7 +181,7 @@ MiddleClass uses `rem` for media-query breakpoints:
 }
 ```
 
-This keeps breakpoints aligned with the document's root scale instead of treating them as unrelated fixed pixels.
+In media queries, `rem` units are based on the browser's initial font size, not the computed font size of the page's `<html>` element. At the usual 16px initial size, `40rem` is 640px; browser font-size preferences may affect that value.
 
 ## Default Spacing Scale
 
