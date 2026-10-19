@@ -1,5 +1,5 @@
 /*
- * MiddleClass 0.4.4
+ * MiddleClass 0.4.5
  * A lightweight, classless-first CSS framework for static websites.
  * Copyright (c) 2026 Jesse Nickles
  * Licensed under the MIT License.
@@ -553,7 +553,7 @@ textarea {
 select:not([multiple]):not([size]),
 select:not([multiple])[size="1"] {
 	appearance: none;
-	padding-inline-end: calc(var(--mc-space-4) + 1.8em);
+	padding-inline-end: calc(var(--mc-space-4) + 1.3em);
 	background-image: var(--mc-chevron-down);
 	background-repeat: no-repeat;
 	background-position: right var(--mc-space-4) center;
