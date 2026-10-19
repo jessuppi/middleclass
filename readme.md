@@ -74,6 +74,7 @@ The [demo site](https://jessuppi.github.io/middleclass/) is the quickest way to 
 | [Accessibility](docs/accessibility.md) | Describes the framework's accessibility baseline, the responsibilities that remain with site authors, component-specific considerations, and basic checks for semantics, focus, contrast, forms, and assistive technology. |
 | [SEO](docs/seo.md) | Distinguishes the core CSS framework from demo-only SEO metadata, documents site-author responsibilities, and explains sitemap and robots.txt choices on GitHub Pages. |
 | [Browser Support](docs/browser-support.md) | Defines supported modern browsers, progressive enhancement expectations, accessibility considerations, and compatibility boundaries. |
+| [Localization](docs/localization.md) | Explains language and right-to-left layout considerations and separates site-owned translations from the core CSS. |
 | [Testing](docs/testing.md) | Provides a manual regression checklist covering layout, forms, responsive behavior, themes, and accessibility. |
 | [Releases](docs/releases.md) | Explains pre-1.0 compatibility, maintainer release checks, version updates, and how adopters should upgrade local CSS copies. |
 | [Troubleshooting](docs/troubleshooting.md) | Helps diagnose common integration problems with stylesheets, spacing, layouts, forms, and dropdowns. |
