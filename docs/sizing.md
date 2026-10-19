@@ -8,7 +8,7 @@ This document describes the current framework approach. The policy may evolve, b
 
 Use:
 
-- `rem` for root-relative typography, spacing, component dimensions, widths, radii, and breakpoints
+- `rem` for root-relative typography, spacing, component dimensions, widths, and radii; media-query breakpoints also use `rem`, based on the browser's initial font size
 - `em` when a value should scale with the font size of a particular element
 - `px` for fixed visual details such as hairline borders, focus outlines, and accessibility mechanics
 - unitless values where CSS defines proportional behavior, especially `line-height` and zero
