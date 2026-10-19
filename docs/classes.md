@@ -277,7 +277,7 @@ MiddleClass owns the chevron's size, color, alignment, direction, and rotation. 
 
 The links remain ordinary links. Do not add application-style `menu` or `menuitem` roles. When open, a pointer click outside the panel closes the disclosure through an invisible viewport layer owned by the native `<summary>`; no JavaScript is required.
 
-The outside-click dismissal pattern is adapted from the MIT-licensed [Pico CSS](https://github.com/picocss/pico) dropdown implementation.
+The outside-click dismissal pattern is adapted from Pico CSS; see [Third-party notices](../notices.md) for the source credit and MIT license.
 
 ### `.dropdown-start`
 
