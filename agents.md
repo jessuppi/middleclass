@@ -17,6 +17,7 @@ These instructions apply to the entire MiddleClass repository. Consult the exist
 - Follow [Customization](docs/customization.md), [Spacing](docs/spacing.md), and [Sizing and units](docs/sizing.md) when changing styling behavior.
 - Review [Accessibility](docs/accessibility.md), [Browser Support](docs/browser-support.md), and [Localization](docs/localization.md) when relevant.
 - Use [Testing](docs/testing.md) for the manual regression checklist and [Releases](docs/releases.md) with [Changelog](changelog.md) for release-related updates.
+- [Attribution](docs/attribution.md) explains licensing and credit for core versus demo icons and how `notices.md` is used.
 - [SEO](docs/seo.md) describes demo-specific metadata and site-owner responsibilities; SEO tooling is not part of MiddleClass core.
 
 ## Editing and Verification
