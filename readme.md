@@ -82,3 +82,4 @@ The [demo site](https://jessuppi.github.io/middleclass/) is the quickest way to 
 | [Spacing](docs/spacing.md) | Defines the vertical rhythm model, which elements own external spacing, how layout classes control internal gaps, how padded components trim their edges, and where intentional exceptions apply. |
 | [CSS variables](docs/variables.md) | Lists the documented customization variables, default values, expected value types, theme-aware color overrides, component-level variables, inheritance behavior, and guidance for extending the variable API. |
 | [Changelog](changelog.md) | Summarizes each release so sites can review framework changes before updating their local copy of `middleclass.css`. |
+| [Agent instructions](agents.md) | Defines repository-specific guidance for coding assistants, including project boundaries, documentation, testing, and commit rules. |
