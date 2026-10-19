@@ -1,5 +1,5 @@
 /*
- * MiddleClass 0.4.5
+ * MiddleClass 0.4.6
  * A lightweight, classless-first CSS framework for static websites.
  * Copyright (c) 2026 Jesse Nickles
  * Licensed under the MIT License.
@@ -445,7 +445,7 @@ kbd {
 
 pre {
 	overflow-x: auto;
-	padding: var(--mc-space-5);
+	padding: var(--mc-space-4);
 	border: var(--mc-border-width) solid var(--mc-border);
 	border-radius: var(--mc-radius);
 	background: var(--mc-code-background);
