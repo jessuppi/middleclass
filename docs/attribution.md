@@ -8,11 +8,7 @@ The project's original CSS is licensed under its [MIT License](../license) and d
 
 Font Awesome SVG icons are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The chevron's SVG packaging and view box were adjusted for CSS use. The stylesheet retains an attribution comment identifying Font Awesome, its copyright, the license, the source, and the modification, so sites copying the CSS retain that information.
 
-The repository also includes [`notices.md`](../notices.md) with the core icon's attribution and the upstream Font Awesome Free license text. This is an **additional documentation and transparency measure**, not a separately prescribed `notices.md` file requirement. It does not replace the attribution retained in the standalone stylesheet.
-
-## Dropdown Technique
-
-MiddleClass's CSS-only outside-click dismissal pattern for `.dropdown` was adapted from [Pico CSS](https://github.com/picocss/pico), which is distributed under the [MIT License](https://github.com/picocss/pico/blob/main/LICENSE.md) (Copyright © 2019–2024 Pico). This credit acknowledges the source of the technique; MiddleClass does not bundle the Pico CSS framework. Any reuse of copyrighted upstream code must also preserve the applicable MIT license and copyright notices.
+The repository also maintains [`notices.md`](../notices.md) as its central record of third-party credits and license texts relevant to the core CSS, including the bundled Font Awesome icon. This is an **additional documentation and transparency measure**, not a separately prescribed `notices.md` file requirement. It does not replace the attribution retained in the standalone stylesheet.
 
 ## Demo Website
 
