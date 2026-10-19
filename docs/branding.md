@@ -4,11 +4,11 @@ MiddleClass uses a compact `.MC` monogram as its primary logo. The mark is inten
 
 Primary logo asset:
 
-`assets/middleclass-logo.svg`
+[`assets/middleclass-logo.svg`](../assets/middleclass-logo.svg)
 
 Favicon asset:
 
-`assets/middleclass-icon.svg`
+[`assets/middleclass-icon.svg`](../assets/middleclass-icon.svg)
 
 ## Logo Construction
 
@@ -83,7 +83,7 @@ The favicon intentionally uses only the blue class dot rather than the full `.MC
 
 The canonical favicon asset is:
 
-`assets/middleclass-icon.svg`
+[`assets/middleclass-icon.svg`](../assets/middleclass-icon.svg)
 
 Its geometry is:
 
