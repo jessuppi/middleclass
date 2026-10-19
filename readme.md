@@ -71,8 +71,10 @@ The [demo site](https://jessuppi.github.io/middleclass/) is the quickest way to 
 | [Scope](docs/scope.md) | Defines the framework's intended purpose and development goals, together with explicit boundaries around tooling, JavaScript, utility generation, fonts, icons, routing, and other application concerns. |
 | [Customization](docs/customization.md) | Provides a practical guide to loading site styles, overriding global or scoped variables, changing typography, widths, spacing, colors, themes, component presentation, and testing the result. |
 | [Classes](docs/classes.md) | Serves as the canonical reference for every supported public class, including its purpose, expected markup, compatible variants, local variables, behavior, limitations, and usage examples. |
+| [Navigation](docs/navigation.md) | Explains native disclosure navigation, CSS-only dropdown behavior, and when additional site-specific enhancements are appropriate. |
 | [Accessibility](docs/accessibility.md) | Describes the framework's accessibility baseline, the responsibilities that remain with site authors, component-specific considerations, and basic checks for semantics, focus, contrast, forms, and assistive technology. |
 | [Attribution](docs/attribution.md) | Explains licensing and attribution for the bundled Font Awesome chevron versus demo-only icons, including the role of `notices.md`. |
+| [Branding](docs/branding.md) | Documents the logo, favicon, colors, SVG geometry, and consistent use of demo branding assets. |
 | [SEO](docs/seo.md) | Distinguishes the core CSS framework from demo-only SEO metadata, documents site-author responsibilities, and explains sitemap and robots.txt choices on GitHub Pages. |
 | [Browser Support](docs/browser-support.md) | Defines supported modern browsers, progressive enhancement expectations, accessibility considerations, and compatibility boundaries. |
 | [Localization](docs/localization.md) | Explains language and right-to-left layout considerations and separates site-owned translations from the core CSS. |
