@@ -73,6 +73,10 @@ The [demo site](https://jessuppi.github.io/middleclass/) is the quickest way to 
 | [Classes](docs/classes.md) | Serves as the canonical reference for every supported public class, including its purpose, expected markup, compatible variants, local variables, behavior, limitations, and usage examples. |
 | [Accessibility](docs/accessibility.md) | Describes the framework's accessibility baseline, the responsibilities that remain with site authors, component-specific considerations, and basic checks for semantics, focus, contrast, forms, and assistive technology. |
 | [SEO](docs/seo.md) | Distinguishes the core CSS framework from demo-only SEO metadata, documents site-author responsibilities, and explains sitemap and robots.txt choices on GitHub Pages. |
+| [Browser Support](docs/browser-support.md) | Defines supported modern browsers, progressive enhancement expectations, accessibility considerations, and compatibility boundaries. |
+| [Testing](docs/testing.md) | Provides a manual regression checklist covering layout, forms, responsive behavior, themes, and accessibility. |
+| [Releases](docs/releases.md) | Explains pre-1.0 compatibility, maintainer release checks, version updates, and how adopters should upgrade local CSS copies. |
+| [Troubleshooting](docs/troubleshooting.md) | Helps diagnose common integration problems with stylesheets, spacing, layouts, forms, and dropdowns. |
 | [Sizing and units](docs/sizing.md) | Explains where and why MiddleClass uses `rem`, `em`, `px`, unitless values, percentages, viewport-aware expressions, and responsive layout units throughout the stylesheet. |
 | [Spacing](docs/spacing.md) | Defines the vertical rhythm model, which elements own external spacing, how layout classes control internal gaps, how padded components trim their edges, and where intentional exceptions apply. |
 | [CSS variables](docs/variables.md) | Lists the documented customization variables, default values, expected value types, theme-aware color overrides, component-level variables, inheritance behavior, and guidance for extending the variable API. |
