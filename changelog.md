@@ -3,6 +3,7 @@
 ## 0.4.5
 
 - reduced reserved spacing between native single-select text and the chevron from approximately `1em` to `0.5em`, matching the compact visual gap used by dropdown triggers while retaining the chevron size and right padding
+- standardized single-line input and single-select line-height at `1.2` to better match button and dropdown trigger heights, without changing textarea or multi-line select line-height
 
 ## 0.4.4
 
