@@ -89,3 +89,5 @@ Automated tools can help identify problems, but they do not replace manual keybo
 ## Scope
 
 MiddleClass does not currently claim formal WCAG conformance. The project should continue improving its defaults while keeping the framework small, semantic, and easy for sites to override.
+
+See [Classes](classes.md) for the supported accessible component markup and [Testing](testing.md) for the broader manual regression checklist.
