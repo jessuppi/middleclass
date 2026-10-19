@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.6
+
+- reduced `pre` block padding from `--mc-space-5` (`1.5rem`) to `--mc-space-4` (`1rem`) for more compact code blocks; inline `code` padding and block margins remain unchanged
+
 ## 0.4.5
 
 - reduced reserved spacing between native single-select text and the chevron from approximately `1em` to `0.5em`, matching the compact visual gap used by dropdown triggers while retaining the chevron size and right padding
