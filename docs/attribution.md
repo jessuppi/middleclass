@@ -4,7 +4,7 @@ MiddleClass separates third-party attribution for the distributable CSS framewor
 
 ## Core Stylesheet
 
-The framework is distributed as `middleclass.css`, licensed under the project's [MIT License](../license). It embeds the Font Awesome Free 7.3.1 `chevron-down` icon for native single-select controls and dropdown triggers.
+The project's original CSS is licensed under its [MIT License](../license) and distributed as `middleclass.css`. That stylesheet also embeds the Font Awesome Free 7.3.1 `chevron-down` icon for native single-select controls and dropdown triggers. The embedded third-party icon remains subject to its own CC BY 4.0 license; the project's MIT license does not replace that requirement.
 
 Font Awesome SVG icons are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). The chevron's SVG packaging and view box were adjusted for CSS use. The stylesheet retains an attribution comment identifying Font Awesome, its copyright, the license, the source, and the modification, so sites copying the CSS retain that information.
 
