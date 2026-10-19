@@ -67,22 +67,22 @@ The [demo site](https://jessuppi.github.io/middleclass/) is the quickest way to 
 
 | Document | Description |
 | --- | --- |
-| [Architecture](docs/architecture.md) | Explains the classless-first model, built-in document layout, why the limited class layer exists, class admission rules, selector strategy, stylesheet organization, public API boundaries, browser expectations, and criteria for evaluating new features. |
 | [Scope](docs/scope.md) | Defines the framework's intended purpose and development goals, together with explicit boundaries around tooling, JavaScript, utility generation, fonts, icons, routing, and other application concerns. |
-| [Customization](docs/customization.md) | Provides a practical guide to loading site styles, overriding global or scoped variables, changing typography, widths, spacing, colors, themes, component presentation, and testing the result. |
+| [Architecture](docs/architecture.md) | Explains the classless-first model, built-in document layout, why the limited class layer exists, class admission rules, selector strategy, stylesheet organization, public API boundaries, browser expectations, and criteria for evaluating new features. |
 | [Classes](docs/classes.md) | Serves as the canonical reference for every supported public class, including its purpose, expected markup, compatible variants, local variables, behavior, limitations, and usage examples. |
 | [Navigation](docs/navigation.md) | Explains native disclosure navigation, CSS-only dropdown behavior, and when additional site-specific enhancements are appropriate. |
+| [Customization](docs/customization.md) | Provides a practical guide to loading site styles, overriding global or scoped variables, changing typography, widths, spacing, colors, themes, component presentation, and testing the result. |
+| [CSS variables](docs/variables.md) | Lists the documented customization variables, default values, expected value types, theme-aware color overrides, component-level variables, inheritance behavior, and guidance for extending the variable API. |
+| [Spacing](docs/spacing.md) | Defines the vertical rhythm model, which elements own external spacing, how layout classes control internal gaps, how padded components trim their edges, and where intentional exceptions apply. |
+| [Sizing and units](docs/sizing.md) | Explains where and why MiddleClass uses `rem`, `em`, `px`, unitless values, percentages, viewport-aware expressions, and responsive layout units throughout the stylesheet. |
 | [Accessibility](docs/accessibility.md) | Describes the framework's accessibility baseline, the responsibilities that remain with site authors, component-specific considerations, and basic checks for semantics, focus, contrast, forms, and assistive technology. |
-| [Attribution](docs/attribution.md) | Explains licensing and attribution for the bundled Font Awesome chevron versus demo-only icons, including the role of `notices.md`. |
-| [Branding](docs/branding.md) | Documents the logo, favicon, colors, SVG geometry, and consistent use of demo branding assets. |
-| [SEO](docs/seo.md) | Distinguishes the core CSS framework from demo-only SEO metadata, documents site-author responsibilities, and explains sitemap and robots.txt choices on GitHub Pages. |
 | [Browser Support](docs/browser-support.md) | Defines supported modern browsers, progressive enhancement expectations, accessibility considerations, and compatibility boundaries. |
 | [Localization](docs/localization.md) | Explains language and right-to-left layout considerations and separates site-owned translations from the core CSS. |
+| [SEO](docs/seo.md) | Distinguishes the core CSS framework from demo-only SEO metadata, documents site-author responsibilities, and explains sitemap and robots.txt choices on GitHub Pages. |
+| [Branding](docs/branding.md) | Documents the logo, favicon, colors, SVG geometry, and consistent use of demo branding assets. |
+| [Attribution](docs/attribution.md) | Explains licensing and attribution for the bundled Font Awesome chevron versus demo-only icons, including the role of `notices.md`. |
+| [Troubleshooting](docs/troubleshooting.md) | Helps diagnose common integration problems with stylesheets, spacing, layouts, forms, and dropdowns. |
 | [Testing](docs/testing.md) | Provides a manual regression checklist covering layout, forms, responsive behavior, themes, and accessibility. |
 | [Releases](docs/releases.md) | Explains pre-1.0 compatibility, maintainer release checks, version updates, and how adopters should upgrade local CSS copies. |
-| [Troubleshooting](docs/troubleshooting.md) | Helps diagnose common integration problems with stylesheets, spacing, layouts, forms, and dropdowns. |
-| [Sizing and units](docs/sizing.md) | Explains where and why MiddleClass uses `rem`, `em`, `px`, unitless values, percentages, viewport-aware expressions, and responsive layout units throughout the stylesheet. |
-| [Spacing](docs/spacing.md) | Defines the vertical rhythm model, which elements own external spacing, how layout classes control internal gaps, how padded components trim their edges, and where intentional exceptions apply. |
-| [CSS variables](docs/variables.md) | Lists the documented customization variables, default values, expected value types, theme-aware color overrides, component-level variables, inheritance behavior, and guidance for extending the variable API. |
 | [Changelog](changelog.md) | Summarizes each release so sites can review framework changes before updating their local copy of `middleclass.css`. |
 | [Agent instructions](agents.md) | Defines repository-specific guidance for coding assistants, including project boundaries, documentation, testing, and commit rules. |
