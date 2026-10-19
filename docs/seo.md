@@ -59,3 +59,5 @@ These are choices specific to the current GitHub Pages URL structure; sites with
 ## Maintenance Boundary
 
 When changing SEO for the demo, edit the demo HTML or its site-specific assets, not the core CSS or public class API. When modifying core styles, keep semantic markup and accessible presentation in mind, but do not treat the framework as responsible for each adopting site's SEO setup.
+
+See [Releases](releases.md) for keeping demo version metadata aligned with CSS releases and [Localization](localization.md) for language-specific responsibilities that belong to site authors.
