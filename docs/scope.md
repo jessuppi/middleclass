@@ -25,3 +25,5 @@ MiddleClass is a CSS foundation, not an application framework. The project does 
 - application state or routing
 
 The embedded Font Awesome down-chevron is a narrowly scoped control affordance shared by native single-selects and dropdown triggers, not an author-facing icon collection.
+
+See [Architecture](architecture.md) for the public API boundaries and criteria for accepting new framework features.
