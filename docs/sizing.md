@@ -37,7 +37,7 @@ Common uses for `rem` include:
 - component heights and widths
 - content-width limits
 - border radii
-- media-query breakpoints
+- media-query breakpoints (resolved against the browser's initial font size, not the computed `<html>` font size)
 
 ## When to Use `em`
 
