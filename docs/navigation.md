@@ -25,16 +25,11 @@ This provides:
 
 ## Dropdown Enhancement
 
-`details` is a disclosure component, not a complete application-style mega menu. If a site needs richer desktop dropdown behavior, add a small site-specific enhancement rather than adding framework JavaScript.
+Unclassed `<details>` elements are ordinary in-flow disclosures. For an overlaid navigation panel, MiddleClass already supports `<details class="dropdown">` with a direct `<summary>` followed by a direct `<ul>` of links. Its CSS positions the panel without shifting surrounding content and allows pointer clicks outside the open panel to dismiss it without JavaScript.
 
-Good enhancements may include:
+The `.dropdown-start` and `.dropup` modifiers adjust panel alignment and opening direction; they do not automatically detect viewport space. See [Classes](classes.md) for supported markup and [Accessibility](accessibility.md) for keyboard and navigation guidance.
 
-- improved open and close behavior
-- closing when clicking outside
-- Escape key handling
-- synchronized `aria-expanded` states
-
-Avoid replacing normal website navigation with application-style `menu` roles. Standard navigation should remain a normal `nav` containing ordinary links.
+For behavior beyond the built-in disclosure and dropdown, such as specialized Escape-key handling or coordinated state across several menus, keep any scripting site-specific and test it with keyboard and assistive technology. Do not add application-style `menu` or `menuitem` roles to ordinary website navigation. Standard navigation should remain a normal `nav` containing ordinary links.
 
 ## When Not to Use It
 
