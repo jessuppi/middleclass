@@ -10,6 +10,10 @@ Font Awesome SVG icons are licensed under [CC BY 4.0](https://creativecommons.or
 
 The repository also includes [`notices.md`](../notices.md) with the core icon's attribution and the upstream Font Awesome Free license text. This is an **additional documentation and transparency measure**, not a separately prescribed `notices.md` file requirement. It does not replace the attribution retained in the standalone stylesheet.
 
+## Dropdown Technique
+
+MiddleClass's CSS-only outside-click dismissal pattern for `.dropdown` was adapted from [Pico CSS](https://github.com/picocss/pico), which is distributed under the [MIT License](https://github.com/picocss/pico/blob/main/LICENSE.md) (Copyright © 2019–2024 Pico). This credit acknowledges the source of the technique; MiddleClass does not bundle the Pico CSS framework. Any reuse of copyrighted upstream code must also preserve the applicable MIT license and copyright notices.
+
 ## Demo Website
 
 The GitHub Pages demo (`index.html`) separately uses two Font Awesome Free 7.3.1 SVG assets:
