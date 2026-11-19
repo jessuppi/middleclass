@@ -106,6 +106,7 @@ The current public class API has four narrow roles. Additional roles should emer
 
 - `.container`
 - `.reading-width`
+- `.viewport-fold`
 - `.stack`
 - `.cluster`
 - `.columns`
