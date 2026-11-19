@@ -171,6 +171,27 @@ body {
 
 That override may cause the available page height to change as browser controls expand or collapse, so it should be adopted when that dynamic behavior is intentional rather than as a mechanical replacement.
 
+## Stable Viewport Folds
+
+For a header-plus-hero layout intended to occupy the initial visible screen without resizing when mobile browser toolbars hide or reappear, use the opt-in [`.viewport-fold`](classes.md#viewport-fold) layout:
+
+```css
+.viewport-fold {
+	display: flex;
+	min-height: 100vh;
+	min-height: 100svh;
+	flex-direction: column;
+}
+
+.viewport-fold > :last-child {
+	flex-grow: 1;
+}
+```
+
+`svh` is the **small viewport height**, based on the viewport when browser interfaces are expanded. It stays stable as mobile browser toolbars retract, unlike `dvh`, which follows the changing visible viewport and can move content below a dynamically sized hero. `lvh` represents the large viewport with retractable browser interfaces hidden. The preceding `100vh` declaration is a fallback for browsers without `svh` support.
+
+The fold uses a minimum height rather than a fixed height so tall content can extend it. Its last direct child receives the extra space, while preceding children such as navigation keep their natural height. This does not replace the separate `body` minimum-height default, and pages that genuinely need to follow toolbar changes may still choose `dvh` explicitly.
+
 ## Breakpoints
 
 MiddleClass uses `rem` for media-query breakpoints:
