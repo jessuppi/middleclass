@@ -1,5 +1,5 @@
 /*
- * MiddleClass 0.4.6
+ * MiddleClass 0.5.0
  * A lightweight, classless-first CSS framework for static websites.
  * Copyright (c) 2026 Jesse Nickles
  * Licensed under the MIT License.
@@ -201,6 +201,17 @@ footer {
 
 .reading-width {
 	max-width: var(--mc-reading-width);
+}
+
+.viewport-fold {
+	display: flex;
+	min-height: 100vh;
+	min-height: 100svh;
+	flex-direction: column;
+}
+
+.viewport-fold > :last-child {
+	flex-grow: 1;
 }
 
 .stack {
