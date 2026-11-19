@@ -34,7 +34,7 @@
 		      "codeRepository": "https://github.com/jessuppi/middleclass",
 		      "programmingLanguage": "CSS",
 		      "license": "https://github.com/jessuppi/middleclass/blob/master/license",
-		      "version": "0.4.6"
+		      "version": "0.5.0"
 		    },
 		    {
 		      "@type": "WebSite",
@@ -71,6 +71,24 @@
 		.download-icon {
 			-webkit-mask: url("assets/icons/download.svg") center / contain no-repeat;
 			mask: url("assets/icons/download.svg") center / contain no-repeat;
+		}
+
+		.viewport-fold-demo {
+			border: var(--mc-border-width) solid var(--mc-border);
+			border-radius: var(--mc-radius);
+		}
+
+		.viewport-fold-demo > :first-child {
+			padding: var(--mc-space-4);
+			border-bottom: var(--mc-border-width) solid var(--mc-border);
+			background: var(--mc-surface);
+		}
+
+		.viewport-fold-demo > :last-child {
+			display: grid;
+			place-items: center;
+			padding: var(--mc-space-5);
+			text-align: center;
 		}
 	</style>
 </head>
@@ -109,7 +127,7 @@
 				<p class="cluster">
 					<a class="button" href="middleclass.css" download>
 						<span class="download-icon" aria-hidden="true"></span>
-						Download 0.4.6
+						Download 0.5.0
 					</a>
 					<a class="button secondary outline" href="https://github.com/jessuppi/middleclass">
 						<span class="github-icon" aria-hidden="true"></span>
@@ -222,6 +240,18 @@
 							<a class="push-end" href="#documentation">End</a>
 						</div>
 					</article>
+				</div>
+
+				<h3>Stable viewport fold</h3>
+				<p><code>.viewport-fold</code> lets a natural-height header and a growing hero fill at least the small mobile viewport without resizing when browser toolbars retract. Scroll past this example to inspect the stable height.</p>
+				<div class="viewport-fold viewport-fold-demo">
+					<div><strong>Example header</strong></div>
+					<div>
+						<div>
+							<strong>Example hero</strong>
+							<p>The hero fills remaining space and can grow with its content.</p>
+						</div>
+					</div>
 				</div>
 			</section>
 
@@ -493,7 +523,7 @@
 
 					<section class="reading-width">
 						<h3>Long content and overflow</h3>
-						<p>This long link should wrap rather than force the page to overflow: <a href="https://example.com/releases/middleclass/0.4.6/documentation/very-long-static-site-example">https://example.com/releases/middleclass/0.4.6/documentation/very-long-static-site-example</a></p>
+						<p>This long link should wrap rather than force the page to overflow: <a href="https://example.com/releases/middleclass/0.5.0/documentation/very-long-static-site-example">https://example.com/releases/middleclass/0.5.0/documentation/very-long-static-site-example</a></p>
 						<pre><code>example-command --with-a-very-long-option-name --and-another-long-option=value</code></pre>
 					</section>
 				</div>
