@@ -9,7 +9,7 @@ For any change to `middleclass.css`, first review the affected selectors, variab
 ### Document and Layout
 
 - Standard `header`–`main`–`footer` flow, including the footer on short pages
-- `.container`, `.reading-width`, `.stack`, `.cluster`, `.columns`, and `.push-end`
+- `.container`, `.reading-width`, `.viewport-fold`, `.stack`, `.cluster`, `.columns`, and `.push-end`
 - Vertical rhythm between paragraphs, headings, lists, tables, and figures
 - Padded edges for cards, notices, blockquotes, fieldsets, and disclosures
 - Long URLs, code samples, narrow tables, and nested content without page-wide overflow
@@ -25,6 +25,7 @@ For any change to `middleclass.css`, first review the affected selectors, variab
 ### Viewports and Browsers
 
 - A narrow viewport around 320px, common phone widths, and desktop widths
+- `.viewport-fold` on mobile with browser toolbars expanding and collapsing during scrolling: confirm the fold stays stable, preceding header content keeps its natural height, the last direct child fills remaining space, and tall content can extend the fold without clipping
 - Browser zoom at 200% and increased default text size
 - Current stable Chrome, Edge, Firefox, and Safari as practical
 - Right-to-left layout when the change affects logical directions
