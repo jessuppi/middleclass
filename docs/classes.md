@@ -8,7 +8,7 @@ This file is the canonical reference for every supported public class. Class nam
 
 MiddleClass intentionally keeps its public class API small:
 
-- Layout: `.container`, `.reading-width`, `.stack`, `.cluster`, `.columns`, and `.push-end`
+- Layout: `.container`, `.reading-width`, `.viewport-fold`, `.stack`, `.cluster`, `.columns`, and `.push-end`
 - Typography: `.brand` and `.eyebrow`
 - Buttons and variants: `.button`, `.secondary`, and `.outline`
 - Content components: `.card`, `.notice`, `.success`, `.warning`, `.danger`, `.dropdown`, `.dropdown-start`, and `.dropup`
@@ -49,6 +49,25 @@ The maximum width is controlled by `--mc-reading-width`. The class uses a max-wi
 	...
 </article>
 ```
+
+### `.viewport-fold`
+
+Creates a vertical layout with a minimum height equal to the small viewport, so its height stays stable when mobile browser toolbars expand or collapse. The last direct child grows to fill unused space, making this useful for a navigation header followed by a hero.
+
+```html
+<header class="viewport-fold">
+	<nav aria-label="Primary navigation">...</nav>
+	<section>
+		<h1>Welcome</h1>
+		<p>Homepage introduction.</p>
+	</section>
+</header>
+<main>...</main>
+```
+
+The navigation keeps its natural height, and the final direct child fills the remaining space. `min-height: 100svh` is used with a `100vh` fallback; content can make the fold taller than one viewport. The class does not center or style the hero, and it does not change the default page-wide `body` layout. Keep the expanding region last and as a direct child, with any project-specific alignment and presentation in the site's stylesheet.
+
+Use this stable layout when a full initial screen is more important than expanding as the browser's interface hides during scrolling. Unlike `100dvh`, `100svh` does not respond to those browser toolbar changes.
 
 ### `.stack`
 
