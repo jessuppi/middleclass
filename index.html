@@ -74,26 +74,14 @@
 		}
 
 		.viewport-fold-demo {
-			border: var(--mc-border-width) solid var(--mc-border);
-			border-radius: var(--mc-radius);
-		}
-
-		.viewport-fold-demo > :first-child {
-			padding: var(--mc-space-4);
-			border-bottom: var(--mc-border-width) solid var(--mc-border);
-			background: var(--mc-surface);
-		}
-
-		.viewport-fold-demo > :last-child {
-			display: grid;
-			place-items: center;
-			padding: var(--mc-space-5);
-			text-align: center;
+			display: flex;
+			align-items: center;
+			padding-block: var(--mc-space-7) var(--mc-space-6);
 		}
 	</style>
 </head>
 <body>
-	<header>
+	<header class="viewport-fold">
 		<div class="container">
 			<nav aria-label="Primary navigation">
 				<ul>
@@ -116,11 +104,8 @@
 				</ul>
 			</nav>
 		</div>
-	</header>
-
-	<main>
-		<div class="container stack">
-			<section>
+		<section class="viewport-fold-demo">
+			<div class="container">
 				<p class="eyebrow">Lightweight CSS framework</p>
 				<h1><mark>Pragmatic CSS</mark> for clean static websites, because a little class never hurt nobody.</h1>
 				<p>MiddleClass is a lightweight, classless-first CSS framework for building clean, responsive static websites.</p>
@@ -134,8 +119,12 @@
 						GitHub Repo
 					</a>
 				</p>
-			</section>
+			</div>
+		</section>
+	</header>
 
+	<main>
+		<div class="container stack">
 			<section id="installation">
 				<h2>Installation</h2>
 				<p>Download the stylesheet, copy it into your project, and serve it alongside your own HTML and other static assets. Keeping a local copy makes the site independent of a CDN and lets you decide when to adopt future MiddleClass updates.</p>
@@ -243,16 +232,7 @@
 				</div>
 
 				<h3>Stable viewport fold</h3>
-				<p><code>.viewport-fold</code> lets a natural-height header and a growing hero fill at least the small mobile viewport without resizing when browser toolbars retract. Scroll past this example to inspect the stable height.</p>
-				<div class="viewport-fold viewport-fold-demo">
-					<div><strong>Example header</strong></div>
-					<div>
-						<div>
-							<strong>Example hero</strong>
-							<p>The hero fills remaining space and can grow with its content.</p>
-						</div>
-					</div>
-				</div>
+				<p>This demo's opening header and hero use <code>.viewport-fold</code>. On a mobile browser, return to the top, reload the page, and scroll down to check that hiding or revealing the browser toolbar does not resize the initial fold. The navigation keeps its natural height while the hero fills the remaining space.</p>
 			</section>
 
 			<section id="components">
