@@ -4,7 +4,6 @@
 
 - added the opt-in `.viewport-fold` layout for a header and growing hero that fill at least the stable small viewport height (`100svh`, with a `100vh` fallback), avoiding toolbar-induced resizing on mobile
 - kept the default `body` and `main` document layout unchanged; the fold's last direct child expands into remaining space while taller content may extend the layout
-- documented viewport-unit behavior and added a demonstration to the live feature tour
 
 ## 0.4.6
 
