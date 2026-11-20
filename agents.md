@@ -28,6 +28,7 @@ These instructions apply to the entire MiddleClass repository. Consult the exist
 - For CSS behavior changes, review affected documentation, the demo, responsive layouts, themes, keyboard focus, native controls, and the regression section. Test browsers when available, but never claim unperformed checks.
 - Keep required third-party attribution and license notices intact.
 - Update the changelog and version references when releasing a new stylesheet version. Keep the stylesheet header, demo download label, and demo structured-data version consistent. Documentation-only or demo-only edits do not require a CSS version bump.
+- When updating `changelog.md`, document only changes to the distributable `middleclass.css` stylesheet. Do not list documentation, demo-site, or administrative changes as release notes.
 
 ## GitHub Changes
 
