@@ -10,6 +10,7 @@ The current project is **pre-1.0** and uses numbered releases (for example, `0.5
 - Identify visible behavior changes, renamed or removed classes, and changed variables so adopters can evaluate upgrades.
 - A CSS-only fix can still affect existing layouts; do not assume a small version increment implies zero integration work.
 - Updates confined to demo copy, SEO, documentation, or repo administration are **not** new framework features and ordinarily do not require a stylesheet version bump.
+- Changelog entries should focus exclusively on changes to `middleclass.css` and their effects on adopting websites. Do not include documentation updates, demo-site changes, SEO adjustments, or repository maintenance, even when these accompany a framework release.
 
 This guide describes the release process to follow, not an assertion that historical releases passed every item below.
 
